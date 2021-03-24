@@ -1,0 +1,51 @@
+
+@use "./colours";
+
+.bubble-hero {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 75%;
+}
+
+.bub-arr-1 {
+  fill: url(#Bubble_Hero_3);
+}
+
+.bub-arr-2 {
+  fill: url(#Bubble_Hero_3-2);
+}
+
+.bub-arr-3 {
+  fill: url(#Bubble_Hero_4);
+}
+
+.bub-cog-1 {
+  fill: url(#Bubble_Hero);
+}
+
+.bub-hea-bg {
+  fill: colours.$site-bg;
+}
+
+.bub-pla-bg {
+  fill: url(#Bubble_Hero);
+}
+
+.bub-sca-1 {
+  isolation: isolate;
+}
+
+.bub-sca-2 {
+  fill: url(#Bubble_Hero);
+}
+
+.bub-sca-3 {
+  mix-blend-mode: overlay;
+}
+
+.bub-sca-4 {
+  fill: colours.$icon-fill;
+}
+

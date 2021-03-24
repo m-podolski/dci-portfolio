@@ -1,0 +1,38 @@
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio Website</title>
+    <link rel="stylesheet" href="./assets/css/all.css" />
+    <link rel="stylesheet" href="./assets/css/styles.css" />
+    <script type="module" src="./assets/js/ui.js"></script>
+
+    <!-- <?php snippet('base/head') ?> -->
+  </head>
+
+  <body>
+    <!-- <?php snippet('navigation/navigation') ?> -->
+    <!-- <?php snippet('base/bubble') ?> -->
+
+    <header id="skip-target" class="landmark header">
+      <!-- <?= $page->heading()->kirbytext() ?> -->
+      <!-- <?php snippet('base/subheading') ?> -->
+      <!-- <?php snippet('base/summary') ?> -->
+    </header>
+
+    <!-- <?= file_get_contents('assets/svg/header-form.svg') ?> -->
+
+    <main class="landmark main">
+      <!-- <?php snippet('icons/icons') ?> -->
+      <section class="content-h2">
+        <!-- <?= $page->matter()->kirbytext() ?> -->
+      </section>
+      <!-- <?php snippet('tabs/tabs') ?> -->
+    </main>
+
+    <footer class="landmark footer">
+      <!-- <?php snippet('footer/footer') ?> -->
+    </footer>
+  </body>
+</html>
