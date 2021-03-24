@@ -11,7 +11,29 @@
 
   <body>
     <!-- <?php snippet('navigation/navigation') ?> -->
-    <!-- <?php snippet('base/bubble') ?> -->
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      xmlns:xlink="http://www.w3.org/1999/xlink"
+      viewBox="0 0 2000 2000"
+      class="bubble-hero"
+      aria-hidden="true"
+    >
+      <defs>
+        <linearGradient
+          id="Bubble_Hero"
+          data-name="Bubble Hero"
+          x1="609.17"
+          y1="1920.74"
+          x2="1390.83"
+          y2="79.26"
+          gradientUnits="userSpaceOnUse"
+        >
+          <stop offset="0" stop-color="#0cf" />
+          <stop offset="0.97" stop-color="#0e10f4" />
+        </linearGradient>
+      </defs>
+      <circle class="bub-pla-bg" cx="1000" cy="1000" r="1000" />
+    </svg>
 
     <header id="skip-target" class="landmark header">
       <h1>Web Grafik Design</h1>
@@ -22,11 +44,11 @@
         Hallo und Moin Moin! Ich bin ein Hamburger Gestalter und bringe Freiberuflern, kleinen und mittleren Unternehmen
         durch maßgeschneiderte Websites, effektive Werbung, durchdachte Publikationen, schlüssige visuelle Identitäten
         und kreative Illustrationen mehr Kommunikationsreichweite und einen professionelleren Auftritt.
-        <button type="button" class="primary"></button>
-        (button: Portfolio sichten link: /portfolio style: primary) Melden Sie sich mit Ihren Fragen oder Aufträgen
-        gerne jederzeit direkt bei mir per (email: malte.podolski@web.de text: E-Mail), (link: #contact text:
-        Kontaktformular) oder (tel: +4917641569719 text: Telefon). (button: Nachricht schreiben link: #contact style:
-        secondary)
+        <a href="#portfolio" class="primary">Portfolio sichten</a>
+        Melden Sie sich mit Ihren Fragen oder Aufträgen gerne jederzeit direkt bei mir per
+        <a href="mailto:malte.podolski@web.de">E-Mail</a> oder
+        <a href="#contactinfo">Telefon</a>
+        <a href="#portfolio" class="secondary">Nachricht schreiben</a>
       </section>
     </header>
 
@@ -40,8 +62,45 @@
 
     <main class="landmark main">
       <!-- <?php snippet('icons/icons') ?> -->
-      <section class="content-h2">
-        <!-- <?= $page->matter()->kirbytext() ?> -->
+      <section class="content-h2" aria-labelledby="h2-1">
+        <h2 id="h2-1">Projekte</h2>
+        <p>
+          Hier finden Sie meine bisherigen Projekte, u.a. aus den Bereichen Webdesign, Webentwicklung, Werbung,
+          Markengestaltung, Information, Veröffentlichungen und Illustration. Melden Sie sich gerne auch ganz
+          unverbindlich falls Sie Fragen zum Ablauf oder einer möglichen Zusammenarbeit haben. Vieles lässt sich im
+          direkten Kontakt am besten klären.
+        </p>
+      </section>
+
+      <section class="content-h2" aria-labelledby="h2-2">
+        <h2 id="h2-2">Über Mich</h2>
+        <p>
+          Die ersten Erfahrungen mit Webdesign machte ich bereits 2002 beim Erstellen einer Website als reines Hobby -
+          damals noch im Web 2.0. Den ersten beruflichen Kontakt stellte das Webdesign-Modul während meiner Ausbildung
+          zum gestaltungstechnischen Assistenten dar, das mich wesentlich mehr begeisterte als der praxisferne
+          Unterricht mit Delphi in der Schule. Als sich im Nebenjob während des Studiums die Gelegenheit ergab, für das
+          Bremer Institut für Strukturmechanik und Produktionsanlagen eine kleine Internetpräsenz für eine
+          ingenieurwissenschaftliche Konferenz zu machen, ergriff ich diese gerne und begann, tiefer in die Materie
+          einzusteigen.
+        </p>
+        <p>
+          Seitdem habe ich als Mediengestalter bei mehreren Unternehmen viel mit Content-Management zu tun gehabt,
+          musste mich aber auch wiederholt z.B. mit Plugin-Installationen in Wordpress oder Joomla-Migrationen
+          beschäftigen. Dadurch reifte bald der Wunsch, mein Know-How im Grafikbereich mit Webentwicklung
+          zusammenzuführen und dabei effektive, flexible, pflegeleichte und benutzerfreundliche Websitelösungen für
+          kleinere Unternehmen zu schaffen.
+        </p>
+      </section>
+
+      <section class="content-h2" aria-labelledby="h2-2">
+        <h2 id="h2-2">Bewerbung</h2>
+        <p>
+          Gestaltungstechnischer Assistent mit **Berufserfahrung als Freiberufler und Angestellter**. Besondere
+          Kenntnisse in den Bereichen **Grafikdesign** sowie **Webdesign und -entwicklung**. Empathiefähigkeit die nicht
+          nur dem Verstehen von Zielgruppen, sondern auch dem alltäglichen Miteinander zugute kommt. Aktuell verfolge
+          ich den Aufbau meines Portfolios und habe mich dabei zuletzt mit dem PHP-CMS Kirby beschäftigt und arbeite
+          mich aktuell neben meiner Arbeit am **Digital Career Institute** in das Javascript-Framework **Vue** ein.
+        </p>
       </section>
       <!-- <?php snippet('tabs/tabs') ?> -->
     </main>
