@@ -8,6 +8,6 @@ import {
   placeIcons,
 } from './icon-iterator.js';
 
-// initNav();
+initNav();
 // initTabs();
 // placeIcons();

@@ -10,7 +10,30 @@
   >/
 
   <body>
-    <!-- <?php snippet('navigation/navigation') ?> -->
+    <a href="#skip-target" class="skip-link">Menü überspringen</a>
+
+    <nav aria-label="Menü" class="nav-pri">
+      <button type="button" id="menu-btn" class="nav-button-menu">Menü</button>
+
+      <ul class="nav-pri-list" aria-labelledby="menu-btn">
+        <li class="nav-item">
+          <a href="#start" class="nav-link active">Start</a>
+        </li>
+        <li class="nav-item">
+          <a href="#portfolio" class="nav-link">Projekte</a>
+        </li>
+        <li class="nav-item">
+          <a href="#about" class="nav-link">Über</a>
+        </li>
+        <li class="nav-item">
+          <a href="#application" class="nav-link">Bewerbung</a>
+        </li>
+        <li class="nav-item">
+          <a href="#contact" class="nav-link">Kontakt</a>
+        </li>
+      </ul>
+    </nav>
+
     <svg
       xmlns="http://www.w3.org/2000/svg"
       xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -36,7 +59,7 @@
     </svg>
 
     <header id="skip-target" class="landmark header">
-      <h1>Web Grafik Design</h1>
+      <h1 id="start">Web Grafik Design</h1>
       <p class="subheading-block">
         <strong class="subheading">Design und Entwicklung aus einer Hand</strong>
       </p>
@@ -62,8 +85,8 @@
 
     <main class="landmark main">
       <!-- <?php snippet('icons/icons') ?> -->
-      <section class="content-h2" aria-labelledby="h2-1">
-        <h2 id="h2-1">Projekte</h2>
+      <section class="content-h2" aria-labelledby="portfolio">
+        <h2 id="portfolio">Projekte</h2>
         <p>
           Hier finden Sie meine bisherigen Projekte, u.a. aus den Bereichen Webdesign, Webentwicklung, Werbung,
           Markengestaltung, Information, Veröffentlichungen und Illustration. Melden Sie sich gerne auch ganz
@@ -72,8 +95,8 @@
         </p>
       </section>
 
-      <section class="content-h2" aria-labelledby="h2-2">
-        <h2 id="h2-2">Über Mich</h2>
+      <section class="content-h2" aria-labelledby="about">
+        <h2 id="about">Über Mich</h2>
         <p>
           Die ersten Erfahrungen mit Webdesign machte ich bereits 2002 beim Erstellen einer Website als reines Hobby -
           damals noch im Web 2.0. Den ersten beruflichen Kontakt stellte das Webdesign-Modul während meiner Ausbildung
@@ -92,8 +115,8 @@
         </p>
       </section>
 
-      <section class="content-h2" aria-labelledby="h2-2">
-        <h2 id="h2-2">Bewerbung</h2>
+      <section class="content-h2" aria-labelledby="application">
+        <h2 id="application">Bewerbung</h2>
         <p>
           Gestaltungstechnischer Assistent mit **Berufserfahrung als Freiberufler und Angestellter**. Besondere
           Kenntnisse in den Bereichen **Grafikdesign** sowie **Webdesign und -entwicklung**. Empathiefähigkeit die nicht
@@ -106,7 +129,98 @@
     </main>
 
     <footer class="landmark footer">
-      <!-- <?php snippet('footer/footer') ?> -->
+
+      <a href="#skip-target" class="button-tertiary button-top">
+        Oben
+      </a>
+
+<section class="contact-info">
+
+  <span id="contactinfo-heading">
+    Kontaktinformationen
+  </span>
+
+  <ul class="contact-info-list" aria-labelledby="contactinfo-heading">
+
+    <li class="contact-info-list-item">
+      <strong class="contact">
+        <!-- <?= $contact ?> -->
+      </strong>
+
+      <ul class="contact-info-entry-list">
+            <li class="contact-info-entry-list-item">
+              <span class="contact-info-entry">
+                <!-- <?= $entry ?> -->
+              </span>
+            </li>
+
+        <li class="contact-info-list-item">
+          <strong class="contact">
+            <!-- <?= $contact ?> -->
+          </strong>
+
+          <li class="contact-info-entry-list-item">
+            <span class="contact-info-entry">
+              <!-- <?= $entry ?> -->
+            </span>
+            <!-- <?= kirbytext($data) ?> -->
+          </li>
+
+      </ul>
+    </li>
+  </ul>
+
+</section>
+
+<section class="footer-nav">
+
+  <span id="navigation-heading">
+    <?= $footer->navigation_heading()->kirbytext() ?>
+  </span>
+
+  <?php snippet('forms/login') ?>
+
+  <nav aria-label="<?= t("nav-sec") ?>" class="nav-footer-sec">
+
+  <?php if($footerMenu->isNotEmpty()): ?>
+    <ul class="nav-footer-sec-list">
+    <?php foreach($footerMenu as $page): ?>
+
+      <li class="nav-item">
+        <a href="<?= $page->url() ?>">
+          <?= $page->menu() ?>
+        </a>
+      </li>
+
+    <?php endforeach ?>
+    </ul>
+
+  <?php endif ?>
+
+  </nav>
+
+</section>
+
+<section id="contact" class="contact-form">
+
+  <span id="contactform-heading">
+    <?= $footer->contactform_heading()->kirbytext() ?>
+  </span>
+
+  <?php snippet('forms/contactform') ?>
+
+</section>
+
+<p class="footline"><?= $footer->footline() ?></p>
+
+<?php foreach($footer->files() as $file): ?>
+
+  <?php if(substr($file->filename(), 0, 4) === "icon"): ?>
+    <?= $file->read() ?>
+  <?php endif ?>
+
+<?php endforeach ?>
+
     </footer>
   </body>
 </html>
