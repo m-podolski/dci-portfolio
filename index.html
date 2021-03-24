@@ -6,8 +6,8 @@
     <title>Portfolio Website</title>
     <link rel="stylesheet" href="./assets/css/normalize.css/normalize.css" />
     <link rel="stylesheet" href="./assets/css/main.css" />
-    <script type="module" src="./assets/js/main.js"></script></head
-  >/
+    <script type="module" src="./assets/js/main.js"></script>
+  </head>
 
   <body>
     <a href="#skip-target" class="skip-link">Menü überspringen</a>
@@ -64,14 +64,21 @@
         <strong class="subheading">Design und Entwicklung aus einer Hand</strong>
       </p>
       <section aria-label="Intro" class="intro">
-        Hallo und Moin Moin! Ich bin ein Hamburger Gestalter und bringe Freiberuflern, kleinen und mittleren Unternehmen
-        durch maßgeschneiderte Websites, effektive Werbung, durchdachte Publikationen, schlüssige visuelle Identitäten
-        und kreative Illustrationen mehr Kommunikationsreichweite und einen professionelleren Auftritt.
-        <a href="#portfolio" class="primary">Portfolio sichten</a>
-        Melden Sie sich mit Ihren Fragen oder Aufträgen gerne jederzeit direkt bei mir per
-        <a href="mailto:malte.podolski@web.de">E-Mail</a> oder
-        <a href="#contactinfo">Telefon</a>
-        <a href="#portfolio" class="secondary">Nachricht schreiben</a>
+        <p>
+          Hallo und Moin Moin! Ich bin ein Hamburger Gestalter und bringe Freiberuflern, kleinen und mittleren
+          Unternehmen durch maßgeschneiderte Websites, effektive Werbung, durchdachte Publikationen, schlüssige visuelle
+          Identitäten und kreative Illustrationen mehr Kommunikationsreichweite und einen professionelleren Auftritt.
+        </p>
+        <div class="button-container">
+          <a href="#portfolio" class="button-primary">Portfolio sichten</a>
+        </div>
+        <p>
+          Melden Sie sich mit Ihren Fragen oder Aufträgen gerne jederzeit direkt bei mir per
+          <a href="mailto:malte.podolski@web.de">E-Mail</a> oder <a href="#contactinfo">Telefon</a>
+        </p>
+        <div class="button-container">
+          <a href="#portfolio" class="button-secondary">Nachricht schreiben</a>
+        </div>
       </section>
     </header>
 
@@ -124,103 +131,594 @@
           ich den Aufbau meines Portfolios und habe mich dabei zuletzt mit dem PHP-CMS Kirby beschäftigt und arbeite
           mich aktuell neben meiner Arbeit am **Digital Career Institute** in das Javascript-Framework **Vue** ein.
         </p>
+
+        <ul class="tab-list" role="tablist" id="tab-list">
+          <li class="tab-list-item" role="presentation">
+            <a href="#info" class="tab" data-tab="info" role="tab">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+                viewBox="0 0 800 800"
+                class="icon icon-app-info"
+                aria-hidden="true"
+              >
+                <g id="icon-app-info">
+                  <circle id="background" class="app-info-1" cx="400" cy="400" r="400" />
+                  <circle id="outer-circle" class="app-info-2" cx="400" cy="400" r="260" />
+                  <ellipse id="head" class="app-info-3" cx="400" cy="350" rx="80" ry="90" />
+                  <path
+                    id="body"
+                    class="app-info-3"
+                    d="M400,480c-83,0-151.17,52.89-159.2,125.55a260,260,0,0,0,318.4,0C551.17,532.89,483,480,400,480Z"
+                  />
+                </g>
+              </svg>
+              <h2 id="tab-info">Info</h2>
+            </a>
+          </li>
+          <li class="tab-list-item" role="presentation">
+            <a href="#cv" class="tab" data-tab="cv" role="tab">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+                viewBox="0 0 800 800"
+                class="icon icon-app-cv"
+                aria-hidden="true"
+              >
+                <g id="icon-app-cv">
+                  <circle id="background" class="app-cv-1" cx="400" cy="400" r="400" />
+                  <path
+                    id="shoe-background"
+                    class="app-cv-2"
+                    d="M163.85,560c141.25,9.65,185.9-37.71,301.47-69.67,70.3-19.44,135.06-25.33,189.32-50.88,58.4-27.49-3.36-73.74-5.81-105.32-5-64.3-30.66-92.45-45.28-94.13-8.74-1-43,40.25-97.08,44.64-12.35,1-38-30.31-57.55-38.64-17.56-7.5-26.87-2.2-73.88,66.38-21.27,31-107.3,115-147.62,135.85-43.53,22.54-95.87,26.38-104.26,59.86C117,532.79,123.63,557.25,163.85,560Z"
+                  />
+                  <path
+                    id="line-sole"
+                    class="app-cv-3"
+                    d="M121.16,520.19c19,22.19,124.65,12.36,176.27-6.28,49.88-18,116.75-68.37,187.48-80.16s167.33-41,174.35-69.28"
+                  />
+                  <path
+                    id="shoe-outline"
+                    class="app-cv-4"
+                    d="M163.85,560c141.25,9.65,185.9-37.71,301.47-69.67,70.3-19.44,135.06-25.33,189.32-50.88,58.4-27.49-3.36-73.74-5.81-105.32-5-64.3-30.66-92.45-45.28-94.13-8.74-1-43,40.25-97.08,44.64-12.35,1-38-30.31-57.55-38.64-17.56-7.5-26.87-2.2-73.88,66.38-21.27,31-107.3,115-147.62,135.85-43.53,22.54-95.87,26.38-104.26,59.86C117,532.79,123.63,557.25,163.85,560Z"
+                  />
+                  <g id="laces">
+                    <line class="app-cv-5" x1="390.21" y1="276.92" x2="421.01" y2="312.29" />
+                    <line class="app-cv-5" x1="363.84" y1="312.29" x2="388.73" y2="341.74" />
+                    <line class="app-cv-5" x1="335.42" y1="345.96" x2="354.24" y2="369.81" />
+                  </g>
+                </g>
+              </svg>
+
+              <h2 id="tab-cv">Lebenlauf</h2>
+            </a>
+          </li>
+          <li class="tab-list-item" role="presentation">
+            <a href="#knowledge" class="tab" data-tab="knowledge" role="tab">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+                viewBox="0 0 800 800"
+                class="icon icon-app-knowledge"
+                aria-hidden="true"
+              >
+                <g id="icon-app-knowledge">
+                  <circle id="background" class="app-kno-1" cx="400" cy="400" r="400" />
+                  <path
+                    id="bulb"
+                    class="app-kno-2"
+                    d="M540,360a140,140,0,0,0-280,0c0,100,80,120,80,220H460C460,480,540,460,540,360Z"
+                  />
+                  <path id="reflection" class="app-kno-3" d="M400,260A101.11,101.11,0,0,0,298.89,361.11" />
+                  <g id="shine">
+                    <line class="app-kno-4" x1="493.75" y1="205.12" x2="523.75" y2="153.16" />
+                    <line class="app-kno-4" x1="562.38" y1="273.75" x2="614.34" y2="243.75" />
+                    <line class="app-kno-4" x1="587.5" y1="367.5" x2="647.5" y2="367.5" />
+                    <line class="app-kno-4" x1="562.38" y1="461.25" x2="614.34" y2="491.25" />
+                    <line class="app-kno-4" x1="237.62" y1="461.25" x2="185.66" y2="491.25" />
+                    <line class="app-kno-4" x1="212.5" y1="367.5" x2="152.5" y2="367.5" />
+                    <line class="app-kno-4" x1="237.62" y1="273.75" x2="185.66" y2="243.75" />
+                    <line class="app-kno-4" x1="306.25" y1="205.12" x2="276.25" y2="153.16" />
+                    <line class="app-kno-4" x1="400" y1="180" x2="400" y2="120" />
+                  </g>
+                  <g id="socket">
+                    <line class="app-kno-5" x1="340" y1="660" x2="460" y2="660" />
+                    <line class="app-kno-5" x1="340" y1="620" x2="460" y2="620" />
+                    <line class="app-kno-5" x1="360" y1="700" x2="440" y2="700" />
+                  </g>
+                </g>
+              </svg>
+
+              <h2 id="tab-knowledge">Kenntnisse</h2>
+            </a>
+          </li>
+          <li class="tab-list-item" role="presentation">
+            <a href="#portfolio" class="tab" data-tab="portfolio" role="tab">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+                viewBox="0 0 800 800"
+                class="icon icon-app-portfolio"
+                aria-hidden="true"
+              >
+                <g id="icon-app-portfolio">
+                  <circle id="background" class="app-por-1" cx="400" cy="400" r="400" />
+                  <g id="cog">
+                    <path
+                      id="teeth"
+                      class="app-por-2"
+                      d="M546.58,339.14l-85.72-85.72L551.44,212,588,248.58ZM640,425.86v-51.7l-93.32-34.77V460.61ZM551.42,588,588,551.44l-41.39-90.58-85.72,85.72ZM374.14,640h51.7l34.77-93.32H339.39ZM212,551.42,248.56,588l90.58-41.39-85.72-85.72ZM160,374.14v51.7l93.32,34.77V339.39ZM248.58,212,212,248.56l41.39,90.58,85.72-85.72Zm177.28-52h-51.7l-34.77,93.32H460.61Z"
+                    />
+                    <path
+                      id="wheel"
+                      class="app-por-3"
+                      d="M400.11,220a180,180,0,1,0,180,180A180,180,0,0,0,400.11,220Zm0,270a90,90,0,1,1,90-90A90,90,0,0,1,400.11,490Z"
+                    />
+                  </g>
+                </g>
+              </svg>
+
+              <h2 id="tab-portfolio">Projekte</h2>
+            </a>
+          </li>
+          <li class="tab-list-item" role="presentation">
+            <a href="#references" class="tab" data-tab="references" role="tab">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+                viewBox="0 0 800 800"
+                class="icon icon-app-references"
+                aria-hidden="true"
+              >
+                <g id="icon-app-references">
+                  <circle id="background" class="app-ref-1" cx="400" cy="400" r="400" />
+                  <path
+                    id="speechbubble"
+                    class="app-ref-2"
+                    d="M400,180c-121.5,0-220,85.07-220,190,0,58,30.1,109.92,77.54,144.77L240,620l85.44-71.2A251,251,0,0,0,400,560c121.5,0,220-85.07,220-190S521.5,180,400,180Z"
+                  />
+                  <path
+                    id="bang"
+                    class="app-ref-3"
+                    d="M433.85,446.15A33.85,33.85,0,1,1,400,412.31,33.85,33.85,0,0,1,433.85,446.15ZM450.77,260H349.23l25.39,118.46h50.76Z"
+                  />
+                </g>
+              </svg>
+
+              <h2 id="tab-references">Feedback</h2>
+            </a>
+          </li>
+          <li class="tab-list-item" role="presentation">
+            <a href="#downloads" class="tab" data-tab="downloads" role="tab">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+                viewBox="0 0 800 800"
+                class="icon icon-app-cert"
+                aria-hidden="true"
+              >
+                <g id="icon-app-cert">
+                  <circle id="background" class="app-cert-1" cx="400" cy="400" r="400" />
+                  <rect id="sheet" class="app-cert-2" x="220" y="180" width="360" height="440" />
+                  <g id="icon-benefits">
+                    <path
+                      id="band"
+                      class="app-cert-3"
+                      d="M495.89,457l41,56.92h-60L444,563.4,420,495Zm-191.78,0-41,56.92h60l33,49.44L380,495Z"
+                    />
+                    <circle id="circle" class="app-cert-4" cx="400" cy="384.91" r="130" />
+                    <polygon
+                      id="star"
+                      class="app-cert-2"
+                      points="400 440.74 464.98 474.91 452.57 402.55 505.15 351.3 432.49 340.74 400 274.91 367.51 340.74 294.85 351.3 347.43 402.55 335.02 474.91 400 440.74"
+                    />
+                  </g>
+                </g>
+              </svg>
+
+              <h2 id="tab-downloads">Downloads</h2>
+            </a>
+          </li>
+        </ul>
+
+        <section
+          class="tab-panel tab-panel-info tab-panel-closed"
+          data-tab="info"
+          id="info"
+          role="tabpanel"
+          aria-labelledby="tab-info"
+        >
+          <div class="tab-panel-wrapper">
+            <dl>
+              <dt>Kontakt</dt>
+              <dd>
+                <p><strong>Telefon</strong></p>
+                <ul>
+                  <li>+49 176&#x2004;41 56 97 19</li>
+                </ul>
+              </dd>
+              <dd>
+                <p><strong>E-Mail</strong></p>
+                <ul>
+                  <li><a href="mailto:malte.podolski@web.de">malte.podolski@web.de</a></li>
+                </ul>
+              </dd>
+              <dd>
+                <p><strong>Social Media</strong></p>
+                <ul>
+                  <li>
+                    <a href="https://www.linkedin.com/in/m-podolski">linkedin.com/in/m-podolski</a>
+                  </li>
+                  <li><a href="https://www.behance.net/m-podolski">behance.net/m-podolski</a></li>
+                  <li><a href="https://github.com/m-podolski">github.com/m-podolski</a></li>
+                </ul>
+              </dd>
+              <dt>Person</dt>
+              <dd>
+                <p><strong>Geburt</strong></p>
+                <ul>
+                  <li>08.&#x200A;05.&#x200A;1988</li>
+                  <li>Achim</li>
+                </ul>
+              </dd>
+              <dd>
+                <p><strong>Adresse</strong></p>
+                <ul>
+                  <li>Hummelsbüttler Hauptstraße 16</li>
+                  <li>22339 Hamburg, Germany</li>
+                </ul>
+              </dd>
+            </dl>
+          </div>
+        </section>
+        <section
+          class="tab-panel tab-panel-cv tab-panel-closed"
+          data-tab="cv"
+          id="cv"
+          role="tabpanel"
+          aria-labelledby="tab-cv"
+        >
+          <div class="tab-panel-wrapper">
+            <dl>
+              <dt>10.20-02.22</dt>
+              <dd>
+                <strong
+                  >Kursteilnehmer Webentwicklung,
+                  <a href="https://digitalcareerinstitute.org/">Digital Career Institute</a>, Hamburg</strong
+                ><br />
+                HTML, CSS, Javascript, React, Node
+              </dd>
+              <dt>07.19-12.19</dt>
+              <dd>
+                <strong>Mediengestalter, <a href="http://fantec.de/">Fantec GmbH</a>, Hamburg</strong><br />
+                Produktfotografie, Bildbearbeitung, Online Marketing / Content, Grafikdesign
+              </dd>
+              <dt>05.19-06.19</dt>
+              <dd>
+                <strong
+                  >Reinzeichner ( freiberuflich ) für <a href="https://de.hogarthww.com/">Hogarth Worldwide</a>,
+                  Hamburg</strong
+                ><br />
+                Layout, Reinzeichnung
+              </dd>
+              <dt>11.18-03.19</dt>
+              <dd>
+                <strong
+                  >Mediengestalter, <a href="https://druckcenter-hamburg.de/">Druckcenter Hamburg</a>, Hamburg</strong
+                ><br />
+                Verkauf, Kreation, Reinzeichnung, Druckproduktion, Werbetechnik
+              </dd>
+              <dt>05.18-07.18</dt>
+              <dd>
+                <strong>Mediengestalter, <a href="http://www.eurolight-gmbh.eu/">Eurolight GmbH</a>, Hamburg</strong
+                ><br />
+                Digital / Print Design, Corporate Design, E-Mail-Marketing, Produktfotografie
+              </dd>
+              <dt>10.17-01.18</dt>
+              <dd>
+                <strong
+                  >Mediengestalter ( freiberuflich ) für
+                  <a href="https://www.essenberger.de/">Essenberger Werbung & Design</a> /
+                  <a href="https://marine-mammals.com/">Marine Mammals Science Education</a>, Husum</strong
+                ><br />
+                Wordpress, Digital / Print Design, Bildbearbeitung / Composing
+              </dd>
+              <dt>08.11-08.12</dt>
+              <dd>
+                <strong
+                  >Fachoberschule ( allgemeine Hochschulreife Fachrichtung Gestaltung ),
+                  <a href="http://www.szals.de/">Schulzentrum an der Alwin-Lonke-Straße</a>, Bremen</strong
+                ><br />
+                Kommunikationsdesign, Produktdesign, Kernfächer
+              </dd>
+              <dt>08.09-08.11</dt>
+              <dd>
+                <strong
+                  >Ausbildung zum staatlich anerkannten gestaltungstechnischen Assistenten,
+                  <a href="http://www.szals.de/">Schulzentrum an der Alwin-Lonke-Straße</a>, Bremen</strong
+                >
+                <ul>
+                  <li>Kommunikationsdesign</li>
+                  <li>Produktgestaltung</li>
+                  <li>Fotografie Projektbasierte Ausbildung in Adobe CS Apps</li>
+                  <li>Designtheorie</li>
+                  <li>Designgeschichte</li>
+                  <li>Fotografie und Bildbearbeitung</li>
+                  <li>Werbepsychologie</li>
+                  <li>Grundlagen der Webentwicklung</li>
+                  <li>Drucktechnik</li>
+                  <li>Austellungsgestaltung und Modellbau</li>
+                </ul>
+              </dd>
+            </dl>
+          </div>
+        </section>
+        <section
+          class="tab-panel tab-panel-knowledge tab-panel-closed"
+          data-tab="knowledge"
+          id="knowledge"
+          role="tabpanel"
+          aria-labelledby="tab-knowledge"
+        >
+          <div class="tab-panel-wrapper">
+            <p>Digital</p>
+            <ul>
+              <li>
+                Languages
+                <ul>
+                  <li>JavaScript</li>
+                  <li>PHP/Twig</li>
+                  <li>CSS/SASS/Stylus</li>
+                  <li>HTML</li>
+                  <li>SVG</li>
+                </ul>
+              </li>
+              <li>
+                Frameworks/CMS
+                <ul>
+                  <li>Vue/Vuepress</li>
+                  <li>Kirby (Development)</li>
+                  <li>Wordpress (Content, Maintenance)</li>
+                </ul>
+              </li>
+              <li>
+                Tooling
+                <ul>
+                  <li>Ubuntu (Windows/Mac)</li>
+                  <li>Visual Studio Code</li>
+                  <li>NPM</li>
+                  <li>Git/Github</li>
+                  <li>Gulp</li>
+                  <li>NginX</li>
+                  <li>G Suite</li>
+                </ul>
+              </li>
+              <li>Webdesign (Wireframing, Mockups, Responsive Design)</li>
+              <li>Barrierefreiheit</li>
+              <li>Technical SEO</li>
+              <li>E-Mail-Marketing</li>
+            </ul>
+            <hr />
+            <p>Grafik</p>
+            <ul>
+              <li>Layout</li>
+              <li>Bildbearbeitung</li>
+              <li>Corporate Design</li>
+              <li>Produktfotografie</li>
+              <li>Illustration</li>
+              <li>Lettering</li>
+              <li>Reinzeichnung</li>
+              <li>Druckproduktion</li>
+              <li>
+                Adobe Creative Cloud
+                <ul>
+                  <li>Bridge</li>
+                  <li>Lightroom</li>
+                  <li>Photoshop</li>
+                  <li>Illustrator</li>
+                  <li>InDesign</li>
+                </ul>
+              </li>
+            </ul>
+            <hr />
+            <p>Softskills</p>
+            <ul>
+              <li>selbstständiges Lernen</li>
+              <li>breite Allgemeinbildung</li>
+              <li>gründliches und strukturiertes Arbeiten</li>
+              <li>Auge für Details</li>
+              <li>offen für Wünsche und Kritik von Auftraggebern und Kunden</li>
+              <li>Fähigkeit (Design)entscheidungen zu reflektieren und verbal zu kommunizieren</li>
+              <li>keine Hemmungen Unterstützung zu erfragen</li>
+            </ul>
+            <hr />
+            <p>Sprachen</p>
+            <ul>
+              <li>Deutsch (&#x200A;Muttersprache&#x200A;)</li>
+              <li>Englisch (&#x200A;Selbsteins. B2-C1&#x200A;)</li>
+            </ul>
+          </div>
+        </section>
+        <section
+          class="tab-panel tab-panel-portfolio tab-panel-closed"
+          data-tab="portfolio"
+          id="portfolio"
+          role="tabpanel"
+          aria-labelledby="tab-portfolio"
+        >
+          <div class="tab-panel-wrapper">
+            <h3 class="mume-header" id="digital">Digital</h3>
+            <p>
+              Mein digitales Portfolio finden Sie auf Github unter
+              <a href="https://github.com/m-podolski">github.com/m-podolski</a>. Zur Zeit bin ich Schüler am
+              <a href="https://digitalcareerinstitute.org">Digital Career Institute</a> und arbeite daneben an meinen
+              eigenen (Frontend-/JS-)Projekten. Aktuell meint das
+              <a href="https://github.com/m-podolski/podolski">meine eigene Website</a> und andere Projekte, die noch in
+              Vorbereitung sind.
+            </p>
+            <hr />
+            <p>Github Cards</p>
+            <hr />
+            <h3 class="mume-header" id="grafik">Grafik</h3>
+            <p><img src="./cover-joinery-lueneberg.jpg" alt="Alt-Text" /></p>
+            <p>
+              Zunächst habe ich mich vor allem mit Brand Design beschäftigt. Dabei sind mehrere kompakte Arbeitsproben
+              entstanden, für die exemplarisch das Projekt
+              <a href="../../../portfolio/joinery-lueneburg">Tischlerei Lüneberg</a> steht.
+            </p>
+            <p><img src="./cover-not-fair-campaign.jpg" alt="Alt-Text" /></p>
+            <p>
+              Als Bespiel für eine vom Unternehmensauftritt getrennte Kampagne habe ich Werbemittel für die
+              <a href="../../../portfolio/not-fair-campaign">Fair Clothing Kampagne</a> gestaltet.
+            </p>
+            <p><img src="./cover-crocus-blossom-festival.jpg" alt="Alt-Text" /></p>
+            <p>
+              Danach habe ich mich dem Medium Plakat gewidmet, um mich noch stärker in die Anforderungen werblichen
+              Grafikdesigns einzuarbeiten. Dabei entstanden u.a. die Plakate für das
+              <a href="../../../portfolio/crocus-blossom-festival">Krokusblütenfest</a>.
+            </p>
+            <p><img src="./cover-pace-magazine.jpg" alt="Alt-Text" /></p>
+            <p>
+              Mein letztes Projekt habe ich in Form eines Magazins erarbeitet, um die Bereiche Layout, Typografie,
+              Illustration, Infografik und zu einem gewissen Grad auch redaktionelle Konzeption zu integrieren.
+              Entstanden ist dabei das <a href="../../../portfolio/pace-magazine">Magazin Pace</a>.
+            </p>
+          </div>
+        </section>
+        <section
+          class="tab-panel tab-panel-references tab-panel-closed"
+          data-tab="references"
+          id="references"
+          role="tabpanel"
+          aria-labelledby="tab-references"
+        >
+          <div class="tab-panel-wrapper">
+            <p><img src="Portrait-Liauw.png" alt="Erwin Liauw" /></p>
+            <p>
+              &#x201E; Herr Podolski zeichnet sich durch großes Engagement aus und hat eine schnelle Auffassungsgabe,
+              kombiniert mit dem Willen und der Fähigkeit, die ihm übertragenen Arbeiten eigenständig zu lösen, sodass
+              er zu vielen Aufgaben herangezogen wurde, die er stets zu meiner vollsten Zufriedenheit ausführte. [ ... ]
+              Besonders hervorzuheben ist für mich, dass Herr Podolski auch bei Aufgaben, die nicht in den
+              gestalterischen Bereich sehr engagiert und gewissenhaft gearbeitet hat. [ ... ] Herr Podolski wird von mir
+              wegen seiner Zuverlässigkeit und Pünktlichkeit sehr geschätzt. Auch auf kollegialer Basis haben wir
+              schnell zu einer sehr positiven Ebene gefunden. &#x201C;<br />
+              <strong>Erwin Liauw ( Dipl. Grafikdesigner )</strong><br />
+              <a href="http://www.liauw-design.de">www.liauw-design.de</a>
+            </p>
+            <p><img src="Portrait-Bader.png" alt="Alexander Bader" /></p>
+            <p>
+              &#x201E; Herr Podolski erledigte seine Aufgaben mit großem Engagement und persönlichem Einsatz während
+              seiner gesamten Beschäftigungszeit an unserem Institut. [ ... ] Immer arbeitete Herr Podolski sehr zügig,
+              ergebnisorientiert und präzise. Er war in hohem Maße zuverlässig. [ ... ] Mit allen Ansprechpartnern kam
+              Herr Podolski gut zurecht und begegnete ihnen immer mit seiner freundlichen, zuvorkommenden Art. Dabei
+              wahrte er stets die Interessen des Instituts und zeigte eine hohe Integrität. Sein Verhalten gegenüber
+              Vorgesetzten, Kollegen und Externen war jederzeit einwandfrei. &#x201C;<br />
+              <strong>Alexander Bader ( Wissenschaftlicher Mitarbeiter )</strong><br />
+              <a href="http://www.bime.de">www.bime.de</a>
+            </p>
+          </div>
+        </section>
+        <section
+          class="tab-panel tab-panel-downloads tab-panel-closed"
+          data-tab="downloads"
+          id="downloads"
+          role="tabpanel"
+          aria-labelledby="tab-downloads"
+        >
+          <div class="tab-panel-wrapper">
+            <table>
+              <thead>
+                <tr>
+                  <th scope="col">Datei</th>
+                  <th scope="col">Geändert</th>
+                  <th scope="col">Größe</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    <a href="#" target="_blank">Zeugnisse.pdf</a>
+                  </td>
+                  <td>24. März 2021 17:07:00</td>
+                  <td>99 MB</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <a href="#tab-list" class="button-secondary">Zur Tabauswahl</a>
       </section>
-      <!-- <?php snippet('tabs/tabs') ?> -->
     </main>
 
     <footer class="landmark footer">
+      <a href="#skip-target" class="button-tertiary button-top"> Oben </a>
 
-      <a href="#skip-target" class="button-tertiary button-top">
-        Oben
-      </a>
+      <section class="contact-info">
+        <strong id="contactinfo-heading">Kontaktinformationen</strong>
 
-<section class="contact-info">
-
-  <span id="contactinfo-heading">
-    Kontaktinformationen
-  </span>
-
-  <ul class="contact-info-list" aria-labelledby="contactinfo-heading">
-
-    <li class="contact-info-list-item">
-      <strong class="contact">
-        <!-- <?= $contact ?> -->
-      </strong>
-
-      <ul class="contact-info-entry-list">
-            <li class="contact-info-entry-list-item">
-              <span class="contact-info-entry">
-                <!-- <?= $entry ?> -->
-              </span>
-            </li>
-
-        <li class="contact-info-list-item">
-          <strong class="contact">
-            <!-- <?= $contact ?> -->
-          </strong>
-
-          <li class="contact-info-entry-list-item">
-            <span class="contact-info-entry">
-              <!-- <?= $entry ?> -->
-            </span>
-            <!-- <?= kirbytext($data) ?> -->
+        <ul class="contact-info-list" aria-labelledby="contactinfo-heading">
+          <li class="contact-info-list-item">
+            <strong class="contact">Telefon</strong>
+            <ul class="contact-info-entry-list">
+              <li class="contact-info-entry-list-item">
+                <span class="contact-info-entry">Mobil</span>
+                <a href="#">0176 41 56 97 19</a>
+              </li>
+            </ul>
           </li>
+          <li class="contact-info-list-item">
+            <strong class="contact">E-Mail</strong>
+            <ul class="contact-info-entry-list">
+              <li class="contact-info-entry-list-item">
+                <span class="contact-info-entry">Privat</span>
+                <a href="#">malte.podolski@web.de</a>
+              </li>
+            </ul>
+          </li>
+          <li class="contact-info-list-item">
+            <strong class="contact">Social Media</strong>
+            <ul class="contact-info-entry-list">
+              <li class="contact-info-entry-list-item">
+                <span class="contact-info-entry">Behance</span>
+                {{icon-behance-white.svg}}
+                <a href="https://www.behance.net/m-podolski" target="_blank">behance.net/m-podolski</a>
+              </li>
+              <li class="contact-info-entry-list-item">
+                <span class="contact-info-entry">Github</span>
+                {{icon-github-white.svg}}
+                <a href="https://github.com/m-podolski" target="_blank">github.com/m-podolski</a>
+              </li>
+              <li class="contact-info-entry-list-item">
+                <span class="contact-info-entry">LinkedIn</span>
+                {{icon-linkedin-white.svg}}
+                <a href="https://www.linkedin.com/in/m-podolski" target="_blank">linkedin.com/in/m-podolski</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </section>
 
-      </ul>
-    </li>
-  </ul>
+      <section class="footer-nav">
+        <strong id="navigation-heading">Navigation</strong>
+        <nav aria-label="Weitere Seiten" class="nav-footer-sec">
+          <ul class="nav-footer-sec-list">
+            <li class="nav-item">
+              <a href="#">Impressum</a>
+            </li>
+            <li class="nav-item">
+              <a href="#">Datenschutz</a>
+            </li>
+          </ul>
+        </nav>
+      </section>
 
-</section>
+      <section id="contact" class="contact-form">
+        <strong id="contactform-heading">Kontaktformular</strong>
+        <!-- <?php snippet('forms/contactform') ?> -->
+      </section>
 
-<section class="footer-nav">
-
-  <span id="navigation-heading">
-    <?= $footer->navigation_heading()->kirbytext() ?>
-  </span>
-
-  <?php snippet('forms/login') ?>
-
-  <nav aria-label="<?= t("nav-sec") ?>" class="nav-footer-sec">
-
-  <?php if($footerMenu->isNotEmpty()): ?>
-    <ul class="nav-footer-sec-list">
-    <?php foreach($footerMenu as $page): ?>
-
-      <li class="nav-item">
-        <a href="<?= $page->url() ?>">
-          <?= $page->menu() ?>
-        </a>
-      </li>
-
-    <?php endforeach ?>
-    </ul>
-
-  <?php endif ?>
-
-  </nav>
-
-</section>
-
-<section id="contact" class="contact-form">
-
-  <span id="contactform-heading">
-    <?= $footer->contactform_heading()->kirbytext() ?>
-  </span>
-
-  <?php snippet('forms/contactform') ?>
-
-</section>
-
-<p class="footline"><?= $footer->footline() ?></p>
-
-<?php foreach($footer->files() as $file): ?>
-
-  <?php if(substr($file->filename(), 0, 4) === "icon"): ?>
-    <?= $file->read() ?>
-  <?php endif ?>
-
-<?php endforeach ?>
-
+      <p class="footline">&copy; 2020-2021 Malte Podolski</p>
     </footer>
   </body>
 </html>

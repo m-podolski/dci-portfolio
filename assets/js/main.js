@@ -9,5 +9,5 @@ import {
 } from './icon-iterator.js';
 
 initNav();
-// initTabs();
-// placeIcons();
+initTabs();
+placeIcons();

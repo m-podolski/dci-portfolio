@@ -1,11 +1,10 @@
-
 @use "./colours";
 
 .bubble-hero {
   position: absolute;
   top: 0;
   left: 0;
-  z-index: -1;
+  // z-index: -1;
   width: 75%;
 }
 
@@ -48,4 +47,3 @@
 .bub-sca-4 {
   fill: colours.$icon-fill;
 }
-
