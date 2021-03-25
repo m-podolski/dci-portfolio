@@ -1,0 +1,77 @@
+@use "./base"
+@use "./colours"
+
+$footer-breakpoint: 60em
+
+.footer
+  display: grid
+  row-gap: calc(#{base.$base} * 0.8)
+  @include base.font(400, normal, 0.6, body)
+  font-variant-numeric: lining-nums proportional-nums
+  color: colours.$content-running-text-bright
+  background: linear-gradient(260deg, colours.$site-bg, hsla(1, 1%, 1%, 0) 100%), linear-gradient(140deg, colours.$site-hero-light, hsla(1, 1%, 1%, 0) 100%), linear-gradient(380deg, colours.$site-hero-dark, hsla(1, 1%, 1%, 0) 100%)
+
+  @media screen and (min-width: $footer-breakpoint)
+    grid-template-columns: repeat(3, 1fr)
+    column-gap: calc(#{base.$base} * 0.8)
+
+  a:not([class]),
+  a:visited:not([class])
+    color: colours.$content-running-text-bright
+  a:hover:not([class]),
+  a:focus:not([class])
+    color: colours.$site-nav-ind
+  a:active:not([class])
+    color: colours.$content-sec-text-light
+
+.footer *:focus:not([class])
+  outline: calc(#{base.$base} * 0.1) dashed colours.$content-running-text-bright
+
+.footer strong
+  @include base.font(500, italic, 0.6, body)
+
+.footer > section
+  max-width: unset
+  margin: 1rem 0
+
+.footer .button-top,
+.footer .footline
+  margin: 0 auto
+  @media screen and (min-width: $footer-breakpoint)
+    grid-column: 1 / 4
+
+.footer .contact-info li
+  list-style-type: none
+
+.footer ul
+  padding: unset
+
+.footer .contact-info-list-item
+  display: grid
+  grid-template-columns: 1fr 3fr
+  column-gap: calc(#{base.$base} * 0.4)
+
+.footer .contact-info-entry-list
+  margin: 0 0 calc(#{base.$base} * 0.4) 0
+  padding: unset
+
+  &-item
+    display: flex
+    flex-flow: row wrap
+
+.footer .contact-info-entry
+  flex: 0 1 auto
+  width: calc(#{base.$base} * 2.4)
+  color: colours.$content-extra-light
+
+.footer .icon-container
+  flex: 0 1 0
+  display: inline
+  margin: 0 calc(#{base.$base} * 0.2) 0 0
+
+.footer .contact-info-entry-list-item p
+  margin: 0 0 calc(#{base.$base} * 0.4) 0
+
+.footer .icon
+  margin: calc(#{base.$base} * -0.1) 0 0 0
+  width: calc(#{base.$base} * 0.8)

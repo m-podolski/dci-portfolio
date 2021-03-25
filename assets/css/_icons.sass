@@ -1,0 +1,468 @@
+@use "./base"
+@use "./colours"
+
+$icon-stroke-width: 20px
+$icon-stroke-width-thick: 36px
+$icon-stroke-width-ben: 12px
+
+$bp-icons: base.$bp-icons
+
+.icon
+  width: 100%
+
+  &-background
+    fill: colours.$content-super-light
+
+.app-info-1
+  fill: colours.$content-super-light
+
+.app-info-2
+  fill: none
+  stroke: colours.$icon-light
+
+.app-info-2,
+.app-info-3
+  stroke-linecap: round
+  stroke-linejoin: round
+  stroke-width: $icon-stroke-width
+
+  &
+    fill: colours.$icon-fill
+    stroke: colours.$icon-dark
+
+.app-cert-1
+  fill: colours.$content-super-light
+
+.app-cert-2,
+.app-cert-3,
+.app-cert-4
+  fill: colours.$icon-fill
+  stroke-width: $icon-stroke-width
+
+.app-cert-2
+  stroke: colours.$icon-dark
+
+.app-cert-2,
+.app-cert-3
+  stroke-linecap: round
+  stroke-linejoin: round
+
+.app-cert-3,
+.app-cert-4
+  stroke: colours.$icon-light
+
+  &
+    stroke-miterlimit: 10
+
+.app-cv-1
+  fill: colours.$content-super-light
+
+.app-cv-2,
+.app-cv-3
+  fill: colours.$icon-fill
+
+.app-cv-3,
+.app-cv-5
+  stroke: colours.$icon-light
+
+.app-cv-3,
+.app-cv-4,
+.app-cv-5
+  stroke-linecap: round
+  stroke-linejoin: round
+  stroke-width: $icon-stroke-width
+
+.app-cv-4
+  fill: none
+  stroke: colours.$icon-dark
+
+.app-kno-1
+  fill: colours.$content-super-light
+
+.app-kno-2
+  fill: colours.$icon-fill
+
+.app-kno-2,
+.app-kno-5
+  stroke: colours.$icon-dark
+
+.app-kno-2,
+.app-kno-3,
+.app-kno-4,
+.app-kno-5
+  stroke-linecap: round
+  stroke-linejoin: round
+  stroke-width: $icon-stroke-width
+
+.app-kno-3
+  fill: none
+
+.app-kno-3,
+.app-kno-4
+  stroke: colours.$icon-light
+
+.app-por-1
+  fill: colours.$content-super-light
+
+.app-por-2,
+.app-por-3
+  fill: colours.$icon-fill
+  stroke-linecap: round
+  stroke-linejoin: round
+  stroke-width: $icon-stroke-width
+
+.app-por-2
+  stroke: colours.$icon-dark
+
+.app-por-3
+  stroke: colours.$icon-light
+
+.app-ref-1
+  fill: colours.$content-super-light
+
+.app-ref-2,
+.app-ref-3
+  fill: colours.$icon-fill
+  stroke-linecap: round
+  stroke-linejoin: round
+  stroke-width: $icon-stroke-width
+
+.app-ref-2
+  stroke: colours.$icon-light
+
+.app-ref-3
+  stroke: colours.$icon-dark
+
+.ben-1,
+.ben-2
+  fill: colours.$icon-fill
+  stroke: colours.$icon-light
+
+.ben-1,
+.ben-3
+  stroke-linecap: round
+  stroke-linejoin: round
+
+.ben-1,
+.ben-2,
+.ben-3
+  stroke-width: $icon-stroke-width-ben
+
+.ben-2
+  stroke-miterlimit: 10
+
+.ben-3
+  fill: colours.$icon-light
+  stroke: colours.$icon-dark
+
+.gra-1
+  fill: colours.$content-super-light
+
+.gra-2,
+.gra-5
+  fill: colours.$icon-fill
+
+.gra-3,
+.gra-4
+  fill: none
+
+.gra-3
+  stroke: colours.$icon-light
+
+.gra-3,
+.gra-4,
+.gra-5
+  stroke-linecap: round
+  stroke-linejoin: round
+  stroke-width: $icon-stroke-width
+
+.gra-4,
+.gra-5
+  stroke: colours.$icon-dark
+
+.web-1
+  fill: colours.$content-super-light
+
+.web-2,
+.web-4
+  fill: none
+
+.web-2,
+.web-3
+  stroke: colours.$icon-dark
+
+.web-2,
+.web-3,
+.web-4,
+.web-5
+  stroke-linecap: round
+  stroke-linejoin: round
+  stroke-width: $icon-stroke-width
+
+.web-3,
+.web-5
+  fill: colours.$icon-fill
+
+.web-4,
+.web-5
+  stroke: colours.$icon-light
+
+.gra-con-1
+  fill: colours.$content-super-light
+
+.gra-con-2,
+.gra-con-3
+  fill: colours.$icon-fill
+  stroke-linecap: round
+  stroke-linejoin: round
+  stroke-width: $icon-stroke-width
+
+.gra-con-2
+  stroke: colours.$icon-dark
+
+.gra-con-3
+  stroke: colours.$icon-light
+
+.gra-ill-1
+  fill: colours.$content-super-light
+
+.gra-ill-2,
+.gra-ill-6,
+.gra-ill-7
+  fill: colours.$icon-fill
+
+.gra-ill-3,
+.gra-ill-4,
+.gra-ill-5
+  fill: none
+
+.gra-ill-3,
+.gra-ill-7
+  stroke: colours.$icon-light
+
+.gra-ill-3,
+.gra-ill-5
+  stroke-miterlimit: 10
+
+.gra-ill-3,
+.gra-ill-4,
+.gra-ill-5,
+.gra-ill-6,
+.gra-ill-7
+  stroke-width: $icon-stroke-width
+
+.gra-ill-4,
+.gra-ill-5,
+.gra-ill-6
+  stroke: colours.$icon-dark
+
+.gra-ill-4,
+.gra-ill-6,
+.gra-ill-7
+  stroke-linecap: round
+  stroke-linejoin: round
+
+.gra-ima-1
+  fill: colours.$content-super-light
+
+.gra-ima-2,
+.gra-ima-3
+  fill: colours.$icon-fill
+
+.gra-ima-2,
+.gra-ima-4
+  stroke: colours.$icon-dark
+
+.gra-ima-2,
+.gra-ima-3,
+.gra-ima-6
+  stroke-linecap: round
+  stroke-linejoin: round
+
+.gra-ima-2,
+.gra-ima-3,
+.gra-ima-4,
+.gra-ima-5,
+.gra-ima-6
+  stroke-width: $icon-stroke-width
+
+.gra-ima-3,
+.gra-ima-5,
+.gra-ima-6
+  stroke: colours.$icon-light
+
+.gra-ima-4,
+.gra-ima-5,
+.gra-ima-6
+  fill: none
+
+.gra-ima-4,
+.gra-ima-5
+  stroke-miterlimit: 10
+
+.gra-pri-1
+  fill: colours.$content-super-light
+
+.gra-pri-2,
+.gra-pri-3
+  fill: colours.$icon-fill
+
+.gra-pri-2
+  stroke: colours.$icon-dark
+
+.gra-pri-2,
+.gra-pri-3,
+.gra-pri-4
+  stroke-linecap: round
+  stroke-linejoin: round
+  stroke-width: $icon-stroke-width
+
+.gra-pri-3,
+.gra-pri-4
+  stroke: colours.$icon-light
+
+  &
+    fill: none
+
+.gra-typ-1
+  fill: colours.$content-super-light
+
+.gra-typ-2,
+.gra-typ-3
+  fill: colours.$icon-fill
+  stroke-linecap: round
+  stroke-linejoin: round
+  stroke-width: $icon-stroke-width
+
+.gra-typ-2
+  stroke: colours.$icon-dark
+
+.web-bac-1
+  fill: colours.$content-super-light
+
+.web-bac-2
+  fill: colours.$icon-fill
+
+.web-bac-2,
+.web-bac-3
+  stroke: colours.$icon-dark
+
+.web-bac-2,
+.web-bac-3,
+.web-bac-4
+  stroke-linecap: round
+  stroke-linejoin: round
+  stroke-width: $icon-stroke-width
+
+.web-bac-3,
+.web-bac-4
+  fill: none
+
+  &
+    stroke: colours.$icon-light
+
+.web-con-1
+  fill: colours.$content-super-light
+
+.web-con-2,
+.web-con-5
+  fill: colours.$icon-fill
+
+.web-con-2,
+.web-con-4
+  stroke: colours.$icon-dark
+
+.web-con-2,
+.web-con-3,
+.web-con-4,
+.web-con-5
+  stroke-linecap: round
+  stroke-linejoin: round
+  stroke-width: $icon-stroke-width
+
+.web-con-3,
+.web-con-4
+  fill: none
+
+.web-con-3,
+.web-con-5
+  stroke: colours.$icon-light
+
+.web-fro-1
+  fill: colours.$content-super-light
+
+.web-fro-2,
+.web-fro-3
+  fill: colours.$icon-fill
+
+.web-fro-2,
+.web-fro-5
+  stroke: colours.$icon-light
+
+.web-fro-2,
+.web-fro-3,
+.web-fro-6
+  stroke-linecap: round
+  stroke-linejoin: round
+
+.web-fro-2,
+.web-fro-3,
+.web-fro-4,
+.web-fro-5,
+.web-fro-6
+  stroke-width: $icon-stroke-width
+
+.web-fro-3,
+.web-fro-4,
+.web-fro-6
+  stroke: colours.$icon-dark
+
+.web-fro-4,
+.web-fro-5,
+.web-fro-6
+  fill: none
+
+.web-fro-4,
+.web-fro-5
+  stroke-miterlimit: 10
+
+.web-mai-1
+  fill: colours.$content-super-light
+
+.web-mai-2
+  fill: none
+  stroke-width: $icon-stroke-width-thick
+
+.web-mai-2,
+.web-mai-3
+  stroke: colours.$icon-dark
+
+.web-mai-2,
+.web-mai-3,
+.web-mai-4
+  stroke-linecap: round
+  stroke-linejoin: round
+
+.web-mai-3,
+.web-mai-4
+  fill: colours.$icon-fill
+  stroke-width: $icon-stroke-width
+
+  &
+    stroke: colours.$icon-light
+
+.web-seo-1
+  fill: colours.$content-super-light
+
+.web-seo-2,
+.web-seo-3
+  fill: colours.$icon-fill
+  stroke-linecap: round
+  stroke-linejoin: round
+  stroke-width: $icon-stroke-width
+
+.web-seo-2
+  stroke: colours.$icon-dark
+
+.web-seo-3
+  stroke: colours.$icon-light
