@@ -7,11 +7,11 @@ $viewfactor: 1.5vmin
 $leadingDisp: 1
 $viewfactorDisp: $viewfactor * 0.5
 
-$base: calc((#{$fontbase} + #{$viewfactor}) * #{$leading})
+$unit: calc((#{$fontbase} + #{$viewfactor}) * #{$leading})
 
 @function raster($scale)
   $factor: $scale * 0.3
-  @return calc(#{$base} * #{$factor})
+  @return calc(#{$unit} * #{$factor})
 
 @function window($scale)
   @return calc(#{$viewfactor} * #{$scale})
@@ -223,6 +223,12 @@ img
   display: block
   width: 100%
   height: auto
+
+.profile-img
+  clip-path: circle(43%)
+  width: 15rem
+  float: left
+  margin-left: 0
 
 ol,
 ul,

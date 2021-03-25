@@ -1,37 +1,33 @@
 @use "./base"
 @use "./colours"
 
-$tabs-max-width: calc(#{base.$base} * 28)
-$tabs-breakpoint: 45em
+$bp-tabs: 45em
 
 .tab-list
   @extend %content
-  max-width: $tabs-max-width
+  max-width: base.$content-max-width
   margin: 0 auto
   padding-left: unset
-
-  @media screen and (min-width: $tabs-breakpoint)
+  @media screen and (min-width: $bp-tabs)
     display: flex
     flex-flow: row wrap
-    margin: calc(#{base.$base} * 0.4) auto
+    margin: base.raster(1) auto
     border-radius: base.$roundness
 
 .tab-list-item
-  margin: calc(#{base.$base} * 0.4) auto
+  margin: base.raster(1) auto
   border-radius: base.$roundness
   background: colours.$content-extra-light
   list-style: none
+  @media screen and (min-width: $bp-tabs)
+    flex: 1 1 auto
+    margin: base.raster(0.5)
   &:hover,
   &:focus
     background: colours.$content-sec-text-light
-
   &:hover *,
   &:focus *
     color: colours.$content-sec-text-dark
-
-  @media screen and (min-width: $tabs-breakpoint)
-    flex: 1 1 auto
-    margin: calc(#{base.$base} * 0.2)
 
 .tab-list-item-open
   background: colours.$content-light
@@ -42,25 +38,22 @@ $tabs-breakpoint: 45em
 .tab
   display: grid
   grid-template-columns: 2fr 3fr
-  column-gap: calc(#{base.$base} * 0.4)
-  padding: calc(#{base.$base} * 0.4)
+  column-gap: base.raster(1)
+  padding: base.raster(1)
   color: colours.$site-btn-pri
+  @media screen and (min-width: $bp-tabs)
+    display: flex
+    flex-flow: column wrap
+    justify-items: center
   &:link,
   &:visited
     text-decoration: unset
     color: colours.$site-btn-pri
-
   &:hover,
   &:focus
     outline: none
-
   &:active
     font-style: italic
-
-  @media screen and (min-width: $tabs-breakpoint)
-    display: flex
-    flex-flow: column wrap
-    justify-items: center
 
 .tab .icon-container
   justify-self: center
@@ -71,41 +64,37 @@ $tabs-breakpoint: 45em
 
 .tab .icon
   align-self: center
-  width: calc(#{base.$base} * 2.4)
-
-  @media screen and (min-width: $tabs-breakpoint)
-    width: calc(#{base.$base} * 1.8)
+  width: base.raster(6)
+  @media screen and (min-width: $bp-tabs)
+    width: base.raster(3)
 
 .tab h2
   align-self: center
   padding: unset
   text-align: left
   @include base.font(800, normal, 1.1, body)
-
-  @media screen and (min-width: $tabs-breakpoint)
-    padding: calc(#{base.$base} * 0.2) 0 0 0
+  @media screen and (min-width: $bp-tabs)
+    padding: base.raster(0.5) 0 0 0
     @include base.font(800, normal, 0.9, body)
 
 .tab-panel
   display: flex
   flex-flow: column wrap
   align-items: center
-  max-width: $tabs-max-width
-  padding: calc(#{base.$base} * 0.4)
-  margin: calc(#{base.$base} * 0.2) auto
+  max-width: base.$content-max-width
+  padding: base.raster(1)
+  margin: base.raster(0.5) auto
   border-radius: base.$roundness
   background: colours.$content-bg-sec
-
   &-closed
     display: none
-
   &-wrapper
     @extend %content
     width: 100%
 
 .button-tabs-top
   @extend %button
-  margin: calc(#{base.$base} * 0.4) auto
+  margin: base.raster(1) auto
 
 .tab-panel p
   margin-top: unset
@@ -113,8 +102,7 @@ $tabs-breakpoint: 45em
 .tab-panel ul,
 .tab-panel ol
   list-style-position: inside
-
-  @media screen and (min-width: $tabs-breakpoint)
+  @media screen and (min-width: $bp-tabs)
     list-style-position: outside
 
 .tab-panel-info dl,
@@ -123,38 +111,34 @@ $tabs-breakpoint: 45em
 .tab-panel-portfolio .tab-panel-wrapper,
 .tab-panel-references .tab-panel-wrapper
   display: grid
-
-  @media screen and (min-width: $tabs-breakpoint)
+  @media screen and (min-width: $bp-tabs)
     grid-template-columns: 20% 1fr
-    column-gap: calc(#{base.$base} * 0.4)
+    column-gap: base.raster(1)
 
 .tab-panel-portfolio .tab-panel-wrapper,
 .tab-panel-references .tab-panel-wrapper
   grid-auto-flow: row
-
-  @media screen and (min-width: $tabs-breakpoint)
+  @media screen and (min-width: $bp-tabs)
     grid-auto-flow: column
 
 .tab-panel dd,
 .tab-panel-portfolio p,
 .tab-panel-references p
-  padding: 0 0 calc(#{base.$base} * 0.8) 0
-
-  @media screen and (min-width: $tabs-breakpoint)
+  padding: 0 0 base.raster(2) 0
+  @media screen and (min-width: $bp-tabs)
     grid-column: 2 / 3
 
 .tab-panel-portfolio .tab-panel-image,
 .tab-panel-references .tab-panel-image
   width: 50%
-  margin: calc(#{base.$base} * 0.8) auto
-
-  @media screen and (min-width: $tabs-breakpoint)
+  margin: base.raster(2) auto
+  @media screen and (min-width: $bp-tabs)
     grid-column: 1 / 2
     width: 100%
     margin: unset
 
 .tab-panel ul ul
-  padding: 0 0 0 calc(#{base.$base} * 0.8)
+  padding: 0 0 0 base.raster(2)
   color: colours.$content-running-text-light
 
 .tab-panel table
@@ -173,7 +157,7 @@ $tabs-breakpoint: 45em
   width: 20%
 
 .tab-panel th
-  padding: calc(#{base.$base} * 0.2)
+  padding: base.raster(0.5)
   background: colours.$site-page-bg
   text-align: left
 
@@ -181,11 +165,11 @@ $tabs-breakpoint: 45em
   background: colours.$site-page-bg
 
 .tab-panel td
-  padding: calc(#{base.$base} * 0.2)
+  padding: base.raster(0.5)
 
 .tab-panel-working-method .content-h3
-  padding: calc(#{base.$base} * 0.4)
-  margin: calc(#{base.$base} * 0.4) auto
+  padding: base.raster(1)
+  margin: base.raster(1) auto
   border-radius: base.$roundness
   background: colours.$content-bg-sec
 
@@ -193,36 +177,36 @@ $tabs-breakpoint: 45em
   text-align: center
 
 .tab-panel-working-method .content-h3 > dl
-  @media screen and (min-width: $tabs-breakpoint)
+  @media screen and (min-width: $bp-tabs)
     display: grid
     grid-template-columns: 15% 1fr
-    column-gap: calc(#{base.$base} * 0.4)
+    column-gap: base.raster(1)
 
 .tab-panel-working-method .content-h3 > dl > dt
   text-align: center
 
-  @media screen and (min-width: $tabs-breakpoint)
+  @media screen and (min-width: $bp-tabs)
     text-align: unset
 
 .tab-panel-working-method .content-h3 > dl > dd
-  @media screen and (min-width: $tabs-breakpoint)
+  @media screen and (min-width: $bp-tabs)
     grid-column: 2 / 3
 
 .tab-panel-working-method .content-h4
-  margin: calc(#{base.$base} * 0.4) auto
+  margin: base.raster(1) auto
   border-radius: base.$roundness
 
-  @media screen and (min-width: $tabs-breakpoint)
-    padding: calc(#{base.$base} * 0.4)
+  @media screen and (min-width: $bp-tabs)
+    padding: base.raster(1)
     background: colours.$content-bg-text
 
 .tab-panel-working-method .icon-container
   display: flex
   justify-content: space-around
-  width: calc(#{base.$base} * 3.5)
-  margin: calc(#{base.$base} * 1.4) auto calc(#{base.$base} * 0.7) auto
+  width: base.raster(8)
+  margin: base.raster(3) auto base.raster(2) auto
 
-  @media screen and (min-width: $tabs-breakpoint)
+  @media screen and (min-width: $bp-tabs)
     grid-row: span 2
     align-self: start
     justify-content: flex-end
@@ -230,7 +214,7 @@ $tabs-breakpoint: 45em
     margin: unset
 
 .tab-panel-working-method .icon-benefits
-  width: calc(#{base.$base} * 2.1)
+  width: base.raster(5)
 
-  @media screen and (min-width: $tabs-breakpoint)
-    width: calc(#{base.$base} * 1.4)
+  @media screen and (min-width: $bp-tabs)
+    width: base.raster(3)

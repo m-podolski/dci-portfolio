@@ -5,7 +5,7 @@ $footer-breakpoint: 60em
 
 .footer
   display: grid
-  row-gap: calc(#{base.$base} * 0.8)
+  row-gap: calc(#{base.$unit} * 0.8)
   @include base.font(400, normal, 0.6, body)
   font-variant-numeric: lining-nums proportional-nums
   color: colours.$content-running-text-bright
@@ -13,7 +13,7 @@ $footer-breakpoint: 60em
 
   @media screen and (min-width: $footer-breakpoint)
     grid-template-columns: repeat(3, 1fr)
-    column-gap: calc(#{base.$base} * 0.8)
+    column-gap: calc(#{base.$unit} * 0.8)
 
   a:not([class]),
   a:visited:not([class])
@@ -25,7 +25,7 @@ $footer-breakpoint: 60em
     color: colours.$content-sec-text-light
 
 .footer *:focus:not([class])
-  outline: calc(#{base.$base} * 0.1) dashed colours.$content-running-text-bright
+  outline: calc(#{base.$unit} * 0.1) dashed colours.$content-running-text-bright
 
 .footer strong
   @include base.font(500, italic, 0.6, body)
@@ -49,10 +49,10 @@ $footer-breakpoint: 60em
 .footer .contact-info-list-item
   display: grid
   grid-template-columns: 1fr 3fr
-  column-gap: calc(#{base.$base} * 0.4)
+  column-gap: calc(#{base.$unit} * 0.4)
 
 .footer .contact-info-entry-list
-  margin: 0 0 calc(#{base.$base} * 0.4) 0
+  margin: 0 0 calc(#{base.$unit} * 0.4) 0
   padding: unset
 
   &-item
@@ -61,17 +61,17 @@ $footer-breakpoint: 60em
 
 .footer .contact-info-entry
   flex: 0 1 auto
-  width: calc(#{base.$base} * 2.4)
+  width: calc(#{base.$unit} * 2.4)
   color: colours.$content-extra-light
 
 .footer .icon-container
   flex: 0 1 0
   display: inline
-  margin: 0 calc(#{base.$base} * 0.2) 0 0
+  margin: 0 calc(#{base.$unit} * 0.2) 0 0
 
 .footer .contact-info-entry-list-item p
-  margin: 0 0 calc(#{base.$base} * 0.4) 0
+  margin: 0 0 calc(#{base.$unit} * 0.4) 0
 
 .footer .icon
-  margin: calc(#{base.$base} * -0.1) 0 0 0
-  width: calc(#{base.$base} * 0.8)
+  margin: calc(#{base.$unit} * -0.1) 0 0 0
+  width: calc(#{base.$unit} * 0.8)
