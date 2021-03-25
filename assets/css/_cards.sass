@@ -1,0 +1,97 @@
+@use "../base/base";
+@use "../base/colours";
+
+$cards-breakpoint-1: 40em;
+$cards-breakpoint-2: 60em;
+$cards-breakpoint-3: 90em;
+$cards-breakpoint-4: 130em;
+
+// Formula for setting the sizes-attribute of the img-tag in "cards.html.twig":
+// .landmark -> padding-w: calc( [$viewfactor:1.5vmin] * 3 );
+// $unit -> calc(( [$fontbase:1.2rem] + [$viewfactor:1.5vmin]) * [$leading:1.4] );
+// row-gap -> calc( [$unit:] * 0.5 )
+// .card-img:hov/foc/act -> transform: scale(1.5)
+// (min-width: 40em) calc( ( (100vw - 9vmin) - ((1.2rem + 1.5vmin) * 2.8) / 5 ) * 1.5 )
+// (min-width: 60em) calc( ( (100vw - 9vmin) - ((1.2rem + 1.5vmin) * 2.1) / 4 ) * 1.5 )
+// (min-width: 90em) calc( ( (100vw - 9vmin) - ((1.2rem + 1.5vmin) * 1.4) / 3 ) * 1.5 )
+// (min-width: 130em) calc( ( (100vw - 9vmin) - ((1.2rem + 1.5vmin) * 0.7) / 2 ) * 1.5 )
+// calc( (100vw - 9vmin) * 1.5 )
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  column-gap: calc(#{base.$unit} * 0.4);
+  row-gap: calc(#{base.$unit} * 0.4);
+  padding-left: unset;
+
+  @media screen and (min-width: $cards-breakpoint-1) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @media screen and (min-width: $cards-breakpoint-2) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  @media screen and (min-width: $cards-breakpoint-3) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  @media screen and (min-width: $cards-breakpoint-4) {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+
+.card {
+  background: colours.$content-super-light;
+  border-radius: base.$roundness;
+  transition: all base.$contentTrans ease-in-out;
+  display: inline;
+  list-style-type: none;
+  &:hover,
+  &:focus {
+    transform: scale(1.025);
+    background: colours.$content-light;
+  }
+  &:active {
+    background: colours.$site-nav-ind;
+  }
+  &:hover > *,
+  &:focus > *,
+  &:active > * {
+    color: colours.$content-text-extra-dark;
+  }
+  &:hover .card-img,
+  &:focus .card-img,
+  &:active .card-img {
+    transform: scale(1.5);
+  }
+}
+
+.card-hidden {
+  display: none;
+}
+
+.card a,
+.card a:visited {
+  text-decoration: none;
+}
+
+.card-img-container {
+  overflow: hidden;
+  border-radius: base.$roundness base.$roundness 0 0;
+}
+
+.card-img {
+  transition: transform base.$contentTrans ease-in-out;
+}
+
+.card-title {
+  display: block;
+  padding: calc(#{base.$unit} * 0.4);
+  @include base.font(800, normal, 0.8, body);
+  color: colours.$content-running-text;
+}
+
+.card-summary {
+  margin: unset;
+  padding: 0 calc(#{base.$unit} * 0.4) calc(#{base.$unit} * 0.4) calc(#{base.$unit} * 0.4);
+  @include base.font(400, normal, 0.7, body);
+  color: colours.$content-running-text;
+}
