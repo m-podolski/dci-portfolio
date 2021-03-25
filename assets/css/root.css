@@ -452,6 +452,95 @@ hr {
   fill: white;
 }
 
+.cards {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: calc(calc((1rem + 1.5vmin) * 1.5) * 0.3);
+  padding-left: unset;
+}
+
+@media screen and (min-width: 50em) {
+  .cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (min-width: 70em) {
+  .cards {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media screen and (min-width: 100em) {
+  .cards {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media screen and (min-width: 140em) {
+  .cards {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+
+.card {
+  background: #e6edff;
+  border-radius: calc(calc((1rem + 1.5vmin) * 1.5) * 0.3);
+  transition: all 0.2s ease-in-out;
+  display: inline;
+  list-style-type: none;
+}
+.card-hidden {
+  display: none;
+}
+.card:hover, .card:focus {
+  transform: scale(1.025);
+  background: #b3c9ff;
+}
+.card:active {
+  background: aqua;
+}
+.card:hover > *, .card:focus > *, .card:active > * {
+  color: #0036b3;
+}
+.card:hover .card-img-img, .card:focus .card-img-img, .card:active-img {
+  transform: scale(1.5);
+}
+
+.card a,
+.card a:visited {
+  text-decoration: none;
+}
+
+.card-img-container {
+  overflow: hidden;
+  border-radius: calc(calc((1rem + 1.5vmin) * 1.5) * 0.3) calc(calc((1rem + 1.5vmin) * 1.5) * 0.3) 0 0;
+}
+
+.card-img {
+  transition: transform 0.2s ease-in-out;
+}
+
+.card-title {
+  display: block;
+  padding: calc(calc((1rem + 1.5vmin) * 1.5) * 0.3);
+  font-weight: 800;
+  font-style: normal;
+  font-size: calc((1rem + 1.5vmin) * 0.7);
+  line-height: calc(((1rem + 1.5vmin) * 1.5) * 0.7);
+  color: #002270;
+}
+
+.card-summary {
+  margin: unset;
+  padding: 0 calc(calc((1rem + 1.5vmin) * 1.5) * 0.3) calc(calc((1rem + 1.5vmin) * 1.5) * 0.3) calc(calc((1rem + 1.5vmin) * 1.5) * 0.3);
+  font-weight: 400;
+  font-style: normal;
+  font-size: calc((1rem + 1.5vmin) * 0.6);
+  line-height: calc(((1rem + 1.5vmin) * 1.5) * 0.6);
+  color: #002270;
+}
+
 .footer {
   display: grid;
   row-gap: calc(calc((1rem + 1.5vmin) * 1.5) * 0.8);
