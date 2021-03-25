@@ -1,50 +1,77 @@
 @use "./base"
 @use "./colours"
 
-$bp-tabs: 45em
+$bp-tabs-1: 30em
+$bp-tabs-2: 45em
+$icon-width: base.raster(8)
 
 .tab-list
   @extend %content
   max-width: base.$content-max-width
   margin: 0 auto
   padding-left: unset
-  @media screen and (min-width: $bp-tabs)
+  @media screen and (min-width: $bp-tabs-1)
     display: flex
     flex-flow: row wrap
-    margin: base.raster(1) auto
-    border-radius: base.$roundness
+  @media screen and (min-width: $bp-tabs-2)
+    display: flex
+    flex-flow: row nowrap
 
 .tab-list-item
-  margin: base.raster(1) auto
-  border-radius: base.$roundness
   background: colours.$content-extra-light
   list-style: none
-  @media screen and (min-width: $bp-tabs)
+  @media screen and (min-width: $bp-tabs-1)
+    flex: 0 1 50%
+  @media screen and (min-width: $bp-tabs-2)
     flex: 1 1 auto
-    margin: base.raster(0.5)
   &:hover,
   &:focus
     background: colours.$content-sec-text-light
   &:hover *,
   &:focus *
     color: colours.$content-sec-text-dark
+  &:first-child
+    border-radius: base.$roundness base.$roundness 0 0
+  &:last-child
+    border-radius: 0 0 base.$roundness base.$roundness
+
+@media screen and (min-width: $bp-tabs-1)
+  .tab-list-item
+    &:first-child
+      border-radius: base.$roundness 0 0 0
+    &:nth-child(2)
+      border-radius: 0 base.$roundness 0 0
+    &:nth-child(5)
+      border-radius: 0 0 0 base.$roundness
+    &:last-child
+      border-radius: 0 0 base.$roundness 0
+
+@media screen and (min-width: $bp-tabs-2)
+  .tab-list-item
+    &:first-child
+      border-radius: base.$roundness 0 0 base.$roundness
+    &:nth-child(2)
+      border-radius: unset
+    &:nth-child(5)
+      border-radius: unset
+    &:last-child
+      border-radius: 0 base.$roundness base.$roundness 0
 
 .tab-list-item-open
   background: colours.$content-light
-
   & h2
     color: colours.$content-text-dark
 
 .tab
-  display: grid
-  grid-template-columns: 2fr 3fr
-  column-gap: base.raster(1)
-  padding: base.raster(1)
+  display: flex
+  gap: base.raster(2)
+  padding: base.raster(0.5) base.raster(1) base.raster(0.5) base.raster(2)
   color: colours.$site-btn-pri
-  @media screen and (min-width: $bp-tabs)
-    display: flex
+  @media screen and (min-width: $bp-tabs-2)
     flex-flow: column wrap
     justify-items: center
+    gap: base.raster(1)
+    padding: base.raster(1)
   &:link,
   &:visited
     text-decoration: unset
@@ -64,26 +91,23 @@ $bp-tabs: 45em
 
 .tab .icon
   align-self: center
-  width: base.raster(6)
-  @media screen and (min-width: $bp-tabs)
-    width: base.raster(3)
+  width: base.raster(5)
+  @media screen and (min-width: $bp-tabs-2)
+    width: base.raster(6)
 
 .tab h2
   align-self: center
   padding: unset
   text-align: left
-  @include base.font(800, normal, 1.1, body)
-  @media screen and (min-width: $bp-tabs)
-    padding: base.raster(0.5) 0 0 0
-    @include base.font(800, normal, 0.9, body)
+  @include base.font(800, normal, 0.7, body)
 
 .tab-panel
   display: flex
   flex-flow: column wrap
   align-items: center
   max-width: base.$content-max-width
+  margin: base.raster(1) auto
   padding: base.raster(1)
-  margin: base.raster(0.5) auto
   border-radius: base.$roundness
   background: colours.$content-bg-sec
   &-closed
@@ -102,7 +126,7 @@ $bp-tabs: 45em
 .tab-panel ul,
 .tab-panel ol
   list-style-position: inside
-  @media screen and (min-width: $bp-tabs)
+  @media screen and (min-width: $bp-tabs-2)
     list-style-position: outside
 
 .tab-panel-info dl,
@@ -111,28 +135,28 @@ $bp-tabs: 45em
 .tab-panel-portfolio .tab-panel-wrapper,
 .tab-panel-references .tab-panel-wrapper
   display: grid
-  @media screen and (min-width: $bp-tabs)
+  @media screen and (min-width: $bp-tabs-2)
     grid-template-columns: 20% 1fr
     column-gap: base.raster(1)
 
 .tab-panel-portfolio .tab-panel-wrapper,
 .tab-panel-references .tab-panel-wrapper
   grid-auto-flow: row
-  @media screen and (min-width: $bp-tabs)
+  @media screen and (min-width: $bp-tabs-2)
     grid-auto-flow: column
 
 .tab-panel dd,
 .tab-panel-portfolio p,
 .tab-panel-references p
   padding: 0 0 base.raster(2) 0
-  @media screen and (min-width: $bp-tabs)
+  @media screen and (min-width: $bp-tabs-2)
     grid-column: 2 / 3
 
 .tab-panel-portfolio .tab-panel-image,
 .tab-panel-references .tab-panel-image
   width: 50%
   margin: base.raster(2) auto
-  @media screen and (min-width: $bp-tabs)
+  @media screen and (min-width: $bp-tabs-2)
     grid-column: 1 / 2
     width: 100%
     margin: unset
@@ -167,6 +191,8 @@ $bp-tabs: 45em
 .tab-panel td
   padding: base.raster(0.5)
 
+// Page specific styles
+
 .tab-panel-working-method .content-h3
   padding: base.raster(1)
   margin: base.raster(1) auto
@@ -177,33 +203,33 @@ $bp-tabs: 45em
   text-align: center
 
 .tab-panel-working-method .content-h3 > dl
-  @media screen and (min-width: $bp-tabs)
+  @media screen and (min-width: $bp-tabs-2)
     display: grid
     grid-template-columns: 15% 1fr
     column-gap: base.raster(1)
 
 .tab-panel-working-method .content-h3 > dl > dt
   text-align: center
-  @media screen and (min-width: $bp-tabs)
+  @media screen and (min-width: $bp-tabs-2)
     text-align: unset
 
 .tab-panel-working-method .content-h3 > dl > dd
-  @media screen and (min-width: $bp-tabs)
+  @media screen and (min-width: $bp-tabs-2)
     grid-column: 2 / 3
 
 .tab-panel-working-method .content-h4
   margin: base.raster(1) auto
   border-radius: base.$roundness
-  @media screen and (min-width: $bp-tabs)
+  @media screen and (min-width: $bp-tabs-2)
     padding: base.raster(1)
     background: colours.$content-bg-text
 
 .tab-panel-working-method .icon-container
   display: flex
   justify-content: space-around
-  width: base.raster(8)
+  width: base.raster(2)
   margin: base.raster(3) auto base.raster(2) auto
-  @media screen and (min-width: $bp-tabs)
+  @media screen and (min-width: $bp-tabs-2)
     grid-row: span 2
     align-self: start
     justify-content: flex-end
@@ -212,5 +238,5 @@ $bp-tabs: 45em
 
 .tab-panel-working-method .icon-benefits
   width: base.raster(5)
-  @media screen and (min-width: $bp-tabs)
+  @media screen and (min-width: $bp-tabs-2)
     width: base.raster(3)

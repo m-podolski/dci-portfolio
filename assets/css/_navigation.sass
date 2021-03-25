@@ -48,20 +48,17 @@ $nav-breakpoint: 45em
   padding: unset
   background: linear-gradient(260deg, colours.$site-bg, hsla(1, 1%, 1%, 0) 100%), linear-gradient(140deg, colours.$site-hero-light, hsla(1, 1%, 1%, 0) 100%), linear-gradient(380deg, colours.$site-hero-dark, colours.$site-hero-light 100%)
   box-shadow: 0px 0.4rem 0.8rem hsla(222, 100%, 22%, 0.2)
-
   @media screen and (min-width: $nav-breakpoint)
     display: flex
     flex-flow: row wrap
     justify-content: space-between
     padding: 0 calc(#{base.$viewfactor} * 4)
-
     transform: translateY(0)
     transition: transform base.$contentTrans ease
 
 .nav-menu-closed
   max-height: 0
   overflow: hidden
-
   @media screen and (min-width: $nav-breakpoint)
     transform: translateY(-25vh)
 
@@ -69,10 +66,8 @@ $nav-breakpoint: 45em
   list-style-type: none
   &:first-child
     padding: calc(#{base.$viewfactor} * 3) 0 0 0
-
   &:last-child
     padding: 0 0 calc(#{base.$viewfactor} * 3) 0
-
   @media screen and (min-width: $nav-breakpoint)
     flex: 1 0 auto
     &:first-child,
@@ -87,17 +82,15 @@ $nav-breakpoint: 45em
   color: colours.$content-running-text-bright
   border: none
   border-radius: unset
+  @media screen and (min-width: $nav-breakpoint)
+    padding: calc(#{base.$viewfactor} * 2) 0
   &:hover,
   &:focus
     background: colours.$site-btn-pri
     color: colours.$site-nav-ind
-
   &:active
     background: colours.$site-nav-ind
     color: colours.$site-btn-pri
-
-  @media screen and (min-width: $nav-breakpoint)
-    padding: calc(#{base.$viewfactor} * 2) 0
 
 .active
   font-style: italic
