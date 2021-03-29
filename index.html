@@ -3,8 +3,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="robots" content="noindex" />
-    <meta name="robots" content="nofollow" />
+    <meta name="robots" content="noindex, nofollow" />
     <title>Portfolio Website</title>
     <link rel="stylesheet" href="./assets/css/normalize.css/normalize.css" />
     <link rel="stylesheet" href="./assets/css/root.css" />
@@ -67,9 +66,10 @@
       </p>
       <section aria-label="summary" class="summary">
         <p>
-          Hallo und Moin Moin! Ich bin ein Hamburger Gestalter und bringe Freiberuflern, kleinen und mittleren
-          Unternehmen durch maßgeschneiderte Websites, effektive Werbung, durchdachte Publikationen, schlüssige visuelle
-          Identitäten und kreative Illustrationen mehr Kommunikationsreichweite und einen professionelleren Auftritt.
+          Hallo und Moin Moin! Ich bin ein Hamburger Gestalter und bringe Freiberuflern, kleinen und
+          mittleren Unternehmen durch maßgeschneiderte Websites, effektive Werbung, durchdachte
+          Publikationen, schlüssige visuelle Identitäten und kreative Illustrationen mehr
+          Kommunikationsreichweite und einen professionelleren Auftritt.
         </p>
         <div class="button-container">
           <a href="#portfolio" class="button-primary">Portfolio sichten</a>
@@ -87,7 +87,10 @@
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 219.62" class="header-form">
       <g id="Heros">
         <g id="header-form-group">
-          <path class="header-form-1" d="M0,0V219.62H1600V0c-238.43,127.4-510.78,199.62-800,199.62S238.43,127.4,0,0Z" />
+          <path
+            class="header-form-1"
+            d="M0,0V219.62H1600V0c-238.43,127.4-510.78,199.62-800,199.62S238.43,127.4,0,0Z"
+          />
         </g>
       </g>
     </svg>
@@ -96,17 +99,116 @@
       <section class="content-h2" aria-labelledby="portfolio">
         <h2 id="projects">Projekte</h2>
         <p>
-          Hier finden Sie meine bisherigen Projekte, u.a. aus den Bereichen Webdesign, Webentwicklung, Werbung,
-          Markengestaltung, Information, Veröffentlichungen und Illustration. Melden Sie sich gerne auch ganz
-          unverbindlich falls Sie Fragen zum Ablauf oder einer möglichen Zusammenarbeit haben. Vieles lässt sich im
-          direkten Kontakt am besten klären.
+          Hier finden Sie meine bisherigen Projekte, u.a. aus den Bereichen Webdesign,
+          Webentwicklung, Werbung, Markengestaltung, Information, Veröffentlichungen und
+          Illustration. Melden Sie sich gerne auch ganz unverbindlich falls Sie Fragen zum Ablauf
+          oder einer möglichen Zusammenarbeit haben. Vieles lässt sich im direkten Kontakt am besten
+          klären.
         </p>
       </section>
+
+      <a href="#skip-tax-filter-target" class="skip-link"> Filtermenü überspingen </a>
+
+      <dl class="tax-filter" aria-labelledby="label-tax-filter">
+        <div id="label-tax-filter" class="label-tax-filter">Filter</div>
+        <dt class="tax-filter-cat">
+          <button type="button" class="tax-filter-cat-btn">Auftraggeber</button>
+        </dt>
+        <dd>
+          <ul class="tax-filter-taglist tax-filter-taglist-closed">
+            <li class="tax-filter-taglist-item">
+              <button type="button" class="tax-filter-tag-btn" data-taxtag="<?= $tag ?>">
+                Bime
+              </button>
+            </li>
+            <li class="tax-filter-taglist-item">
+              <button type="button" class="tax-filter-tag-btn" data-taxtag="<?= $tag ?>">
+                Flüchtling
+              </button>
+            </li>
+          </ul>
+        </dd>
+        <dt class="tax-filter-cat">
+          <button type="button" class="tax-filter-cat-btn">Technologie</button>
+        </dt>
+        <dd>
+          <ul class="tax-filter-taglist tax-filter-taglist-closed">
+            <li class="tax-filter-taglist-item">
+              <button type="button" class="tax-filter-tag-btn" data-taxtag="<?= $tag ?>">
+                Print
+              </button>
+            </li>
+            <li class="tax-filter-taglist-item">
+              <button type="button" class="tax-filter-tag-btn" data-taxtag="<?= $tag ?>">
+                Digital
+              </button>
+            </li>
+          </ul>
+        </dd>
+        <dt class="tax-filter-cat">
+          <button type="button" class="tax-filter-cat-btn">Schwerpunkt</button>
+        </dt>
+        <dd>
+          <ul class="tax-filter-taglist tax-filter-taglist-closed">
+            <li class="tax-filter-taglist-item">
+              <button type="button" class="tax-filter-tag-btn" data-taxtag="<?= $tag ?>">
+                Werbung
+              </button>
+            </li>
+            <li class="tax-filter-taglist-item">
+              <button type="button" class="tax-filter-tag-btn" data-taxtag="<?= $tag ?>">
+                Fotografie
+              </button>
+            </li>
+            <li class="tax-filter-taglist-item">
+              <button type="button" class="tax-filter-tag-btn" data-taxtag="<?= $tag ?>">
+                Entwicklung
+              </button>
+            </li>
+            <li class="tax-filter-taglist-item">
+              <button type="button" class="tax-filter-tag-btn" data-taxtag="<?= $tag ?>">
+                Grafikdesign
+              </button>
+            </li>
+            <li class="tax-filter-taglist-item">
+              <button type="button" class="tax-filter-tag-btn" data-taxtag="<?= $tag ?>">
+                Konzept
+              </button>
+            </li>
+            <li class="tax-filter-taglist-item">
+              <button type="button" class="tax-filter-tag-btn" data-taxtag="<?= $tag ?>">
+                Markendesign
+              </button>
+            </li>
+            <li class="tax-filter-taglist-item">
+              <button type="button" class="tax-filter-tag-btn" data-taxtag="<?= $tag ?>">
+                Styleguide
+              </button>
+            </li>
+            <li class="tax-filter-taglist-item">
+              <button type="button" class="tax-filter-tag-btn" data-taxtag="<?= $tag ?>">
+                Logo-Redesign
+              </button>
+            </li>
+            <li class="tax-filter-taglist-item">
+              <button type="button" class="tax-filter-tag-btn" data-taxtag="<?= $tag ?>">
+                Online Präsenz
+              </button>
+            </li>
+          </ul>
+        </dd>
+      </dl>
+      <span id="skip-tax-filter-target"></span>
+
       <ul class="cards">
         <li class="card">
           <a href="#" class="card-link">
             <div class="card-img-container">
-              <img class="card-img" src="./assets/images/cover-72-hours-wilhelmsburg.jpg" alt="Projekt" />
+              <img
+                class="card-img"
+                src="./assets/images/cover-72-hours-wilhelmsburg.jpg"
+                alt="Projekt"
+              />
             </div>
             <strong class="card-title"> 72 Stunden Wilhelmsburg </strong>
             <p class="card-summary">
@@ -117,20 +219,31 @@
         <li class="card">
           <a href="#" class="card-link">
             <div class="card-img-container">
-              <img class="card-img" src="./assets/images/cover-brand-design-njl.jpg" alt="Projekt" />
+              <img
+                class="card-img"
+                src="./assets/images/cover-brand-design-njl.jpg"
+                alt="Projekt"
+              />
             </div>
             <strong class="card-title"> Markengestaltung Design Nordic Jet Line </strong>
-            <p class="card-summary">Logo-Redesign mit vollständigem Styleguide für ein Reedereiunternehmen.</p>
+            <p class="card-summary">
+              Logo-Redesign mit vollständigem Styleguide für ein Reedereiunternehmen.
+            </p>
           </a>
         </li>
         <li class="card">
           <a href="#" class="card-link">
             <div class="card-img-container">
-              <img class="card-img" src="./assets/images/cover-branding-eventmanager.jpg" alt="Projekt" />
+              <img
+                class="card-img"
+                src="./assets/images/cover-branding-eventmanager.jpg"
+                alt="Projekt"
+              />
             </div>
             <strong class="card-title"> Markengestaltung Seehusen Eventmanagerin </strong>
             <p class="card-summary">
-              Konzept und Markengestaltung für eine Freiberuflerin inklusive Gestaltung von Büromaterialien.
+              Konzept und Markengestaltung für eine Freiberuflerin inklusive Gestaltung von
+              Büromaterialien.
             </p>
           </a>
         </li>
@@ -147,29 +260,40 @@
               Mediengestalter für das Bremer Institut für Strukturmechanik und Produktionsanlagen
             </strong>
             <p class="card-summary">
-              Eine Auswahl von der Projekte, die während meiner Arbeit für das BIME (Uni Bremen) entstanden sind.
+              Eine Auswahl von der Projekte, die während meiner Arbeit für das BIME (Uni Bremen)
+              entstanden sind.
             </p>
           </a>
         </li>
         <li class="card">
           <a href="#" class="card-link">
             <div class="card-img-container">
-              <img class="card-img" src="./assets/images/cover-crocus-blossom-festival.jpg" alt="Projekt" />
+              <img
+                class="card-img"
+                src="./assets/images/cover-crocus-blossom-festival.jpg"
+                alt="Projekt"
+              />
             </div>
             <strong class="card-title"> Krokusblütenfest Plakat </strong>
             <p class="card-summary">
-              Plakatdesigns für ein norddeutsches Kleinstadtfestival mit digitalisierten Zeichnungen.
+              Plakatdesigns für ein norddeutsches Kleinstadtfestival mit digitalisierten
+              Zeichnungen.
             </p>
           </a>
         </li>
         <li class="card">
           <a href="#" class="card-link">
             <div class="card-img-container">
-              <img class="card-img" src="./assets/images/cover-illustration-fluechtling-magazine.jpg" alt="Projekt" />
+              <img
+                class="card-img"
+                src="./assets/images/cover-illustration-fluechtling-magazine.jpg"
+                alt="Projekt"
+              />
             </div>
             <strong class="card-title"> Illustration für das Flüchtling Magazin </strong>
             <p class="card-summary">
-              Handgezeichnete Illustration für das Magazin „Kohero“ (früher „Der Flüchtling“) zum Thema Grundgesetz.
+              Handgezeichnete Illustration für das Magazin „Kohero“ (früher „Der Flüchtling“) zum
+              Thema Grundgesetz.
             </p>
           </a>
         </li>
@@ -177,32 +301,38 @@
 
       <section class="content-h2" aria-labelledby="about">
         <h2 id="about">Über Mich</h2>
-        <img src="./assets/images/Lebenslauf-Foto.jpg" alt="Ich" class="profile-img" />
+        <img
+          src="./assets/images/malte-podolski-portrait-square.png"
+          alt="Ich"
+          class="profile-img"
+        />
         <p>
           Den ersten beruflichen Kontakt stellte das Webdesign-Modul während meiner Ausbildung zum
-          gestaltungstechnischen Assistenten dar, das mich wesentlich mehr begeisterte als der praxisferne Unterricht
-          mit Delphi in der Schule. Als sich im Nebenjob während des Studiums die Gelegenheit ergab, für das Bremer
-          Institut für Strukturmechanik und Produktionsanlagen eine kleine Internetpräsenz für eine
-          ingenieurwissenschaftliche Konferenz zu machen, ergriff ich diese gerne und begann, tiefer in die Materie
-          einzusteigen.
+          gestaltungstechnischen Assistenten dar, das mich wesentlich mehr begeisterte als der
+          praxisferne Unterricht mit Delphi in der Schule. Als sich im Nebenjob während des Studiums
+          die Gelegenheit ergab, für das Bremer Institut für Strukturmechanik und Produktionsanlagen
+          eine kleine Internetpräsenz für eine ingenieurwissenschaftliche Konferenz zu machen,
+          ergriff ich diese gerne und begann, tiefer in die Materie einzusteigen.
         </p>
         <p>
-          Seitdem habe ich als Mediengestalter bei mehreren Unternehmen viel mit Content-Management zu tun gehabt,
-          musste mich aber auch wiederholt z.B. mit Plugin-Installationen in Wordpress oder Joomla-Migrationen
-          beschäftigen. Dadurch reifte bald der Wunsch, mein Know-How im Grafikbereich mit Webentwicklung
-          zusammenzuführen und dabei effektive, flexible, pflegeleichte und benutzerfreundliche Websitelösungen für
-          kleinere Unternehmen zu schaffen.
+          Seitdem habe ich als Mediengestalter bei mehreren Unternehmen viel mit Content-Management
+          zu tun gehabt, musste mich aber auch wiederholt z.B. mit Plugin-Installationen in
+          Wordpress oder Joomla-Migrationen beschäftigen. Dadurch reifte bald der Wunsch, mein
+          Know-How im Grafikbereich mit Webentwicklung zusammenzuführen und dabei effektive,
+          flexible, pflegeleichte und benutzerfreundliche Websitelösungen für kleinere Unternehmen
+          zu schaffen.
         </p>
       </section>
 
       <section class="content-h2" aria-labelledby="application">
         <h2 id="application">Bewerbung</h2>
         <p>
-          Gestaltungstechnischer Assistent mit Berufserfahrung als Freiberufler und Angestellter. Besondere Kenntnisse
-          in den Bereichen Grafikdesign sowie Webdesign und -entwicklung. Empathiefähigkeit die nicht nur dem Verstehen
-          von Zielgruppen, sondern auch dem alltäglichen Miteinander zugute kommt. Aktuell verfolge ich den Aufbau
-          meines Portfolios und habe mich dabei zuletzt mit dem PHP-CMS Kirby beschäftigt und arbeite mich aktuell neben
-          meiner Arbeit am Digital Career Institute in das Javascript-Framework Vue ein.
+          Gestaltungstechnischer Assistent mit Berufserfahrung als Freiberufler und Angestellter.
+          Besondere Kenntnisse in den Bereichen Grafikdesign sowie Webdesign und -entwicklung.
+          Empathiefähigkeit die nicht nur dem Verstehen von Zielgruppen, sondern auch dem
+          alltäglichen Miteinander zugute kommt. Aktuell verfolge ich den Aufbau meines Portfolios
+          und habe mich dabei zuletzt mit dem PHP-CMS Kirby beschäftigt und arbeite mich aktuell
+          neben meiner Arbeit am Digital Career Institute in das Javascript-Framework Vue ein.
         </p>
 
         <ul class="tab-list" role="tablist" id="tab-list">
@@ -282,7 +412,11 @@
                     class="app-kno-2"
                     d="M540,360a140,140,0,0,0-280,0c0,100,80,120,80,220H460C460,480,540,460,540,360Z"
                   />
-                  <path id="reflection" class="app-kno-3" d="M400,260A101.11,101.11,0,0,0,298.89,361.11" />
+                  <path
+                    id="reflection"
+                    class="app-kno-3"
+                    d="M400,260A101.11,101.11,0,0,0,298.89,361.11"
+                  />
                   <g id="shine">
                     <line class="app-kno-4" x1="493.75" y1="205.12" x2="523.75" y2="153.16" />
                     <line class="app-kno-4" x1="562.38" y1="273.75" x2="614.34" y2="243.75" />
@@ -402,45 +536,31 @@
           aria-labelledby="tab-info"
         >
           <div class="tab-panel-wrapper">
+            <h3>Kontakt</h3>
             <dl>
-              <dt>Kontakt</dt>
+              <dt>Telefon</dt>
+              <dd>+49 111 01 01 01 01 01</dd>
+              <dt>E-Mail</dt>
+              <dd><a href="mailto:malte.podolski@web.de">malte.podolski@web.de</a></dd>
+              <dt>Social Media</dt>
               <dd>
-                <p><strong>Telefon</strong></p>
-                <ul>
-                  <li>+49 176&#x2004;41 56 97 19</li>
-                </ul>
+                <a href="https://www.linkedin.com/in/m-podolski">linkedin.com/in/m-podolski</a>
               </dd>
               <dd>
-                <p><strong>E-Mail</strong></p>
-                <ul>
-                  <li><a href="mailto:malte.podolski@web.de">malte.podolski@web.de</a></li>
-                </ul>
+                <a href="https://www.behance.net/m-podolski">behance.net/m-podolski</a>
               </dd>
               <dd>
-                <p><strong>Social Media</strong></p>
-                <ul>
-                  <li>
-                    <a href="https://www.linkedin.com/in/m-podolski">linkedin.com/in/m-podolski</a>
-                  </li>
-                  <li><a href="https://www.behance.net/m-podolski">behance.net/m-podolski</a></li>
-                  <li><a href="https://github.com/m-podolski">github.com/m-podolski</a></li>
-                </ul>
+                <a href="https://github.com/m-podolski">github.com/m-podolski</a>
               </dd>
-              <dt>Person</dt>
-              <dd>
-                <p><strong>Geburt</strong></p>
-                <ul>
-                  <li>08.&#x200A;05.&#x200A;1988</li>
-                  <li>Achim</li>
-                </ul>
-              </dd>
-              <dd>
-                <p><strong>Adresse</strong></p>
-                <ul>
-                  <li>Hummelsbüttler Hauptstraße 16</li>
-                  <li>22339 Hamburg, Germany</li>
-                </ul>
-              </dd>
+            </dl>
+            <h3>Person</h3>
+            <dl>
+              <dt>Geburt</dt>
+              <dd>01.10.1100</dd>
+              <dd>Achim</dd>
+              <dt>Adresse</dt>
+              <dd>Hummelsbüttler Hauptstraße 10</dd>
+              <dd>10011 Hamburg, Germany</dd>
             </dl>
           </div>
         </section>
@@ -452,38 +572,37 @@
           aria-labelledby="tab-cv"
         >
           <div class="tab-panel-wrapper">
+            <h3>Arbeitsstellen</h3>
             <dl>
               <dt>10.20-02.22</dt>
               <dd>
                 <strong
                   >Kursteilnehmer Webentwicklung,
-                  <a href="https://digitalcareerinstitute.org/">Digital Career Institute</a>, Hamburg</strong
+                  <a href="https://digitalcareerinstitute.org/">Digital Career Institute</a>,
+                  Hamburg</strong
                 ><br />
                 HTML, CSS, Javascript, React, Node
               </dd>
               <dt>07.19-12.19</dt>
               <dd>
-                <strong>Mediengestalter, <a href="http://fantec.de/">Fantec GmbH</a>, Hamburg</strong><br />
-                Produktfotografie, Bildbearbeitung, Online Marketing / Content, Grafikdesign
-              </dd>
-              <dt>05.19-06.19</dt>
-              <dd>
                 <strong
-                  >Reinzeichner ( freiberuflich ) für <a href="https://de.hogarthww.com/">Hogarth Worldwide</a>,
-                  Hamburg</strong
+                  >Mediengestalter, <a href="http://fantec.de/">Fantec GmbH</a>, Hamburg</strong
                 ><br />
-                Layout, Reinzeichnung
+                Produktfotografie, Bildbearbeitung, Online Marketing / Content, Grafikdesign
               </dd>
               <dt>11.18-03.19</dt>
               <dd>
                 <strong
-                  >Mediengestalter, <a href="https://druckcenter-hamburg.de/">Druckcenter Hamburg</a>, Hamburg</strong
+                  >Mediengestalter,
+                  <a href="https://druckcenter-hamburg.de/">Druckcenter Hamburg</a>, Hamburg</strong
                 ><br />
                 Verkauf, Kreation, Reinzeichnung, Druckproduktion, Werbetechnik
               </dd>
               <dt>05.18-07.18</dt>
               <dd>
-                <strong>Mediengestalter, <a href="http://www.eurolight-gmbh.eu/">Eurolight GmbH</a>, Hamburg</strong
+                <strong
+                  >Mediengestalter, <a href="http://www.eurolight-gmbh.eu/">Eurolight GmbH</a>,
+                  Hamburg</strong
                 ><br />
                 Digital / Print Design, Corporate Design, E-Mail-Marketing, Produktfotografie
               </dd>
@@ -492,15 +611,20 @@
                 <strong
                   >Mediengestalter ( freiberuflich ) für
                   <a href="https://www.essenberger.de/">Essenberger Werbung & Design</a> /
-                  <a href="https://marine-mammals.com/">Marine Mammals Science Education</a>, Husum</strong
+                  <a href="https://marine-mammals.com/">Marine Mammals Science Education</a>,
+                  Husum</strong
                 ><br />
                 Wordpress, Digital / Print Design, Bildbearbeitung / Composing
               </dd>
+            </dl>
+            <h3>Ausbildung</h3>
+            <dl>
               <dt>08.11-08.12</dt>
               <dd>
                 <strong
                   >Fachoberschule ( allgemeine Hochschulreife Fachrichtung Gestaltung ),
-                  <a href="http://www.szals.de/">Schulzentrum an der Alwin-Lonke-Straße</a>, Bremen</strong
+                  <a href="http://www.szals.de/">Schulzentrum an der Alwin-Lonke-Straße</a>,
+                  Bremen</strong
                 ><br />
                 Kommunikationsdesign, Produktdesign, Kernfächer
               </dd>
@@ -508,7 +632,8 @@
               <dd>
                 <strong
                   >Ausbildung zum staatlich anerkannten gestaltungstechnischen Assistenten,
-                  <a href="http://www.szals.de/">Schulzentrum an der Alwin-Lonke-Straße</a>, Bremen</strong
+                  <a href="http://www.szals.de/">Schulzentrum an der Alwin-Lonke-Straße</a>,
+                  Bremen</strong
                 >
                 <ul>
                   <li>Kommunikationsdesign</li>
@@ -534,129 +659,143 @@
           aria-labelledby="tab-knowledge"
         >
           <div class="tab-panel-wrapper">
-            <p>Digital</p>
+            <h3>Webentwicklung</h3>
+            <h4>Hardskills</h4>
             <ul>
-              <li>
-                Languages
-                <ul>
-                  <li>JavaScript</li>
-                  <li>PHP/Twig</li>
-                  <li>CSS/SASS/Stylus</li>
-                  <li>HTML</li>
-                  <li>SVG</li>
-                </ul>
-              </li>
-              <li>
-                Frameworks/CMS
-                <ul>
-                  <li>Vue/Vuepress</li>
-                  <li>Kirby (Development)</li>
-                  <li>Wordpress (Content, Maintenance)</li>
-                </ul>
-              </li>
-              <li>
-                Tooling
-                <ul>
-                  <li>Ubuntu (Windows/Mac)</li>
-                  <li>Visual Studio Code</li>
-                  <li>NPM</li>
-                  <li>Git/Github</li>
-                  <li>Gulp</li>
-                  <li>NginX</li>
-                  <li>G Suite</li>
-                </ul>
-              </li>
-              <li>Webdesign (Wireframing, Mockups, Responsive Design)</li>
-              <li>Barrierefreiheit</li>
+              <li>Webdesign (Wireframing, Mockups, Prototypen)</li>
+              <li>Frontend-Entwicklung</li>
+              <li>Design und Entwicklung für Barrierefreiheit</li>
               <li>Technical SEO</li>
-              <li>E-Mail-Marketing</li>
             </ul>
-            <hr />
-            <p>Grafik</p>
+            <h4>Languages</h4>
+            <ul class="logo-list">
+              <li><img src="./assets/images/logos/JS.svg" /><span>JavaScript</span></li>
+              <li><img src="./assets/images/logos/CSS-3.svg" /><span>CSS</span></li>
+              <li><img src="./assets/images/logos/SASS.svg" /><span>SASS</span></li>
+              <li><img src="./assets/images/logos/Stylus.svg" /><span>Stylus</span></li>
+              <li><img src="./assets/images/logos/HTML-5.svg" /><span>HTML</span></li>
+              <li><img src="./assets/images/logos/SVG.svg" /><span>SVG</span></li>
+              <li><img src="./assets/images/logos/PHP.svg" /><span>PHP</span></li>
+            </ul>
+            <h4>Frameworks/Libraries</h4>
+            <ul class="logo-list">
+              <li><img src="./assets/images/logos/Vue.svg" /><span>Vue</span></li>
+              <li><img src="./assets/images/logos/Gridsome.svg" /><span>Gridsome (SSG)</span></li>
+              <li><img src="./assets/images/logos/Kirby.svg" /><span>Kirby (CMS)</span></li>
+            </ul>
+            <h4>Tooling</h4>
+            <ul class="logo-list">
+              <li><img src="./assets/images/logos/Ubuntu.svg" /><span>Ubuntu</span></li>
+              <li>
+                <img src="./assets/images/logos/visual-studio-code.svg" /><span
+                  >Visual Studio Code</span
+                >
+              </li>
+              <li><img src="./assets/images/logos/Git.svg" /><span>Git</span></li>
+              <li><img src="./assets/images/logos/GitHub.svg" /><span>Github</span></li>
+              <li><img src="./assets/images/logos/NPM.svg" /><span>Yarn/NPM</span></li>
+              <li><img src="./assets/images/logos/Gulp.svg" /><span>Gulp</span></li>
+              <li><img src="./assets/images/logos/Google.svg" /><span>G Suite</span></li>
+            </ul>
+            <h3>Grafikdesign</h3>
+            <h4>Hardskills</h4>
             <ul>
               <li>Layout</li>
               <li>Bildbearbeitung</li>
-              <li>Corporate Design</li>
+              <li>Identity Design</li>
               <li>Produktfotografie</li>
               <li>Illustration</li>
-              <li>Lettering</li>
               <li>Reinzeichnung</li>
-              <li>Druckproduktion</li>
-              <li>
-                Adobe Creative Cloud
-                <ul>
-                  <li>Bridge</li>
-                  <li>Lightroom</li>
-                  <li>Photoshop</li>
-                  <li>Illustrator</li>
-                  <li>InDesign</li>
-                </ul>
-              </li>
             </ul>
-            <hr />
-            <p>Softskills</p>
+            <h4>Adobe Creative Cloud</h4>
+            <ul class="logo-list">
+              <li>
+                <img src="./assets/images/logos/Adobe-Illustrator.svg" /><span>Illustrator</span>
+              </li>
+              <li><img src="./assets/images/logos/Adobe-Indesign.svg" /><span>InDesign</span></li>
+              <li><img src="./assets/images/logos/Adobe-Photoshop.svg" /><span>Photoshop</span></li>
+              <li><img src="./assets/images/logos/Adobe-Bridge.svg" /><span>Bridge</span></li>
+              <li><img src="./assets/images/logos/Adobe-Lightroom.svg" /><span>Lightroom</span></li>
+            </ul>
+            <h3>Softskills</h3>
             <ul>
               <li>selbstständiges Lernen</li>
               <li>breite Allgemeinbildung</li>
               <li>gründliches und strukturiertes Arbeiten</li>
               <li>Auge für Details</li>
-              <li>offen für Wünsche und Kritik von Auftraggebern und Kunden</li>
-              <li>Fähigkeit (Design)entscheidungen zu reflektieren und verbal zu kommunizieren</li>
+              <li>offenes Ohr für Wünsche und Kritik von Auftraggebern und Kunden</li>
+              <li>Fähigkeit Entscheidungen zu reflektieren und zu kommunizieren</li>
               <li>keine Hemmungen Unterstützung zu erfragen</li>
             </ul>
-            <hr />
-            <p>Sprachen</p>
+            <h3>Sprachen</h3>
             <ul>
-              <li>Deutsch (&#x200A;Muttersprache&#x200A;)</li>
-              <li>Englisch (&#x200A;Selbsteins. B2-C1&#x200A;)</li>
+              <li>Deutsch (Muttersprache)</li>
+              <li>Englisch (Selbsteins. B2-C1)</li>
             </ul>
           </div>
         </section>
         <section
-          class="tab-panel tab-panel-portfolio tab-panel-closed"
+          class="tab-panel tab-panel-portfolio"
           data-tab="portfolio"
           id="portfolio"
           role="tabpanel"
           aria-labelledby="tab-portfolio"
         >
+          <!--  tab-panel-closed -->
           <div class="tab-panel-wrapper">
             <h3 id="digital">Digital</h3>
             <p>
               Mein digitales Portfolio finden Sie auf Github unter
-              <a href="https://github.com/m-podolski">github.com/m-podolski</a>. Zur Zeit bin ich Schüler am
-              <a href="https://digitalcareerinstitute.org">Digital Career Institute</a> und arbeite daneben an meinen
-              eigenen (Frontend-/JS-)Projekten. Aktuell meint das
-              <a href="https://github.com/m-podolski/podolski">meine eigene Website</a> und andere Projekte, die noch in
-              Vorbereitung sind.
+              <a href="https://github.com/m-podolski">github.com/m-podolski</a>. Zur Zeit bin ich
+              Schüler am
+              <a href="https://digitalcareerinstitute.org">Digital Career Institute</a> und arbeite
+              daneben an meinen eigenen (Frontend-/JS-)Projekten. Aktuell meint das
+              <a href="https://github.com/m-podolski/podolski">meine eigene Website</a> und andere
+              Projekte, die noch in Vorbereitung sind.
             </p>
-            <hr />
             <p>Github Cards</p>
-            <hr />
             <h3 id="grafik">Grafik</h3>
-            <p><img src="./assets/images/cover-joinery-lueneberg.jpg" alt="Alt-Text" class="tab-panel-image" /></p>
+            <img
+              src="./assets/images/cover-joinery-lueneberg.jpg"
+              alt="Alt-Text"
+              class="tab-panel-image"
+            />
             <p>
-              Zunächst habe ich mich vor allem mit Brand Design beschäftigt. Dabei sind mehrere kompakte Arbeitsproben
-              entstanden, für die exemplarisch das Projekt
+              Zunächst habe ich mich vor allem mit Brand Design beschäftigt. Dabei sind mehrere
+              kompakte Arbeitsproben entstanden, für die exemplarisch das Projekt
               <a href="#">Tischlerei Lüneberg</a> steht.
             </p>
-            <p><img src="./assets/images/cover-not-fair-campaign.jpg" alt="Alt-Text" class="tab-panel-image" /></p>
+            <img
+              src="./assets/images/cover-not-fair-campaign.jpg"
+              alt="Alt-Text"
+              class="tab-panel-image"
+            />
             <p>
-              Als Bespiel für eine vom Unternehmensauftritt getrennte Kampagne habe ich Werbemittel für die
+              Als Bespiel für eine vom Unternehmensauftritt getrennte Kampagne habe ich Werbemittel
+              für die
               <a href="#">Fair Clothing Kampagne</a> gestaltet.
             </p>
+            <img
+              src="./assets/images/cover-crocus-blossom-festival.jpg"
+              alt="Alt-Text"
+              class="tab-panel-image"
+            />
             <p>
-              <img src="./assets/images/cover-crocus-blossom-festival.jpg" alt="Alt-Text" class="tab-panel-image" />
-            </p>
-            <p>
-              Danach habe ich mich dem Medium Plakat gewidmet, um mich noch stärker in die Anforderungen werblichen
-              Grafikdesigns einzuarbeiten. Dabei entstanden u.a. die Plakate für das
+              Danach habe ich mich dem Medium Plakat gewidmet, um mich noch stärker in die
+              Anforderungen werblichen Grafikdesigns einzuarbeiten. Dabei entstanden u.a. die
+              Plakate für das
               <a href="#">Krokusblütenfest</a>.
             </p>
-            <p><img src="./assets/images/cover-pace-magazine.jpg" alt="Alt-Text" class="tab-panel-image" /></p>
+            <img
+              src="./assets/images/cover-pace-magazine.jpg"
+              alt="Alt-Text"
+              class="tab-panel-image"
+            />
             <p>
-              Mein letztes Projekt habe ich in Form eines Magazins erarbeitet, um die Bereiche Layout, Typografie,
-              Illustration, Infografik und zu einem gewissen Grad auch redaktionelle Konzeption zu integrieren.
-              Entstanden ist dabei das <a href="#">Magazin Pace</a>.
+              Mein letztes Projekt habe ich in Form eines Magazins erarbeitet, um die Bereiche
+              Layout, Typografie, Illustration, Infografik und zu einem gewissen Grad auch
+              redaktionelle Konzeption zu integrieren. Entstanden ist dabei das
+              <a href="#">Magazin Pace</a>.
             </p>
           </div>
         </section>
@@ -668,26 +807,37 @@
           aria-labelledby="tab-references"
         >
           <div class="tab-panel-wrapper">
-            <p><img src="./assets/images/Portrait-Liauw.png" alt="Erwin Liauw" class="tab-panel-image" /></p>
+            <img
+              src="./assets/images/Portrait-Liauw.png"
+              alt="Erwin Liauw"
+              class="tab-panel-image"
+            />
             <p>
-              &#x201E; Herr Podolski zeichnet sich durch großes Engagement aus und hat eine schnelle Auffassungsgabe,
-              kombiniert mit dem Willen und der Fähigkeit, die ihm übertragenen Arbeiten eigenständig zu lösen, sodass
-              er zu vielen Aufgaben herangezogen wurde, die er stets zu meiner vollsten Zufriedenheit ausführte. [ ... ]
-              Besonders hervorzuheben ist für mich, dass Herr Podolski auch bei Aufgaben, die nicht in den
-              gestalterischen Bereich sehr engagiert und gewissenhaft gearbeitet hat. [ ... ] Herr Podolski wird von mir
-              wegen seiner Zuverlässigkeit und Pünktlichkeit sehr geschätzt. Auch auf kollegialer Basis haben wir
-              schnell zu einer sehr positiven Ebene gefunden. &#x201C;<br />
+              &#x201E; Herr Podolski zeichnet sich durch großes Engagement aus und hat eine schnelle
+              Auffassungsgabe, kombiniert mit dem Willen und der Fähigkeit, die ihm übertragenen
+              Arbeiten eigenständig zu lösen, sodass er zu vielen Aufgaben herangezogen wurde, die
+              er stets zu meiner vollsten Zufriedenheit ausführte. [ ... ] Besonders hervorzuheben
+              ist für mich, dass Herr Podolski auch bei Aufgaben, die nicht in den gestalterischen
+              Bereich sehr engagiert und gewissenhaft gearbeitet hat. [ ... ] Herr Podolski wird von
+              mir wegen seiner Zuverlässigkeit und Pünktlichkeit sehr geschätzt. Auch auf
+              kollegialer Basis haben wir schnell zu einer sehr positiven Ebene gefunden.
+              &#x201C;<br />
               <strong>Erwin Liauw ( Dipl. Grafikdesigner )</strong><br />
               <a href="http://www.liauw-design.de">www.liauw-design.de</a>
             </p>
-            <p><img src="./assets/images/Portrait-Bader.png" alt="Alexander Bader" class="tab-panel-image" /></p>
+            <img
+              src="./assets/images/Portrait-Bader.png"
+              alt="Alexander Bader"
+              class="tab-panel-image"
+            />
             <p>
-              &#x201E; Herr Podolski erledigte seine Aufgaben mit großem Engagement und persönlichem Einsatz während
-              seiner gesamten Beschäftigungszeit an unserem Institut. [ ... ] Immer arbeitete Herr Podolski sehr zügig,
-              ergebnisorientiert und präzise. Er war in hohem Maße zuverlässig. [ ... ] Mit allen Ansprechpartnern kam
-              Herr Podolski gut zurecht und begegnete ihnen immer mit seiner freundlichen, zuvorkommenden Art. Dabei
-              wahrte er stets die Interessen des Instituts und zeigte eine hohe Integrität. Sein Verhalten gegenüber
-              Vorgesetzten, Kollegen und Externen war jederzeit einwandfrei. &#x201C;<br />
+              &#x201E; Herr Podolski erledigte seine Aufgaben mit großem Engagement und persönlichem
+              Einsatz während seiner gesamten Beschäftigungszeit an unserem Institut. [ ... ] Immer
+              arbeitete Herr Podolski sehr zügig, ergebnisorientiert und präzise. Er war in hohem
+              Maße zuverlässig. [ ... ] Mit allen Ansprechpartnern kam Herr Podolski gut zurecht und
+              begegnete ihnen immer mit seiner freundlichen, zuvorkommenden Art. Dabei wahrte er
+              stets die Interessen des Instituts und zeigte eine hohe Integrität. Sein Verhalten
+              gegenüber Vorgesetzten, Kollegen und Externen war jederzeit einwandfrei. &#x201C;<br />
               <strong>Alexander Bader ( Wissenschaftlicher Mitarbeiter )</strong><br />
               <a href="http://www.bime.de">www.bime.de</a>
             </p>
@@ -732,9 +882,7 @@
                   <td>99 MB</td>
                 </tr>
                 <tr>
-                  <td>
-                    <a href="#" target="_blank">Zeugnisse.pdf</a>
-                  </td>
+                  <td>#0 <a href="#" target="_blank">Zeugnisse.pdf</a></td>
                   <td>24. März 2021 17:07:00</td>
                   <td>99 MB</td>
                 </tr>
@@ -756,8 +904,128 @@
             </table>
           </div>
         </section>
+        <div class="button-container">
+          <a +bv -+href="#tab-list" class="button-secondary">Zur Tabauswahl</a>
+        </div>
+        <section
+          class="tab-panel tab-panel-working-method"
+          data-tab="graphic"
+          id="graphic"
+          role="tabpanel"
+          aria-labelledby="tab-graphic"
+        >
+          <section class="content-h3">
+            <h3>Der Ablauf</h3>
+            <section class="content-h4">
+              <h4>1. Planung</h4>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloribus similique quasi
+              expedita pariatur fugit, rem magnam impedit veritatis temporibus. Velit atque
+              molestiae recusandae alias illo a iure repudiandae saepe laudantium rerum at fuga,
+              reprehenderit modi mollitia. Voluptate, eos fugit nisi consectetur rerum tempore
+              dignissimos, repudiandae rem magni optio, magnam nulla.
+            </section>
+            <section class="content-h4">
+              <h4>2. Entwurf</h4>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloribus similique quasi
+              expedita pariatur fugit, rem magnam impedit veritatis temporibus. Velit atque
+              molestiae recusandae alias illo a iure repudiandae saepe laudantium rerum at fuga,
+              reprehenderit modi mollitia. Voluptate, eos fugit nisi consectetur rerum tempore
+              dignissimos, repudiandae rem magni optio, magnam nulla.
+            </section>
+          </section>
+          <section class="content-h3">
+            <h3>Leistungen</h3>
 
-        <a href="#tab-list" class="button-secondary">Zur Tabauswahl</a>
+            <dl>
+              <div class="icon-container">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                  viewBox="0 0 800 800"
+                  class="icon icon-graphic-concept"
+                  aria-hidden="true"
+                >
+                  <g id="icon-graphic-concept">
+                    <circle id="background" class="gra-con-1" cx="400" cy="400" r="400" />
+                    <g id="arms">
+                      <line class="gra-con-2" x1="320" y1="260" x2="360" y2="340" />
+                      <line class="gra-con-2" x1="520" y1="320" x2="460" y2="360" />
+                      <line class="gra-con-2" x1="400" y1="458.11" x2="400" y2="580" />
+                      <line class="gra-con-2" x1="480" y1="440" x2="560" y2="500" />
+                      <line class="gra-con-2" x1="240" y1="400" x2="300" y2="400" />
+                    </g>
+                    <g id="panel-image">
+                      <rect class="gra-con-2" x="520.06" y="180" width="139.94" height="139.5" />
+                      <line class="gra-con-3" x1="560" y1="280" x2="620" y2="220" />
+                      <line class="gra-con-3" x1="560" y1="220" x2="620" y2="280" />
+                    </g>
+                    <g id="panel-text">
+                      <rect class="gra-con-2" x="80" y="320" width="159.94" height="200" />
+                      <line class="gra-con-3" x1="120" y1="358.11" x2="200" y2="358.11" />
+                      <line class="gra-con-3" x1="120" y1="398.11" x2="200" y2="398.11" />
+                      <line class="gra-con-3" x1="120" y1="438.11" x2="200" y2="438.11" />
+                      <line class="gra-con-3" x1="120" y1="478.11" x2="200" y2="478.11" />
+                    </g>
+                    <ellipse
+                      id="bubble-middle"
+                      class="gra-con-2"
+                      cx="400"
+                      cy="398.11"
+                      rx="100"
+                      ry="80"
+                    />
+                    <ellipse id="bubble3" class="gra-con-2" cx="620" cy="510" rx="80" ry="50" />
+                    <circle id="bubble1" class="gra-con-2" cx="300" cy="219.06" r="59.06" />
+                    <circle id="bubble2" class="gra-con-2" cx="400" cy="630" r="80" />
+                  </g>
+                </svg>
+              </div>
+              <dt>Konzept und Identität</dt>
+              <dd>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloribus similique quasi
+                expedita pariatur fugit, rem magnam impedit veritatis temporibus. Velit atque
+                molestiae recusandae alias illo a iure repudiandae saepe laudantium rerum at fuga,
+                reprehenderit modi mollitia. Voluptate, eos fugit nisi consectetur rerum tempore
+                dignissimos, repudiandae rem magni optio, magnam nulla.
+              </dd>
+            </dl>
+          </section>
+          <section class="content-h3">
+            <h3>Ihre Vorteile</h3>
+            <dl>
+              <div class="icon-container">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 281.84 316.49"
+                  class="icon icon-benefits"
+                  aria-hidden="true"
+                >
+                  <g id="icon-benefits">
+                    <path
+                      id="band"
+                      class="ben-1"
+                      d="M236.82,206.13l41,56.92h-60l-33,49.44-24-68.41ZM45,206.13,4,263.05H64l33,49.44,24-68.41Z"
+                    />
+                    <circle id="circle" class="ben-2" cx="140.92" cy="134" r="130" />
+                    <polygon
+                      id="star"
+                      class="ben-3"
+                      points="140.92 189.84 205.91 224 193.49 151.64 246.07 100.39 173.41 89.84 140.92 24 108.43 89.84 35.77 100.39 88.35 151.64 75.94 224 140.92 189.84"
+                    />
+                  </g>
+                </svg>
+              </div>
+              <dt>Individualität und Wiedererkennbarkeit</dt>
+              <dd>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloribus similique quasi
+                expedita pariatur fugit, rem magnam impedit veritatis temporibus. Velit atque
+                molestiae recusandae alias illo a iure repudiandae saepe laudantium rerum at fuga,
+                reprehenderit modi mollitia. Voluptate, eos fugit nisi consectetur rerum tempore
+                dignissimos, repudiandae rem magni optio, magnam nulla.
+              </dd>
+            </dl>
+          </section>
+        </section>
       </section>
     </main>
 
@@ -773,7 +1041,7 @@
             <ul class="contact-info-entry-list">
               <li class="contact-info-entry-list-item">
                 <span class="contact-info-entry">Mobil</span>
-                <a href="#">0176 41 56 97 19</a>
+                <a href="#">0110 10 10 01 011</a>
               </li>
             </ul>
           </li>
@@ -792,7 +1060,9 @@
               <li class="contact-info-entry-list-item">
                 <span class="contact-info-entry">Behance</span>
                 <!-- {{icon-behance-white.svg}} -->
-                <a href="https://www.behance.net/m-podolski" target="_blank">behance.net/m-podolski</a>
+                <a href="https://www.behance.net/m-podolski" target="_blank"
+                  >behance.net/m-podolski</a
+                >
               </li>
               <li class="contact-info-entry-list-item">
                 <span class="contact-info-entry">Github</span>
@@ -802,7 +1072,9 @@
               <li class="contact-info-entry-list-item">
                 <span class="contact-info-entry">LinkedIn</span>
                 <!-- {{icon-linkedin-white.svg}} -->
-                <a href="https://www.linkedin.com/in/m-podolski" target="_blank">linkedin.com/in/m-podolski</a>
+                <a href="https://www.linkedin.com/in/m-podolski" target="_blank"
+                  >linkedin.com/in/m-podolski</a
+                >
               </li>
             </ul>
           </li>

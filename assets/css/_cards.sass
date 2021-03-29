@@ -20,7 +20,6 @@ $bp-cards: 40 60 90 130
   transition: all base.$contentTrans ease-in-out
   display: inline
   list-style-type: none
-
   &-hidden
     display: none
   &:hover,
@@ -35,9 +34,8 @@ $bp-cards: 40 60 90 130
     color: colours.$content-text-extra-dark
   &:hover .card-img,
   &:focus .card-img,
-  &:active
-    &-img
-      transform: scale(1.5)
+  &:active .card-img
+    transform: scale(1.5)
 
 .card a,
 .card a:visited

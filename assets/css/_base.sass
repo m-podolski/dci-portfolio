@@ -204,7 +204,7 @@ h2,
 h3,
 h4
   margin: unset
-  padding: raster(3) 0 raster(4) 0
+  margin: raster(4) 0 raster(2) 0
 
 h2
   text-align: center
@@ -225,10 +225,11 @@ img
   height: auto
 
 .profile-img
-  clip-path: circle(43%)
+  clip-path: circle(50%)
   width: 15rem
   float: left
-  margin-left: 0
+  margin: raster(2)
+  background: colours.$content-light
 
 ol,
 ul,
@@ -243,6 +244,17 @@ ol ol
   padding: raster(1) raster(2)
   color: colours.$content-running-text-light
 
+dt,
+th
+  padding: 0 0 raster(0.5) 0
+  color: colours.$content-sec-text-dark
+  @include font(500, italic, 0.7, body)
+  font-variant-numeric: oldstyle-nums tabular-nums
+
+dd
+  margin: 0
+  padding: 0 0 raster(1) 0
+
 p
   margin: raster(2) 0
 
@@ -251,17 +263,6 @@ em
 
 strong
   @include font(500, italic, 0.7, body)
-
-dd
-  margin: 0
-  padding: 0 0 raster(1) 0
-
-dt,
-th
-  padding: 0 0 raster(0.4) 0
-  color: colours.$content-sec-text-dark
-  @include font(500, italic, 0.7, body)
-  font-variant-numeric: oldstyle-nums tabular-nums
 
 pre
   margin: raster(4) 0

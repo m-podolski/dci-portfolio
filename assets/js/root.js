@@ -7,7 +7,13 @@ import {
 import {
   placeIcons,
 } from './icon-iterator.js';
+import {
+  init as initTaxfilter,
+  enableFilter,
+} from './taxonomy-filter.js';
 
 initNav();
 initTabs();
 placeIcons();
+initTaxfilter();
+enableFilter();

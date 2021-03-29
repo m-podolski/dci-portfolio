@@ -9,12 +9,12 @@ const conf = {
     attr: 'aria-selected',
     val: 'true',
     query() {
-      return `[${this.controlsStateInd.attr}="${this.controlsStateInd.val}"]`
-    }
+      return `[${ this.controlsStateInd.attr }="${ this.controlsStateInd.val }"]`;
+    },
   },
   content: '.tab-panel',
-  contentState: 'tab-panel-closed'
-}
+  contentState: 'tab-panel-closed',
+};
 
 function getNodes() {
 
@@ -27,9 +27,10 @@ function getNodes() {
     root,
     controlsList,
     controls,
-    content
-  }
+    content,
+  };
 }
+
 const dom = getNodes();
 
 function setInitialState() {
@@ -37,7 +38,7 @@ function setInitialState() {
   // Initial Content-display-state (conf.contentState)
   // is set in template to prevent flashing
   // Content-display-state (show 1st content-element)
-  dom.content[0].classList.remove(conf.contentState);
+  // dom.content[0].classList.remove(conf.contentState);
   // Control-display-state
   dom.controlsList[0].classList.add(conf.controlsState);
   // Control-ARIA-state
@@ -46,6 +47,7 @@ function setInitialState() {
   for (const node of dom.controls) {
     node.setAttribute('tabindex', '-1');
   }
+
   dom.controls[0].setAttribute('tabindex', '0');
 }
 
@@ -59,6 +61,7 @@ function toggle(currentControl, targetControl) {
       node.classList.add(conf.contentState);
     }
   }
+
   // Control-display-state
   currentControl.parentElement.classList.remove(conf.controlsState);
   targetControl.parentElement.classList.toggle(conf.controlsState);
@@ -79,32 +82,33 @@ function handleKeys(e, currentControl) {
 
   // Control-Keyboard-function
   switch (e.key) {
-    // Switch tabs via left/right arrow
-    case 'ArrowLeft':
-      index = index - 1;
-      targetControl = index >= 0 ?
-        dom.controls[index] :
-        dom.controls[dom.controls.length - 1];
-      toggle(currentControl, targetControl);
-      break;
-    case 'ArrowRight':
-      index = index + 1;
-      targetControl = index <= dom.controls.length - 1 ?
-        dom.controls[index] :
-        dom.controls[0];
-      toggle(currentControl, targetControl);
-      break;
+  // Switch tabs via left/right arrow
+  case 'ArrowLeft':
+    index = index - 1;
+    targetControl = index >= 0 ?
+      dom.controls[index] :
+      dom.controls[dom.controls.length - 1];
+    toggle(currentControl, targetControl);
+    break;
+  case 'ArrowRight':
+    index = index + 1;
+    targetControl = index <= dom.controls.length - 1 ?
+      dom.controls[index] :
+      dom.controls[0];
+    toggle(currentControl, targetControl);
+    break;
     // Focus to content on down-arrow
-    case 'ArrowDown':
-      for (const node of dom.content) {
-        if (currentControl.dataset.tab === node.dataset.tab) {
-          node.focus();
-          node.scrollIntoView();
-        }
+  case 'ArrowDown':
+    for (const node of dom.content) {
+      if (currentControl.dataset.tab === node.dataset.tab) {
+        node.focus();
+        node.scrollIntoView();
       }
-      break;
-    default:
-      return;
+    }
+
+    break;
+  default:
+    return;
   }
 }
 
@@ -113,15 +117,12 @@ function init() {
   setInitialState();
 
   document.addEventListener('keydown', (e) => {
-
     const current = dom.root.querySelector(conf.controlsStateInd.query.call(conf));
     handleKeys(e, current);
   });
 
   for (const control of dom.controls) {
-
     control.addEventListener('click', () => {
-
       const current = dom.root.querySelector(conf.controlsStateInd.query.call(conf));
       const target = control;
       if (current !== target) {

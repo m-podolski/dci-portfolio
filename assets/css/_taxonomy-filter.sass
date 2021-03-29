@@ -1,0 +1,61 @@
+@use "./base"
+@use "./colours"
+
+.tax-filter
+  @extend %content
+  padding-left: unset
+  background: colours.$content-extra-light
+  border-radius: base.$roundness
+  overflow: hidden
+
+.label-tax-filter
+  padding: base.raster(0.5)
+  background: colours.$content-light
+  @include base.font(800, normal, 0.7, body)
+  text-align: center
+
+.tax-filter-cat
+  margin: base.raster(0.25)
+  padding: base.raster(0.5)
+  &-btn
+    @extend .button-primary
+    width: 100%
+    padding: base.raster(0.5)
+
+.tax-filter-taglist
+  display: flex
+  flex-flow: row wrap
+  justify-content: stretch
+  max-height: 100vh
+  transition: max-height base.$contentTrans ease-in-out
+  padding: base.raster(0.5)
+  list-style: none
+  &-closed
+    max-height: 0
+    overflow: hidden
+    margin: 0
+    padding-top: 0
+    padding-bottom: 0
+  &-item
+    flex: 1 1 auto
+    margin: base.raster(0.25)
+
+.tax-filter-tag-btn
+  @extend %button
+  width: 100%
+  padding: base.raster(0.5)
+  background: colours.$content-running-text-bright
+  border-color: colours.$content-dark
+  color: colours.$content-extra-dark
+  @include base.font(800, normal, 0.6, body)
+  &:hover,
+  &:focus
+    background: colours.$content-extra-dark
+    border-color: colours.$content-running-text-bright
+    color: colours.$content-running-text-bright
+  &:active,
+  &.tax-filter-tag-btn-selected
+    background: colours.$content-running-text-bright
+    border-color: colours.$site-nav-ind
+    color: colours.$content-extra-dark
+    @include base.font(800, italic, 0.6, body)
