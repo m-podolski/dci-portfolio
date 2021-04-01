@@ -13,7 +13,7 @@ const conf = {
   subcontrolsListState: 'tax-filter-taglist-closed',
   subcontrols: '.tax-filter-tag-btn',
   subcontrolsStateInd: 'tax-filter-tag-btn-selected',
-  targetsRoot: '.cards',
+  targetsRoot: '.cards-list',
   target: '.card',
   targetState: 'card-hidden',
   url: `${ document.location.pathname }.json`,

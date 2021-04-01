@@ -3,20 +3,21 @@
 
 $bp-cards: 40 60 90 130
 
-.cards
+.cards-list
   display: grid
   grid-template-columns: repeat(1, 1fr)
   gap: base.raster(1)
   padding-left: unset
 
 @each $bp in $bp-cards
-  .cards
+  .cards-list
     @media screen and (min-width: #{ $bp }em)
       grid-template-columns: repeat(#{ index($bp-cards, $bp) + 1 }, 1fr)
 
 .card
   background: colours.$content-super-light
   border-radius: base.$roundness
+  overflow: hidden
   transition: all base.$contentTrans ease-in-out
   display: inline
   list-style-type: none
@@ -37,25 +38,24 @@ $bp-cards: 40 60 90 130
   &:active .card-img
     transform: scale(1.5)
 
-.card a,
-.card a:visited
-  text-decoration: none
+  & a,
+  & a:visited
+    text-decoration: none
 
-.card-img-container
-  overflow: hidden
-  border-radius: base.$roundness base.$roundness 0 0
+  &-img-container
+    overflow: hidden
 
-.card-img
-  transition: transform base.$contentTrans ease-in-out
+  &-img
+    transition: transform base.$contentTrans ease-in-out
 
-.card-title
-  display: block
-  padding: base.raster(1)
-  @include base.font(800, normal, 0.7, body)
-  color: colours.$content-running-text
+  &-title
+    display: block
+    padding: base.raster(1)
+    @include base.font(800, normal, 0.7, body)
+    color: colours.$content-running-text
 
-.card-summary
-  margin: unset
-  padding: 0 base.raster(1) base.raster(1) base.raster(1)
-  @include base.font(400, normal, 0.6, body)
-  color: colours.$content-running-text
+  &-summary
+    margin: unset
+    padding: 0 base.raster(1) base.raster(1) base.raster(1)
+    @include base.font(400, normal, 0.6, body)
+    color: colours.$content-running-text

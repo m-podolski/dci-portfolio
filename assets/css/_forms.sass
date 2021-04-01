@@ -1,0 +1,51 @@
+@use "./base"
+@use "./colours"
+
+.form .honeypot
+  position: absolute
+  left: -9999px
+
+.form label
+  @include base.font(600, normal, 0.6, body)
+
+.form input,
+.form textarea
+  width: 100%
+  margin: base.raster(0.25) 0 base.raster(1) 0
+  padding: base.raster(1) base.raster(0.5) base.raster(0.5) base.raster(0.5)
+  border: none
+  border-bottom: base.raster(0.5) solid colours.$content-bg-text
+  border-radius: base.$roundness-small
+  background: colours.$content-bg-text
+  color: colours.$content-running-text
+
+.form .valid,
+.form .invalid
+  outline: none
+
+.form .valid
+  border-bottom-color: colours.$content-light
+
+.form .invalid
+  border-bottom-color: colours.$content-sec-text-dark
+
+.form ::placeholder
+  color: colours.$content-text-medium
+
+.form .error-info
+  margin: base.raster(-0.5) 0 base.raster(1) 0
+  padding: base.raster(0.5)
+  border-radius: base.$roundness-small
+  background: colours.$content-bg-text
+  color: colours.$content-sec-text-dark
+  @include base.font(600, normal, 0.5, body)
+
+.form .noerror
+  display: none
+
+.form .error
+  display: block
+
+.form .button-submit
+  display: block
+  margin: 0.5rem auto

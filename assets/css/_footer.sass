@@ -5,7 +5,7 @@ $footer-breakpoint: 60em
 
 .footer
   display: grid
-  row-gap: calc(#{base.$unit} * 0.8)
+  gap: base.raster(2)
   @include base.font(400, normal, 0.6, body)
   font-variant-numeric: lining-nums proportional-nums
   color: colours.$content-running-text-bright
@@ -13,7 +13,7 @@ $footer-breakpoint: 60em
 
   @media screen and (min-width: $footer-breakpoint)
     grid-template-columns: repeat(3, 1fr)
-    column-gap: calc(#{base.$unit} * 0.8)
+    gap: base.raster(2)
 
   a:not([class]),
   a:visited:not([class])
@@ -24,54 +24,57 @@ $footer-breakpoint: 60em
   a:active:not([class])
     color: colours.$content-sec-text-light
 
-.footer *:focus:not([class])
-  outline: calc(#{base.$unit} * 0.1) dashed colours.$content-running-text-bright
+  & *:focus:not([class])
+    outline: base.raster(0.25) dashed colours.$content-running-text-bright
 
-.footer strong
-  @include base.font(500, italic, 0.6, body)
+  & > section
+    max-width: unset
+    margin: 1rem 0
 
-.footer > section
-  max-width: unset
-  margin: 1rem 0
+  & ul
+    padding: unset
 
-.footer .button-top,
-.footer .footline
-  margin: 0 auto
-  @media screen and (min-width: $footer-breakpoint)
-    grid-column: 1 / 4
+  & li
+    list-style: none
 
-.footer .contact-info li
-  list-style-type: none
+  & strong
+    @include base.font(500, italic, 0.6, body)
 
-.footer ul
-  padding: unset
+  & .heading
+    display: inline-block
+    padding: 0 0 base.raster(2) 0
 
-.footer .contact-info-list-item
-  display: grid
-  grid-template-columns: 1fr 3fr
-  column-gap: calc(#{base.$unit} * 0.4)
+  & .button-top,
+  & .footline
+    margin: 0 auto
+    @media screen and (min-width: $footer-breakpoint)
+      grid-column: 1 / 4
 
-.footer .contact-info-entry-list
-  margin: 0 0 calc(#{base.$unit} * 0.4) 0
-  padding: unset
+  & .contact-info-list
 
-  &-item
-    display: flex
-    flex-flow: row wrap
+    & > li
+      display: grid
+      grid-template-columns: 1fr 3fr
+      column-gap: base.raster(1)
 
-.footer .contact-info-entry
-  flex: 0 1 auto
-  width: calc(#{base.$unit} * 2.4)
-  color: colours.$content-extra-light
+  & .contact-info-entry-list
+    margin: 0 0 base.raster(1) 0
+    padding: unset
 
-.footer .icon-container
-  flex: 0 1 0
-  display: inline
-  margin: 0 calc(#{base.$unit} * 0.2) 0 0
+    & > li
+      display: flex
+      flex-flow: row wrap
 
-.footer .contact-info-entry-list-item p
-  margin: 0 0 calc(#{base.$unit} * 0.4) 0
+  & .contact-info-entry
+    flex: 0 1 auto
+    width: base.raster(6)
+    color: colours.$content-extra-light
 
-.footer .icon
-  margin: calc(#{base.$unit} * -0.1) 0 0 0
-  width: calc(#{base.$unit} * 0.8)
+  & .icon-container
+    flex: 0 1 0
+    display: inline
+    margin: 0 base.raster(0.5) 0 0
+
+  & .icon
+    margin: base.raster(-0.25) 0 0 0
+    width: base.raster(2)

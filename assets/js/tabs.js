@@ -2,7 +2,7 @@
 const conf = {
 
   root: '.tab-list',
-  controlsList: '.tab-list-item',
+  controlsList: '.tab-list li',
   controls: '.tab',
   controlsState: 'tab-list-item-open',
   controlsStateInd: {
@@ -38,7 +38,7 @@ function setInitialState() {
   // Initial Content-display-state (conf.contentState)
   // is set in template to prevent flashing
   // Content-display-state (show 1st content-element)
-  // dom.content[0].classList.remove(conf.contentState);
+  dom.content[0].classList.remove(conf.contentState);
   // Control-display-state
   dom.controlsList[0].classList.add(conf.controlsState);
   // Control-ARIA-state

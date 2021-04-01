@@ -1,0 +1,29 @@
+
+@use "./base"
+@use "./colours"
+
+$tax-info-breakpoint: 40em
+
+.tax-info
+  @extend %content
+  padding: unset
+  @media screen and (min-width: $tax-info-breakpoint)
+    display: grid
+    grid-template-columns: 1fr 4fr
+    column-gap: base.raster(1)
+
+  &-tag
+    grid-column: 2 / 3
+
+  &-list
+    padding: 0
+
+  &-list-item
+    display: inline
+    list-style: none
+
+.header .tax-info
+  margin: unset
+
+.header .tax-info-cat
+  color: colours.$content-running-text-bright

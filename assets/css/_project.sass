@@ -1,0 +1,26 @@
+@use "./base"
+@use "./colours"
+
+.template-project
+  background: colours.$content-bg-light
+
+.template-project .header
+  min-height: unset
+  padding: base.$unit base.window(3)
+
+.template-project .main
+  padding: unset
+
+.template-project .main > *:not(.lightbox)
+  padding: base.$unit base.window(3)
+
+.template-project .heading
+  padding: unset
+  @include base.font(1000, normal, 1.5, disp)
+  color: colours.$content-text-medium
+  text-align: center
+
+.template-project .button-close
+  position: absolute
+  right: 0
+  @include base.font(1000, normal, 0.9, disp)

@@ -1,0 +1,48 @@
+@use "./base"
+@use "./colours"
+
+.pagination
+  @extend %content
+  display: grid
+  grid-template-columns: 1fr 1fr
+  column-gap: base.raster(1)
+
+  &-panel
+    display: flex
+    flex-flow: column wrap
+    justify-content: space-between
+    border-radius: base.$roundness
+    background: colours.$content-extra-light
+    color: colours.$content-text-extra-dark
+    transition: all base.$contentTrans ease-in-out
+    text-decoration: none
+    &:hover,
+    &:focus
+      transform: scale(1.025)
+      background: colours.$content-sec-text-light
+
+    &:hover *,
+    &:focus *
+      color: colours.$content-sec-text-dark
+
+  &-panel[data-pagination="prev"]
+    grid-column: 1 / 2
+    text-align: right
+
+  &-panel[data-pagination="next"]
+    grid-column: 2 / 3
+    text-align: left
+
+  &-linktext
+    display: inline-block
+    padding: base.raster(1) base.raster(1) base.raster(0.5) base.raster(1)
+    @include base.font(800, italic, 0.7, body)
+    color: colours.$content-text-medium
+
+  &-title
+    display: inline-block
+    padding: 0 base.raster(1) base.raster(1) base.raster(1)
+
+  &-img
+    display: block
+    border-radius: 0 0 base.$roundness base.$roundness

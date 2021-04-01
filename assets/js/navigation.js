@@ -1,18 +1,18 @@
 
 const conf = {
 
-  root: '.nav-pri',
+  root: '.nav-primary',
   breakpoint: '(min-width: 45em)', // Should match @media rules in '_navigation.scss'
   skipLink: '.skip-link',
   menuControl: '.nav-button-menu',
   menuControlMenuStateInd: {
-      attr: 'aria-expanded',
-      value: 'true'
+    attr: 'aria-expanded',
+    value: 'true',
   },
-  menu: '.nav-pri-list',
-  menuState: 'nav-menu-closed',
+  menu: '.nav-primary-list',
+  menuState: 'nav-closed',
   controls: '.nav-link',
-  focusableControls: '.nav-button-menu, .nav-link'
+  focusableControls: '.nav-button-menu, .nav-link',
 };
 
 function getNodes() {
@@ -34,9 +34,10 @@ function getNodes() {
     skipLink,
     controls,
     firstFocusable,
-    lastFocusable
-  }
+    lastFocusable,
+  };
 }
+
 // dom object assigned in module scope to allow named event handlers to be declared here as well. Thus making removal of listeners possible while giving them access to dom object.
 const dom = getNodes();
 
@@ -91,13 +92,11 @@ function toggleNavBar() {
   prevScrollpos = currentScrollPos;
 }
 
-
 function toggleNavMenu() {
 
   // Menu-Control-ARIA-state
   const isExpanded = dom.menuControl.getAttribute(conf.menuControlMenuStateInd.attr) ===
-  conf.menuControlMenuStateInd.value ?
-  true : false;
+  conf.menuControlMenuStateInd.value;
   dom.menuControl.setAttribute(conf.menuControlMenuStateInd.attr, !isExpanded);
   // Controls-display-state
   dom.menu.classList.toggle(conf.menuState);
@@ -116,8 +115,7 @@ function trapTab(e) {
   const isTabPressed = e.key === 'Tab';
   const isEscPressed = e.key === 'Escape';
   const isExpanded = dom.menuControl.getAttribute(conf.menuControlMenuStateInd.attr) ===
-    conf.menuControlMenuStateInd.value ?
-    true : false;
+    conf.menuControlMenuStateInd.value;
 
   const toggle = toggleNavMenu.bind(dom.menuControl);
 

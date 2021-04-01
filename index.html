@@ -13,24 +13,26 @@
   <body>
     <a href="#skip-target" class="skip-link">Menü überspringen</a>
 
-    <nav aria-label="Menü" class="nav-pri">
+    <nav aria-label="Menü" class="nav-primary">
       <button type="button" id="menu-btn" class="nav-button-menu">Menü</button>
-
-      <ul class="nav-pri-list" aria-labelledby="menu-btn">
-        <li class="nav-item">
+      <ul class="nav-primary-list" aria-labelledby="menu-btn">
+        <li>
           <a href="#start" class="nav-link active">Start</a>
         </li>
-        <li class="nav-item">
+        <li>
           <a href="#projects" class="nav-link">Projekte</a>
         </li>
-        <li class="nav-item">
+        <li>
           <a href="#about" class="nav-link">Über</a>
         </li>
-        <li class="nav-item">
+        <li>
           <a href="#application" class="nav-link">Bewerbung</a>
         </li>
-        <li class="nav-item">
+        <li>
           <a href="#contact" class="nav-link">Kontakt</a>
+        </li>
+        <li>
+          <a href="./project.html" class="nav-link">Projekt</a>
         </li>
       </ul>
     </nav>
@@ -82,6 +84,33 @@
           <a href="#portfolio" class="button-secondary">Nachricht schreiben</a>
         </div>
       </section>
+
+      <p class="rubrication">
+        <span class="rubrication-title">Die Korrekturschleife</span> |
+        <span class="rubrication-category"> Content-Management-Systeme </span>
+      </p>
+      <h1 id="start">Warum nicht Wordpress</h1>
+      <p class="subheading-block">
+        <strong class="subheading"
+          >Ich bin eine interessante Überschrift bzw. ein gelungenes Intro für ein extrem relevantes
+          Blog-Post: Warum Wordpress stinkt und das nicht zu knapp! Lorem ipsum, bla ich kann gar
+          kein Latein!</strong
+        >
+      </p>
+      <dl class="tax-info">
+        <dt class="tax-info-cat">Veröffentlicht</dt>
+        <dd class="tax-info-tag">
+          <time datetime=""> Montag, den 22. Oktober 2018 &nbsp; 16:00 Uhr </time>
+        </dd>
+        <dt class="tax-info-cat">Aktualisiert</dt>
+        <dd class="tax-info-tag">
+          <time datetime=""> Montag, den 22. Oktober 2018 &nbsp; 16:00 Uhr </time>
+        </dd>
+        <dt class="tax-info-cat">Themen</dt>
+        <dd class="tax-info-tag">content management systeme</dd>
+        <dd class="tax-info-tag">wordpress</dd>
+        <dd class="tax-info-tag">kirby</dd>
+      </dl>
     </header>
 
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 219.62" class="header-form">
@@ -116,13 +145,11 @@
         </dt>
         <dd>
           <ul class="tax-filter-taglist tax-filter-taglist-closed">
-            <li class="tax-filter-taglist-item">
-              <button type="button" class="tax-filter-tag-btn" data-taxtag="<?= $tag ?>">
-                Bime
-              </button>
+            <li>
+              <button type="button" class="tax-filter-tag-btn" data-taxtag="$tag">Bime</button>
             </li>
-            <li class="tax-filter-taglist-item">
-              <button type="button" class="tax-filter-tag-btn" data-taxtag="<?= $tag ?>">
+            <li>
+              <button type="button" class="tax-filter-tag-btn" data-taxtag="$tag">
                 Flüchtling
               </button>
             </li>
@@ -133,15 +160,11 @@
         </dt>
         <dd>
           <ul class="tax-filter-taglist tax-filter-taglist-closed">
-            <li class="tax-filter-taglist-item">
-              <button type="button" class="tax-filter-tag-btn" data-taxtag="<?= $tag ?>">
-                Print
-              </button>
+            <li>
+              <button type="button" class="tax-filter-tag-btn" data-taxtag="$tag">Print</button>
             </li>
-            <li class="tax-filter-taglist-item">
-              <button type="button" class="tax-filter-tag-btn" data-taxtag="<?= $tag ?>">
-                Digital
-              </button>
+            <li>
+              <button type="button" class="tax-filter-tag-btn" data-taxtag="$tag">Digital</button>
             </li>
           </ul>
         </dd>
@@ -150,48 +173,44 @@
         </dt>
         <dd>
           <ul class="tax-filter-taglist tax-filter-taglist-closed">
-            <li class="tax-filter-taglist-item">
-              <button type="button" class="tax-filter-tag-btn" data-taxtag="<?= $tag ?>">
-                Werbung
-              </button>
+            <li>
+              <button type="button" class="tax-filter-tag-btn" data-taxtag="$tag">Werbung</button>
             </li>
-            <li class="tax-filter-taglist-item">
-              <button type="button" class="tax-filter-tag-btn" data-taxtag="<?= $tag ?>">
+            <li>
+              <button type="button" class="tax-filter-tag-btn" data-taxtag="$tag">
                 Fotografie
               </button>
             </li>
-            <li class="tax-filter-taglist-item">
-              <button type="button" class="tax-filter-tag-btn" data-taxtag="<?= $tag ?>">
+            <li>
+              <button type="button" class="tax-filter-tag-btn" data-taxtag="$tag">
                 Entwicklung
               </button>
             </li>
-            <li class="tax-filter-taglist-item">
-              <button type="button" class="tax-filter-tag-btn" data-taxtag="<?= $tag ?>">
+            <li>
+              <button type="button" class="tax-filter-tag-btn" data-taxtag="$tag">
                 Grafikdesign
               </button>
             </li>
-            <li class="tax-filter-taglist-item">
-              <button type="button" class="tax-filter-tag-btn" data-taxtag="<?= $tag ?>">
-                Konzept
-              </button>
+            <li>
+              <button type="button" class="tax-filter-tag-btn" data-taxtag="$tag">Konzept</button>
             </li>
-            <li class="tax-filter-taglist-item">
-              <button type="button" class="tax-filter-tag-btn" data-taxtag="<?= $tag ?>">
+            <li>
+              <button type="button" class="tax-filter-tag-btn" data-taxtag="$tag">
                 Markendesign
               </button>
             </li>
-            <li class="tax-filter-taglist-item">
-              <button type="button" class="tax-filter-tag-btn" data-taxtag="<?= $tag ?>">
+            <li>
+              <button type="button" class="tax-filter-tag-btn" data-taxtag="$tag">
                 Styleguide
               </button>
             </li>
-            <li class="tax-filter-taglist-item">
-              <button type="button" class="tax-filter-tag-btn" data-taxtag="<?= $tag ?>">
+            <li>
+              <button type="button" class="tax-filter-tag-btn" data-taxtag="$tag">
                 Logo-Redesign
               </button>
             </li>
-            <li class="tax-filter-taglist-item">
-              <button type="button" class="tax-filter-tag-btn" data-taxtag="<?= $tag ?>">
+            <li>
+              <button type="button" class="tax-filter-tag-btn" data-taxtag="$tag">
                 Online Präsenz
               </button>
             </li>
@@ -200,7 +219,7 @@
       </dl>
       <span id="skip-tax-filter-target"></span>
 
-      <ul class="cards">
+      <ul class="cards-list">
         <li class="card">
           <a href="#" class="card-link">
             <div class="card-img-container">
@@ -336,7 +355,7 @@
         </p>
 
         <ul class="tab-list" role="tablist" id="tab-list">
-          <li class="tab-list-item" role="presentation">
+          <li role="presentation">
             <a href="#info" class="tab" data-tab="info" role="tab">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -359,7 +378,7 @@
               <h2 id="tab-info">Info</h2>
             </a>
           </li>
-          <li class="tab-list-item" role="presentation">
+          <li role="presentation">
             <a href="#cv" class="tab" data-tab="cv" role="tab">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -396,7 +415,7 @@
               <h2 id="tab-cv">Lebenlauf</h2>
             </a>
           </li>
-          <li class="tab-list-item" role="presentation">
+          <li role="presentation">
             <a href="#knowledge" class="tab" data-tab="knowledge" role="tab">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -439,7 +458,7 @@
               <h2 id="tab-knowledge">Kenntnisse</h2>
             </a>
           </li>
-          <li class="tab-list-item" role="presentation">
+          <li role="presentation">
             <a href="#portfolio" class="tab" data-tab="portfolio" role="tab">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -468,7 +487,7 @@
               <h2 id="tab-portfolio">Projekte</h2>
             </a>
           </li>
-          <li class="tab-list-item" role="presentation">
+          <li role="presentation">
             <a href="#references" class="tab" data-tab="references" role="tab">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -495,7 +514,7 @@
               <h2 id="tab-references">Feedback</h2>
             </a>
           </li>
-          <li class="tab-list-item" role="presentation">
+          <li role="presentation">
             <a href="#downloads" class="tab" data-tab="downloads" role="tab">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -735,15 +754,14 @@
           </div>
         </section>
         <section
-          class="tab-panel tab-panel-portfolio"
+          class="tab-panel tab-panel-portfolio tab-panel-closed"
           data-tab="portfolio"
           id="portfolio"
           role="tabpanel"
           aria-labelledby="tab-portfolio"
         >
-          <!--  tab-panel-closed -->
           <div class="tab-panel-wrapper">
-            <h3 id="digital">Digital</h3>
+            <h3 id="digital">Web</h3>
             <p>
               Mein digitales Portfolio finden Sie auf Github unter
               <a href="https://github.com/m-podolski">github.com/m-podolski</a>. Zur Zeit bin ich
@@ -861,23 +879,17 @@
               </thead>
               <tbody>
                 <tr>
-                  <td>
-                    <a href="#" target="_blank">Zeugnisse.pdf</a>
-                  </td>
+                  <td><a href="#" target="_blank">Zeugnisse.pdf</a></td>
                   <td>24. März 2021 17:07:00</td>
                   <td>99 MB</td>
                 </tr>
                 <tr>
-                  <td>
-                    <a href="#" target="_blank">Zeugnisse.pdf</a>
-                  </td>
+                  <td><a href="#" target="_blank">Zeugnisse.pdf</a></td>
                   <td>24. März 2021 17:07:00</td>
                   <td>99 MB</td>
                 </tr>
                 <tr>
-                  <td>
-                    <a href="#" target="_blank">Zeugnisse.pdf</a>
-                  </td>
+                  <td><a href="#" target="_blank">Zeugnisse.pdf</a></td>
                   <td>24. März 2021 17:07:00</td>
                   <td>99 MB</td>
                 </tr>
@@ -907,124 +919,124 @@
         <div class="button-container">
           <a +bv -+href="#tab-list" class="button-secondary">Zur Tabauswahl</a>
         </div>
-        <section
-          class="tab-panel tab-panel-working-method"
-          data-tab="graphic"
-          id="graphic"
-          role="tabpanel"
-          aria-labelledby="tab-graphic"
-        >
-          <section class="content-h3">
-            <h3>Der Ablauf</h3>
-            <section class="content-h4">
-              <h4>1. Planung</h4>
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloribus similique quasi
-              expedita pariatur fugit, rem magnam impedit veritatis temporibus. Velit atque
-              molestiae recusandae alias illo a iure repudiandae saepe laudantium rerum at fuga,
-              reprehenderit modi mollitia. Voluptate, eos fugit nisi consectetur rerum tempore
-              dignissimos, repudiandae rem magni optio, magnam nulla.
-            </section>
-            <section class="content-h4">
-              <h4>2. Entwurf</h4>
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloribus similique quasi
-              expedita pariatur fugit, rem magnam impedit veritatis temporibus. Velit atque
-              molestiae recusandae alias illo a iure repudiandae saepe laudantium rerum at fuga,
-              reprehenderit modi mollitia. Voluptate, eos fugit nisi consectetur rerum tempore
-              dignissimos, repudiandae rem magni optio, magnam nulla.
-            </section>
-          </section>
-          <section class="content-h3">
-            <h3>Leistungen</h3>
+      </section>
 
-            <dl>
-              <div class="icon-container">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  xmlns:xlink="http://www.w3.org/1999/xlink"
-                  viewBox="0 0 800 800"
-                  class="icon icon-graphic-concept"
-                  aria-hidden="true"
-                >
-                  <g id="icon-graphic-concept">
-                    <circle id="background" class="gra-con-1" cx="400" cy="400" r="400" />
-                    <g id="arms">
-                      <line class="gra-con-2" x1="320" y1="260" x2="360" y2="340" />
-                      <line class="gra-con-2" x1="520" y1="320" x2="460" y2="360" />
-                      <line class="gra-con-2" x1="400" y1="458.11" x2="400" y2="580" />
-                      <line class="gra-con-2" x1="480" y1="440" x2="560" y2="500" />
-                      <line class="gra-con-2" x1="240" y1="400" x2="300" y2="400" />
-                    </g>
-                    <g id="panel-image">
-                      <rect class="gra-con-2" x="520.06" y="180" width="139.94" height="139.5" />
-                      <line class="gra-con-3" x1="560" y1="280" x2="620" y2="220" />
-                      <line class="gra-con-3" x1="560" y1="220" x2="620" y2="280" />
-                    </g>
-                    <g id="panel-text">
-                      <rect class="gra-con-2" x="80" y="320" width="159.94" height="200" />
-                      <line class="gra-con-3" x1="120" y1="358.11" x2="200" y2="358.11" />
-                      <line class="gra-con-3" x1="120" y1="398.11" x2="200" y2="398.11" />
-                      <line class="gra-con-3" x1="120" y1="438.11" x2="200" y2="438.11" />
-                      <line class="gra-con-3" x1="120" y1="478.11" x2="200" y2="478.11" />
-                    </g>
-                    <ellipse
-                      id="bubble-middle"
-                      class="gra-con-2"
-                      cx="400"
-                      cy="398.11"
-                      rx="100"
-                      ry="80"
-                    />
-                    <ellipse id="bubble3" class="gra-con-2" cx="620" cy="510" rx="80" ry="50" />
-                    <circle id="bubble1" class="gra-con-2" cx="300" cy="219.06" r="59.06" />
-                    <circle id="bubble2" class="gra-con-2" cx="400" cy="630" r="80" />
-                  </g>
-                </svg>
-              </div>
-              <dt>Konzept und Identität</dt>
-              <dd>
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloribus similique quasi
-                expedita pariatur fugit, rem magnam impedit veritatis temporibus. Velit atque
-                molestiae recusandae alias illo a iure repudiandae saepe laudantium rerum at fuga,
-                reprehenderit modi mollitia. Voluptate, eos fugit nisi consectetur rerum tempore
-                dignissimos, repudiandae rem magni optio, magnam nulla.
-              </dd>
-            </dl>
+      <section
+        class="tab-panel tab-panel-working-method"
+        data-tab="graphic"
+        id="graphic"
+        role="tabpanel"
+        aria-labelledby="tab-graphic"
+      >
+        <section class="content-h3">
+          <h3>Der Ablauf</h3>
+          <section class="content-h4">
+            <h4>1. Planung</h4>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloribus similique quasi
+            expedita pariatur fugit, rem magnam impedit veritatis temporibus. Velit atque molestiae
+            recusandae alias illo a iure repudiandae saepe laudantium rerum at fuga, reprehenderit
+            modi mollitia. Voluptate, eos fugit nisi consectetur rerum tempore dignissimos,
+            repudiandae rem magni optio, magnam nulla.
           </section>
-          <section class="content-h3">
-            <h3>Ihre Vorteile</h3>
-            <dl>
-              <div class="icon-container">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 281.84 316.49"
-                  class="icon icon-benefits"
-                  aria-hidden="true"
-                >
-                  <g id="icon-benefits">
-                    <path
-                      id="band"
-                      class="ben-1"
-                      d="M236.82,206.13l41,56.92h-60l-33,49.44-24-68.41ZM45,206.13,4,263.05H64l33,49.44,24-68.41Z"
-                    />
-                    <circle id="circle" class="ben-2" cx="140.92" cy="134" r="130" />
-                    <polygon
-                      id="star"
-                      class="ben-3"
-                      points="140.92 189.84 205.91 224 193.49 151.64 246.07 100.39 173.41 89.84 140.92 24 108.43 89.84 35.77 100.39 88.35 151.64 75.94 224 140.92 189.84"
-                    />
-                  </g>
-                </svg>
-              </div>
-              <dt>Individualität und Wiedererkennbarkeit</dt>
-              <dd>
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloribus similique quasi
-                expedita pariatur fugit, rem magnam impedit veritatis temporibus. Velit atque
-                molestiae recusandae alias illo a iure repudiandae saepe laudantium rerum at fuga,
-                reprehenderit modi mollitia. Voluptate, eos fugit nisi consectetur rerum tempore
-                dignissimos, repudiandae rem magni optio, magnam nulla.
-              </dd>
-            </dl>
+          <section class="content-h4">
+            <h4>2. Entwurf</h4>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloribus similique quasi
+            expedita pariatur fugit, rem magnam impedit veritatis temporibus. Velit atque molestiae
+            recusandae alias illo a iure repudiandae saepe laudantium rerum at fuga, reprehenderit
+            modi mollitia. Voluptate, eos fugit nisi consectetur rerum tempore dignissimos,
+            repudiandae rem magni optio, magnam nulla.
           </section>
+        </section>
+        <section class="content-h3">
+          <h3>Leistungen</h3>
+          <dl>
+            <div class="icon-container">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+                viewBox="0 0 800 800"
+                class="icon icon-graphic-concept"
+                aria-hidden="true"
+              >
+                <g id="icon-graphic-concept">
+                  <circle id="background" class="gra-con-1" cx="400" cy="400" r="400" />
+                  <g id="arms">
+                    <line class="gra-con-2" x1="320" y1="260" x2="360" y2="340" />
+                    <line class="gra-con-2" x1="520" y1="320" x2="460" y2="360" />
+                    <line class="gra-con-2" x1="400" y1="458.11" x2="400" y2="580" />
+                    <line class="gra-con-2" x1="480" y1="440" x2="560" y2="500" />
+                    <line class="gra-con-2" x1="240" y1="400" x2="300" y2="400" />
+                  </g>
+                  <g id="panel-image">
+                    <rect class="gra-con-2" x="520.06" y="180" width="139.94" height="139.5" />
+                    <line class="gra-con-3" x1="560" y1="280" x2="620" y2="220" />
+                    <line class="gra-con-3" x1="560" y1="220" x2="620" y2="280" />
+                  </g>
+                  <g id="panel-text">
+                    <rect class="gra-con-2" x="80" y="320" width="159.94" height="200" />
+                    <line class="gra-con-3" x1="120" y1="358.11" x2="200" y2="358.11" />
+                    <line class="gra-con-3" x1="120" y1="398.11" x2="200" y2="398.11" />
+                    <line class="gra-con-3" x1="120" y1="438.11" x2="200" y2="438.11" />
+                    <line class="gra-con-3" x1="120" y1="478.11" x2="200" y2="478.11" />
+                  </g>
+                  <ellipse
+                    id="bubble-middle"
+                    class="gra-con-2"
+                    cx="400"
+                    cy="398.11"
+                    rx="100"
+                    ry="80"
+                  />
+                  <ellipse id="bubble3" class="gra-con-2" cx="620" cy="510" rx="80" ry="50" />
+                  <circle id="bubble1" class="gra-con-2" cx="300" cy="219.06" r="59.06" />
+                  <circle id="bubble2" class="gra-con-2" cx="400" cy="630" r="80" />
+                </g>
+              </svg>
+            </div>
+            <dt>Konzept und Identität</dt>
+            <dd>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloribus similique quasi
+              expedita pariatur fugit, rem magnam impedit veritatis temporibus. Velit atque
+              molestiae recusandae alias illo a iure repudiandae saepe laudantium rerum at fuga,
+              reprehenderit modi mollitia. Voluptate, eos fugit nisi consectetur rerum tempore
+              dignissimos, repudiandae rem magni optio, magnam nulla.
+            </dd>
+          </dl>
+        </section>
+        <section class="content-h3">
+          <h3>Ihre Vorteile</h3>
+          <dl>
+            <div class="icon-container">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 281.84 316.49"
+                class="icon icon-benefits"
+                aria-hidden="true"
+              >
+                <g id="icon-benefits">
+                  <path
+                    id="band"
+                    class="ben-1"
+                    d="M236.82,206.13l41,56.92h-60l-33,49.44-24-68.41ZM45,206.13,4,263.05H64l33,49.44,24-68.41Z"
+                  />
+                  <circle id="circle" class="ben-2" cx="140.92" cy="134" r="130" />
+                  <polygon
+                    id="star"
+                    class="ben-3"
+                    points="140.92 189.84 205.91 224 193.49 151.64 246.07 100.39 173.41 89.84 140.92 24 108.43 89.84 35.77 100.39 88.35 151.64 75.94 224 140.92 189.84"
+                  />
+                </g>
+              </svg>
+            </div>
+            <dt>Individualität und Wiedererkennbarkeit</dt>
+            <dd>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloribus similique quasi
+              expedita pariatur fugit, rem magnam impedit veritatis temporibus. Velit atque
+              molestiae recusandae alias illo a iure repudiandae saepe laudantium rerum at fuga,
+              reprehenderit modi mollitia. Voluptate, eos fugit nisi consectetur rerum tempore
+              dignissimos, repudiandae rem magni optio, magnam nulla.
+            </dd>
+          </dl>
         </section>
       </section>
     </main>
@@ -1033,43 +1045,43 @@
       <a href="#skip-target" class="button-tertiary button-top"> Oben </a>
 
       <section class="contact-info">
-        <strong id="contactinfo-heading">Kontaktinformationen</strong>
+        <strong id="contactinfo-heading" class="heading">Kontaktinformationen</strong>
 
         <ul class="contact-info-list" aria-labelledby="contactinfo-heading">
-          <li class="contact-info-list-item">
+          <li>
             <strong class="contact">Telefon</strong>
             <ul class="contact-info-entry-list">
-              <li class="contact-info-entry-list-item">
+              <li>
                 <span class="contact-info-entry">Mobil</span>
                 <a href="#">0110 10 10 01 011</a>
               </li>
             </ul>
           </li>
-          <li class="contact-info-list-item">
+          <li>
             <strong class="contact">E-Mail</strong>
             <ul class="contact-info-entry-list">
-              <li class="contact-info-entry-list-item">
+              <li>
                 <span class="contact-info-entry">Privat</span>
                 <a href="#">malte.podolski@web.de</a>
               </li>
             </ul>
           </li>
-          <li class="contact-info-list-item">
+          <li>
             <strong class="contact">Social Media</strong>
             <ul class="contact-info-entry-list">
-              <li class="contact-info-entry-list-item">
+              <li>
                 <span class="contact-info-entry">Behance</span>
                 <!-- {{icon-behance-white.svg}} -->
                 <a href="https://www.behance.net/m-podolski" target="_blank"
                   >behance.net/m-podolski</a
                 >
               </li>
-              <li class="contact-info-entry-list-item">
+              <li>
                 <span class="contact-info-entry">Github</span>
                 <!-- {{icon-github-white.svg}} -->
                 <a href="https://github.com/m-podolski" target="_blank">github.com/m-podolski</a>
               </li>
-              <li class="contact-info-entry-list-item">
+              <li>
                 <span class="contact-info-entry">LinkedIn</span>
                 <!-- {{icon-linkedin-white.svg}} -->
                 <a href="https://www.linkedin.com/in/m-podolski" target="_blank"
@@ -1082,13 +1094,13 @@
       </section>
 
       <section class="footer-nav">
-        <strong id="navigation-heading">Navigation</strong>
+        <strong id="navigation-heading" class="heading">Navigation</strong>
         <nav aria-label="Weitere Seiten" class="nav-footer-sec">
           <ul class="nav-footer-sec-list">
-            <li class="nav-item">
+            <li>
               <a href="#">Impressum</a>
             </li>
-            <li class="nav-item">
+            <li>
               <a href="#">Datenschutz</a>
             </li>
           </ul>
@@ -1096,7 +1108,7 @@
       </section>
 
       <section id="contact" class="contact-form">
-        <strong id="contactform-heading">Kontaktformular</strong>
+        <strong id="contactform-heading" class="heading">Kontaktformular</strong>
         <!-- <?php snippet('forms/contactform') ?> -->
       </section>
 
