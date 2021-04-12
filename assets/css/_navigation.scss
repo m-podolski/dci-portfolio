@@ -1,4 +1,7 @@
-Should match "window.matchMedia()" in navigation.js
+@use "./base";
+@use "./colours";
+
+// Should match "window.matchMedia()" in navigation.js
 $bp-nav: 45em;
 
 .skip-link {
@@ -59,7 +62,7 @@ $bp-nav: 45em;
     position: relative;
     top: 0;
     // height: 5rem;
-    transition: top 1s ease;
+    transition: top 0.2s ease;
   }
   & > li {
     list-style-type: none;
