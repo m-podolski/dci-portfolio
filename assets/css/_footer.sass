@@ -9,7 +9,7 @@ $footer-breakpoint: 60em
   @include base.font(400, normal, 0.6, body)
   font-variant-numeric: lining-nums proportional-nums
   color: colours.$content-running-text-bright
-  background: linear-gradient(260deg, colours.$site-bg, hsla(1, 1%, 1%, 0) 100%), linear-gradient(140deg, colours.$site-hero-light, hsla(1, 1%, 1%, 0) 100%), linear-gradient(380deg, colours.$site-hero-dark, hsla(1, 1%, 1%, 0) 100%)
+  background: linear-gradient(260deg, colours.$site-bg-medium, hsla(1, 1%, 1%, 0) 100%), linear-gradient(140deg, colours.$site-bg-light, hsla(1, 1%, 1%, 0) 100%), linear-gradient(380deg, colours.$site-bg-dark, hsla(1, 1%, 1%, 0) 100%)
 
   @media screen and (min-width: $footer-breakpoint)
     grid-template-columns: repeat(3, 1fr)
@@ -20,9 +20,9 @@ $footer-breakpoint: 60em
     color: colours.$content-running-text-bright
   a:hover:not([class]),
   a:focus:not([class])
-    color: colours.$site-nav-ind
+    color: colours.$site-btn-ind
   a:active:not([class])
-    color: colours.$content-sec-text-light
+    color: colours.$content-bg-sec-medium
 
   & *:focus:not([class])
     outline: base.raster(0.25) dashed colours.$content-running-text-bright
@@ -68,7 +68,7 @@ $footer-breakpoint: 60em
   & .contact-info-entry
     flex: 0 1 auto
     width: base.raster(6)
-    color: colours.$content-extra-light
+    color: colours.$content-running-text-bright
 
   & .icon-container
     flex: 0 1 0

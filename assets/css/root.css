@@ -100,7 +100,7 @@ html {
   background: #f7f4f3;
 }
 
-.tax-filter, .tab-list, .pagination, section {
+.tax-info, .tax-filter, .pagination, section {
   max-width: calc(calc((1rem + 1.5vmin) * 1.5) * 18);
   margin: calc(calc((1rem + 1.5vmin) * 1.5) * 0.9) auto;
 }
@@ -118,7 +118,7 @@ h1 {
   font-weight: 1000;
   font-style: normal;
   font-size: calc((1rem + 0.75vmin) * 2.8);
-  line-height: calc(((1rem + 0.75vmin) * 1) * 2.8);
+  line-height: calc(((1rem + 0.75vmin) * 1.2) * 2.8);
   color: aqua;
   mix-blend-mode: hard-light;
   opacity: 0.85;
@@ -133,7 +133,7 @@ h1 {
   font-weight: 600;
   font-style: normal;
   font-size: calc((1rem + 0.75vmin) * 1);
-  line-height: calc(((1rem + 0.75vmin) * 1) * 1);
+  line-height: calc(((1rem + 0.75vmin) * 1.2) * 1);
 }
 
 .summary {
@@ -156,33 +156,33 @@ h1 {
   justify-content: center;
 }
 
-.tax-filter-tag-btn, .nav-button-menu, .nav-link, .button-tertiary, .button-secondary, .button-primary, .tax-filter dt button, .button-lightbox {
+.tax-filter-tag-btn, .nav-button-menu, .nav-link, .button-tertiary, .button-secondary, .button-primary, .button-lightbox {
   display: inline-block;
   padding: calc(calc((1rem + 1.5vmin) * 1.5) * 0.3) calc(calc((1rem + 1.5vmin) * 1.5) * 0.9);
   color: white;
   border: solid calc(calc((1rem + 1.5vmin) * 1.5) * 0.12);
-  border-radius: calc(1.5vmin * 100);
+  border-radius: 999px;
   font-weight: 800;
   font-style: normal;
   font-size: calc((1rem + 1.5vmin) * 0.7);
   line-height: calc(((1rem + 1.5vmin) * 1.5) * 0.7);
-  letter-spacing: calc(calc((1rem + 1.5vmin) * 1.5) * 0.03);
+  letter-spacing: calc(calc((1rem + 1.5vmin) * 1.5) * 0.015);
   text-align: center;
   text-decoration: none;
   transition: color 0.1s ease-in-out, background 0.1s ease-in-out, border 0.1s ease-in-out;
   cursor: pointer;
 }
 
-.button-primary, .tax-filter dt button, .button-lightbox {
+.button-primary, .button-lightbox {
   background: #2969ff;
   border-color: #b3c9ff;
 }
-.button-primary:hover:not(.button-disabled), .tax-filter dt button:hover:not(.button-disabled), .button-lightbox:hover:not(.button-disabled), .button-primary:focus:not(.button-disabled), .tax-filter dt button:focus:not(.button-disabled), .button-lightbox:focus:not(.button-disabled) {
+.button-primary:hover:not(.button-disabled), .button-lightbox:hover:not(.button-disabled), .button-primary:focus:not(.button-disabled), .button-lightbox:focus:not(.button-disabled) {
   background: white;
   border-color: #2969ff;
   color: #2969ff;
 }
-.button-primary:active:not(.button-disabled), .tax-filter dt button:active:not(.button-disabled), .button-lightbox:active:not(.button-disabled), .button-primary.selected:not(.button-disabled), .tax-filter dt button.selected:not(.button-disabled), .selected.button-lightbox:not(.button-disabled) {
+.button-primary:active:not(.button-disabled), .button-lightbox:active:not(.button-disabled), .button-primary.selected:not(.button-disabled), .selected.button-lightbox:not(.button-disabled) {
   background: white;
   border-color: aqua;
   color: #2969ff;
@@ -227,21 +227,21 @@ h1 {
 }
 
 ::selection {
-  background: #ffc499;
+  background: #ffcc99;
 }
 
 *:focus:not([class]) {
-  outline: calc(calc((1rem + 1.5vmin) * 1.5) * 0.06) dashed #4e83fd;
+  outline: calc(calc((1rem + 1.5vmin) * 1.5) * 0.06) dashed #2969ff;
 }
 
 a:not([class]),
 a:visited:not([class]) {
-  color: #cc4400;
+  color: #b33c00;
 }
 
 a:hover:not([class]),
 a:focus:not([class]) {
-  color: #4e83fd;
+  color: #2969ff;
 }
 
 a:active:not([class]) {
@@ -270,7 +270,7 @@ h3 {
   font-style: normal;
   font-size: calc((1rem + 1.5vmin) * 1.1);
   line-height: calc(((1rem + 1.5vmin) * 1.5) * 1.1);
-  color: #0949dc;
+  color: #3b73f7;
 }
 
 h4 {
@@ -313,7 +313,7 @@ ol ol {
 dt,
 th {
   padding: 0 0 calc(calc((1rem + 1.5vmin) * 1.5) * 0.15) 0;
-  color: #cc4400;
+  color: #b33c00;
   font-weight: 500;
   font-style: italic;
   font-size: calc((1rem + 1.5vmin) * 0.7);
@@ -384,11 +384,11 @@ figcaption {
 
 hr {
   margin: calc(calc((1rem + 1.5vmin) * 1.5) * 0.6) 0;
-  border-top: 0.1rem solid #cc4400;
+  border-top: 0.1rem solid #b33c00;
 }
 
 .footnote-ref {
-  color: #cc4400;
+  color: #b33c00;
   font-weight: 800;
   font-style: italic;
   font-size: calc((1rem + 1.5vmin) * 0.6);
@@ -406,7 +406,7 @@ hr {
 }
 .footnotes ol li::marker {
   content: counter(my-counter) ".";
-  color: #cc4400;
+  color: #b33c00;
   font-weight: 800;
   font-style: italic;
   font-size: calc((1rem + 1.5vmin) * 0.7);
@@ -463,8 +463,14 @@ hr {
 .cards-list {
   display: grid;
   grid-template-columns: repeat(1, 1fr);
-  gap: calc(calc((1rem + 1.5vmin) * 1.5) * 0.3);
+  column-gap: calc(calc((1rem + 1.5vmin) * 1.5) * 0.6);
+  row-gap: calc(calc((1rem + 1.5vmin) * 1.5) * 1.2);
   padding-left: unset;
+}
+.cards-list li {
+  overflow: hidden;
+  list-style: none;
+  border-radius: calc(calc((1rem + 1.5vmin) * 1.5) * 0.3);
 }
 
 @media screen and (min-width: 40em) {
@@ -492,12 +498,11 @@ hr {
 }
 
 .card {
+  display: inline-block;
+  height: 100%;
   background: #e6edff;
-  border-radius: calc(calc((1rem + 1.5vmin) * 1.5) * 0.3);
-  overflow: hidden;
   transition: all 0.2s ease-in-out;
-  display: inline;
-  list-style-type: none;
+  text-decoration: none;
 }
 .card-hidden {
   display: none;
@@ -512,21 +517,18 @@ hr {
 .card:hover > *, .card:focus > *, .card:active > * {
   color: #0036b3;
 }
-.card:hover .card-img, .card:focus .card-img, .card:active .card-img {
-  transform: scale(1.5);
-}
-.card a, .card a:visited {
-  text-decoration: none;
-}
 .card-img-container {
   overflow: hidden;
 }
-.card-img {
+.card img {
   transition: transform 0.2s ease-in-out;
+}
+.card:hover img, .card:focus img, .card:active img {
+  transform: scale(1.4);
 }
 .card-title {
   display: block;
-  padding: calc(calc((1rem + 1.5vmin) * 1.5) * 0.3);
+  padding: calc(calc((1rem + 1.5vmin) * 1.5) * 0.6);
   font-weight: 800;
   font-style: normal;
   font-size: calc((1rem + 1.5vmin) * 0.7);
@@ -535,7 +537,7 @@ hr {
 }
 .card-summary {
   margin: unset;
-  padding: 0 calc(calc((1rem + 1.5vmin) * 1.5) * 0.3) calc(calc((1rem + 1.5vmin) * 1.5) * 0.3) calc(calc((1rem + 1.5vmin) * 1.5) * 0.3);
+  padding: 0 calc(calc((1rem + 1.5vmin) * 1.5) * 0.6) calc(calc((1rem + 1.5vmin) * 1.5) * 0.6) calc(calc((1rem + 1.5vmin) * 1.5) * 0.6);
   font-weight: 400;
   font-style: normal;
   font-size: calc((1rem + 1.5vmin) * 0.6);
@@ -569,7 +571,7 @@ hr {
   color: aqua;
 }
 .footer a:active:not([class]) {
-  color: #ffc499;
+  color: #ffcc99;
 }
 .footer *:focus:not([class]) {
   outline: calc(calc((1rem + 1.5vmin) * 1.5) * 0.075) dashed white;
@@ -618,7 +620,7 @@ hr {
 .footer .contact-info-entry {
   flex: 0 1 auto;
   width: calc(calc((1rem + 1.5vmin) * 1.5) * 1.8);
-  color: #d1dfff;
+  color: white;
 }
 .footer .icon-container {
   flex: 0 1 0;
@@ -664,7 +666,7 @@ hr {
 }
 
 .form .invalid {
-  border-bottom-color: #cc4400;
+  border-bottom-color: #b33c00;
 }
 
 .form ::placeholder {
@@ -676,7 +678,7 @@ hr {
   padding: calc(calc((1rem + 1.5vmin) * 1.5) * 0.15);
   border-radius: calc(calc((1rem + 1.5vmin) * 1.5) * 0.15);
   background: #f0f4ff;
-  color: #cc4400;
+  color: #b33c00;
   font-weight: 600;
   font-style: normal;
   font-size: calc((1rem + 1.5vmin) * 0.5);
@@ -1279,7 +1281,7 @@ hr {
   font-weight: 1000;
   font-style: normal;
   font-size: calc((1rem + 0.75vmin) * 0.9);
-  line-height: calc(((1rem + 0.75vmin) * 1) * 0.9);
+  line-height: calc(((1rem + 0.75vmin) * 1.2) * 0.9);
 }
 
 .skip-link {
@@ -1310,13 +1312,13 @@ hr {
   order: 2;
   width: 100vw;
   background: #d1dfff;
-  color: #2969ff;
+  color: #2362f6;
   border-radius: unset;
   border: none;
 }
 .nav-button-menu:hover, .nav-button-menu:focus {
-  color: #cc4400;
-  background: #ffc499;
+  color: #b33c00;
+  background: #ffcc99;
 }
 @media screen and (min-width: 45em) {
   .nav-button-menu {
@@ -1418,10 +1420,10 @@ hr {
 }
 .pagination-panel:hover, .pagination-panel:focus {
   transform: scale(1.025);
-  background: #ffc499;
+  background: #ffcc99;
 }
 .pagination-panel:hover *, .pagination-panel:focus * {
-  color: #cc4400;
+  color: #b33c00;
 }
 .pagination-panel[data-pagination=prev] {
   grid-column: 1/2;
@@ -1462,40 +1464,35 @@ hr {
   color: white;
 }
 
-.template-project {
+.page-project {
   background: #f9fbfb;
 }
-
-.template-project .header {
+.page-project .header {
   min-height: unset;
   padding: calc((1rem + 1.5vmin) * 1.5) calc(1.5vmin * 3);
 }
-
-.template-project .main {
+.page-project .main {
   padding: unset;
 }
-
-.template-project .main > *:not(.lightbox) {
+.page-project .main > *:not(.lightbox) {
   padding: calc((1rem + 1.5vmin) * 1.5) calc(1.5vmin * 3);
 }
-
-.template-project .heading {
+.page-project .heading {
   padding: unset;
   font-weight: 1000;
   font-style: normal;
   font-size: calc((1rem + 0.75vmin) * 1.5);
-  line-height: calc(((1rem + 0.75vmin) * 1) * 1.5);
+  line-height: calc(((1rem + 0.75vmin) * 1.2) * 1.5);
   color: #3b73f7;
   text-align: center;
 }
-
-.template-project .button-close {
+.page-project .button-close {
   position: absolute;
   right: 0;
   font-weight: 1000;
   font-style: normal;
   font-size: calc((1rem + 0.75vmin) * 0.9);
-  line-height: calc(((1rem + 0.75vmin) * 1) * 0.9);
+  line-height: calc(((1rem + 0.75vmin) * 1.2) * 0.9);
 }
 
 .tab-list {
@@ -1531,23 +1528,23 @@ hr {
   }
 }
 .tab-list li:hover, .tab-list li:focus {
-  background: #ffc499;
+  background: #ffcc99;
 }
 .tab-list li:hover *, .tab-list li:focus * {
-  color: #cc4400;
+  color: #b33c00;
 }
 .tab-list .tab-list-item-open {
   background: #b3c9ff;
 }
 .tab-list .tab-list-item-open h2 {
-  color: #0949dc;
+  font-style: italic;
+  color: #0036b3;
 }
 
 .tab {
   display: flex;
   gap: calc(calc((1rem + 1.5vmin) * 1.5) * 0.6);
   padding: calc(calc((1rem + 1.5vmin) * 1.5) * 0.15) calc(calc((1rem + 1.5vmin) * 1.5) * 0.3) calc(calc((1rem + 1.5vmin) * 1.5) * 0.15) calc(calc((1rem + 1.5vmin) * 1.5) * 0.6);
-  color: #2969ff;
 }
 @media screen and (min-width: 45em) {
   .tab {
@@ -1557,9 +1554,8 @@ hr {
     padding: calc(calc((1rem + 1.5vmin) * 1.5) * 0.3);
   }
 }
-.tab:link, .tab:visited {
+.tab, .tab:visited {
   text-decoration: unset;
-  color: #2969ff;
 }
 .tab:hover, .tab:focus {
   outline: none;
@@ -1590,6 +1586,8 @@ hr {
   font-style: normal;
   font-size: calc((1rem + 1.5vmin) * 0.7);
   line-height: calc(((1rem + 1.5vmin) * 1.5) * 0.7);
+  letter-spacing: calc(calc((1rem + 1.5vmin) * 1.5) * 0.015);
+  color: #2362f6;
 }
 
 .tab-panel {
@@ -1613,7 +1611,7 @@ hr {
 }
 @media screen and (min-width: 45em) {
   .tab-panel-info dl, .tab-panel-cv dl, .tab-panel-portfolio .tab-panel-wrapper, .tab-panel-references .tab-panel-wrapper, .tab-panel-working-method .content-h3 dl {
-    grid-template-columns: 15% 1fr;
+    grid-template-columns: 20% 1fr;
     column-gap: calc(calc((1rem + 1.5vmin) * 1.5) * 0.6);
   }
 }
@@ -1737,7 +1735,7 @@ hr {
 
 .label-tax-filter {
   padding: calc(calc((1rem + 1.5vmin) * 1.5) * 0.15);
-  background: #b3c9ff;
+  background: #e6edff;
   font-weight: 800;
   font-style: normal;
   font-size: calc((1rem + 1.5vmin) * 0.7);
@@ -1752,12 +1750,31 @@ hr {
   overflow: hidden;
 }
 .tax-filter dt {
-  margin: calc(calc((1rem + 1.5vmin) * 1.5) * 0.075);
-  padding: calc(calc((1rem + 1.5vmin) * 1.5) * 0.15);
+  padding: unset;
 }
 .tax-filter dt button {
   width: 100%;
-  padding: calc(calc((1rem + 1.5vmin) * 1.5) * 0.15);
+  padding: calc(calc((1rem + 1.5vmin) * 1.5) * 0.3);
+  background: unset;
+  border: unset;
+  font-weight: 800;
+  font-style: normal;
+  font-size: calc((1rem + 1.5vmin) * 0.7);
+  line-height: calc(((1rem + 1.5vmin) * 1.5) * 0.7);
+  letter-spacing: calc(calc((1rem + 1.5vmin) * 1.5) * 0.015);
+  color: #2362f6;
+}
+.tax-filter dt button:hover, .tax-filter dt button:focus {
+  background: #ffcc99;
+  color: #b33c00;
+}
+.tax-filter dt .selected {
+  background: #b3c9ff;
+  font-style: italic;
+  color: #0036b3;
+}
+.tax-filter dd {
+  padding: unset;
 }
 .tax-filter-taglist {
   display: flex;
@@ -1799,10 +1816,36 @@ hr {
   background: white;
   border-color: aqua;
   color: #2362f6;
-  font-weight: 800;
   font-style: italic;
-  font-size: calc((1rem + 1.5vmin) * 0.6);
-  line-height: calc(((1rem + 1.5vmin) * 1.5) * 0.6);
+}
+
+.tax-info {
+  padding: unset;
+}
+@media screen and (min-width: 40em) {
+  .tax-info {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    column-gap: calc(calc((1rem + 1.5vmin) * 1.5) * 0.3);
+  }
+}
+.tax-info-tag {
+  grid-column: 2/3;
+}
+.tax-info-list {
+  padding: 0;
+}
+.tax-info-list-item {
+  display: inline;
+  list-style: none;
+}
+
+.header .tax-info {
+  margin: unset;
+}
+
+.header .tax-info-cat {
+  color: white;
 }
 
 /*# sourceMappingURL=root.css.map */

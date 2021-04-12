@@ -135,7 +135,9 @@ function selectFilters(e) {
     // Reset to complete list
     displayResults(false, dom);
   }
-  e.target.classList.toggle(conf.subcontrolsStateInd);
+  if (e.target.tagName === 'BUTTON') {
+    e.target.classList.toggle(conf.subcontrolsStateInd);
+  }
 }
 
 // Search Function: Create list of resulting URLs

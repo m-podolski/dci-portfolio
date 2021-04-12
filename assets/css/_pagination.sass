@@ -12,18 +12,18 @@
     flex-flow: column wrap
     justify-content: space-between
     border-radius: base.$roundness
-    background: colours.$content-extra-light
-    color: colours.$content-text-extra-dark
+    background: colours.$content-light
+    color: colours.$content-text-dark
     transition: all base.$contentTrans ease-in-out
     text-decoration: none
     &:hover,
     &:focus
       transform: scale(1.025)
-      background: colours.$content-sec-text-light
+      background: colours.$content-bg-sec-medium
 
     &:hover *,
     &:focus *
-      color: colours.$content-sec-text-dark
+      color: colours.$content-text-sec-dark
 
   &-panel[data-pagination="prev"]
     grid-column: 1 / 2

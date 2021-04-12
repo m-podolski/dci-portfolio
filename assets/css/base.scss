@@ -1,0 +1,328 @@
+@use "./colours";
+@use "./fonts";
+
+$fontbase: 1rem;
+$leading: 1.5;
+$viewfactor: 1.5vmin;
+$leadingDisp: 1.2;
+$viewfactorDisp: $viewfactor * 0.5;
+
+$unit: calc((#{$fontbase} + #{$viewfactor}) * #{$leading});
+
+@function raster($scale) {
+  $factor: $scale * 0.3;
+  @return calc(#{$unit} * #{$factor});
+}
+
+@function window($scale) {
+  @return calc(#{$viewfactor} * #{$scale});
+}
+
+$roundness: raster(1);
+$roundness-small: raster(0.5);
+$content-max-width: raster(60);
+
+$contentTrans: 0.2s;
+$elemTrans: 0.1s;
+
+$bp-icons: 45em;
+
+@mixin fontsizes($fontbase, $leading, $viewfactor, $scale) {
+  font-size: calc((#{$fontbase} + #{$viewfactor}) * #{$scale});
+  line-height: calc(
+    ((#{$fontbase} + #{$viewfactor}) * #{$leading}) * #{$scale}
+  );
+}
+
+@mixin font($weight, $style, $scale, $type) {
+  @if $type == disp {
+    font-weight: $weight;
+    font-style: $style;
+    @include fontsizes($fontbase, $leadingDisp, $viewfactorDisp, $scale);
+  } @else {
+    font-weight: $weight;
+    font-style: $style;
+    @include fontsizes($fontbase, $leading, $viewfactor, $scale);
+  }
+}
+
+* {
+  box-sizing: border-box;
+  margin-block: unset;
+  margin-inline: unset;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  background: colours.$site-bg-medium;
+  font-family: "Fira Sans", sans-serif;
+  @include font(400, normal, 0.7, body);
+  color: colours.$content-running-text;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  word-break: break-word;
+  font-variant-numeric: oldstyle-nums proportional-nums;
+}
+.landmark {
+  padding: raster(3) window(3);
+}
+header {
+  min-height: 100vh;
+  padding-top: 20vh;
+  color: colours.$content-running-text-bright;
+}
+.header-form {
+  display: block;
+  margin: 0 0 -5px 0;
+}
+.header-form-1 {
+  fill: colours.$site-page-bg;
+}
+.main,
+html {
+  background: colours.$site-page-bg;
+}
+%content {
+  max-width: $content-max-width;
+  margin: raster(3) auto;
+}
+section {
+  @extend %content;
+}
+h1,
+.subheading-block,
+.summary {
+  position: relative;
+  z-index: 2;
+}
+h1 {
+  margin: unset;
+  padding: raster(3) 0 raster(6) 0;
+  @include font(1000, normal, 2.8, disp);
+  color: colours.$site-btn-ind;
+  mix-blend-mode: hard-light;
+  opacity: 0.85;
+}
+.subheading-block {
+  max-width: $content-max-width;
+  margin: 0 0 raster(15) 0;
+}
+.subheading {
+  @include font(600, normal, 1, disp);
+}
+.summary {
+  display: flex;
+  flex-flow: column nowrap;
+  max-width: $content-max-width;
+  margin: 0 auto;
+  padding: raster(4) raster(2);
+  color: colours.$content-text-dark;
+  background: colours.$content-extra-light;
+  border-radius: $roundness;
+  @include font(500, italic, 0.7, body);
+}
+.button-container {
+  display: flex;
+  justify-content: center;
+}
+%button {
+  display: inline-block;
+  padding: raster(1) raster(3);
+  color: colours.$content-running-text-bright;
+  border: solid raster(0.4);
+  border-radius: 999px;
+  @include font(800, normal, 0.7, body);
+  letter-spacing: raster(0.05);
+  text-align: center;
+  text-decoration: none;
+  transition: color $elemTrans ease-in-out, background $elemTrans ease-in-out,
+    border $elemTrans ease-in-out;
+  cursor: pointer;
+}
+.button-primary {
+  @extend %button;
+  background: colours.$site-btn-pri;
+  border-color: colours.$site-btn-pri-cont;
+  &:hover:not(.button-disabled),
+  &:focus:not(.button-disabled) {
+    background: colours.$content-running-text-bright;
+    border-color: colours.$site-btn-pri;
+    color: colours.$site-btn-pri;
+  }
+  &:active:not(.button-disabled),
+  &.selected:not(.button-disabled) {
+    background: colours.$content-running-text-bright;
+    border-color: colours.$site-btn-ind;
+    color: colours.$site-btn-pri;
+    font-style: italic;
+  }
+}
+.button-secondary {
+  @extend %button;
+  background: colours.$site-btn-sec;
+  border-color: colours.$site-btn-sec-cont;
+  &:hover:not(.button-disabled),
+  &:focus:not(.button-disabled) {
+    background: colours.$content-running-text-bright;
+    border-color: colours.$site-btn-sec;
+    color: colours.$site-btn-sec;
+  }
+  &:active:not(.button-disabled),
+  &.selected:not(.button-disabled) {
+    background: colours.$content-running-text-bright;
+    border-color: colours.$site-btn-ind;
+    color: colours.$site-btn-sec;
+    font-style: italic;
+  }
+}
+.button-tertiary {
+  @extend %button;
+  background: colours.$site-btn-ter;
+  border-color: colours.$site-btn-ter-cont;
+  color: colours.$site-btn-ter-col;
+  &:hover:not(.button-disabled),
+  &:focus:not(.button-disabled) {
+    background: colours.$content-running-text-bright;
+    border-color: colours.$site-bg-dark;
+    color: colours.$site-bg-dark;
+  }
+  &:active:not(.button-disabled),
+  &.selected:not(.button-disabled) {
+    background: colours.$content-running-text-bright;
+    border-color: colours.$site-btn-ind;
+    color: colours.$site-btn-pri;
+    font-style: italic;
+  }
+}
+.button-disabled {
+  filter: grayscale(100%) contrast(35%) brightness(150%);
+}
+::selection {
+  background: colours.$content-bg-sec-medium;
+}
+*:focus:not([class]) {
+  outline: raster(0.2) dashed colours.$site-btn-pri;
+}
+a:not([class]),
+a:visited:not([class]) {
+  color: colours.$content-text-sec-dark;
+}
+a:hover:not([class]),
+a:focus:not([class]) {
+  color: colours.$site-btn-pri;
+}
+a:active:not([class]) {
+  color: colours.$site-btn-ind;
+  background: unset;
+}
+h2,
+h3,
+h4 {
+  margin: unset;
+  margin: raster(6) 0 raster(4) 0;
+}
+h2 {
+  text-align: center;
+  @include font(800, normal, 1.3, body);
+  color: colours.$content-dark;
+}
+h3 {
+  @include font(800, normal, 1.1, body);
+  color: colours.$content-text-medium;
+}
+h4 {
+  @include font(800, normal, 0.9, body);
+  color: colours.$content-text-dark;
+}
+img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.profile-img {
+  clip-path: circle(50%);
+  width: 15rem;
+  float: left;
+  margin: raster(2);
+  background: colours.$content-medium;
+}
+ol,
+ul,
+dl {
+  margin-block-start: unset;
+  margin-block-end: unset;
+  padding: 0 0 0 raster(2);
+  list-style-position: outside;
+}
+ul ul,
+ol ol {
+  padding: raster(1) raster(2);
+  color: colours.$content-running-text-light;
+}
+dt,
+th {
+  padding: 0 0 raster(0.5) 0;
+  color: colours.$content-text-sec-dark;
+  @include font(500, italic, 0.7, body);
+  font-variant-numeric: oldstyle-nums tabular-nums;
+}
+dd {
+  margin: 0;
+  padding: 0 0 raster(1) 0;
+}
+p {
+  margin: raster(2) 0;
+}
+em {
+  @include font(400, italic, 0.7, body);
+}
+strong {
+  @include font(500, italic, 0.7, body);
+}
+pre {
+  margin: raster(4) 0;
+  padding: raster(2);
+  overflow-x: auto;
+  background: colours.$content-bg-light;
+  border-left: solid 8px colours.$content-dark;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+code {
+  @include font(444, normal, 0.6, body);
+  color: colours.$content-text-dark;
+}
+blockquote {
+  padding: raster(2) raster(4);
+  @include font(400, italic, 0.7, body);
+}
+figure {
+  margin: raster(4) 0;
+}
+figcaption {
+  margin: raster(2) 0;
+  @include font(500, italic, 0.6, body);
+}
+hr {
+  margin: raster(2) 0;
+  border-top: 0.1rem solid colours.$content-text-sec-dark;
+}
+.footnote-ref {
+  color: colours.$content-text-sec-dark;
+  @include font(800, italic, 0.6, body);
+  text-decoration: none;
+}
+.footnotes ol {
+  list-style: none;
+  counter-reset: my-counter;
+  & li {
+    counter-increment: my-counter;
+    padding: 0 0 0 0.5rem;
+  }
+  & li::marker {
+    content: counter(my-counter) ".";
+    color: colours.$content-text-sec-dark;
+    @include font(800, italic, 0.7, body);
+  }
+}

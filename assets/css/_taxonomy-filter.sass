@@ -3,25 +3,40 @@
 
 .label-tax-filter
   padding: base.raster(0.5)
-  background: colours.$content-light
+  background: colours.$content-extra-light
+  // color: white
   @include base.font(800, normal, 0.7, body)
   text-align: center
 
 .tax-filter
   @extend %content
   padding-left: unset
-  background: colours.$content-extra-light
+  background: colours.$content-light
   border-radius: base.$roundness
   overflow: hidden
 
   & dt
-    margin: base.raster(0.25)
-    padding: base.raster(0.5)
+    padding: unset
 
     & button
-      @extend .button-primary
       width: 100%
-      padding: base.raster(0.5)
+      padding: base.raster(1)
+      background: unset
+      border: unset
+      @include base.font(800, normal, 0.7, body)
+      letter-spacing: base.raster(0.05)
+      color: colours.$content-extra-dark
+      &:hover,
+      &:focus
+        background: colours.$content-bg-sec-medium
+        color: colours.$content-text-sec-dark
+    & .selected
+      background: colours.$content-medium
+      font-style: italic
+      color: colours.$content-text-dark
+
+  & dd
+    padding: unset
 
   &-taglist
     display: flex
@@ -59,6 +74,6 @@
     &:active,
     &-selected
       background: colours.$content-running-text-bright
-      border-color: colours.$site-nav-ind
+      border-color: colours.$site-btn-ind
       color: colours.$content-extra-dark
-      @include base.font(800, italic, 0.6, body)
+      font-style: italic

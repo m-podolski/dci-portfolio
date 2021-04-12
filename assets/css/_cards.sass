@@ -6,8 +6,14 @@ $bp-cards: 40 60 90 130
 .cards-list
   display: grid
   grid-template-columns: repeat(1, 1fr)
-  gap: base.raster(1)
+  column-gap: base.raster(2)
+  row-gap: base.raster(4)
   padding-left: unset
+
+  & li
+    overflow: hidden
+    list-style: none
+    border-radius: base.$roundness
 
 @each $bp in $bp-cards
   .cards-list
@@ -15,47 +21,47 @@ $bp-cards: 40 60 90 130
       grid-template-columns: repeat(#{ index($bp-cards, $bp) + 1 }, 1fr)
 
 .card
-  background: colours.$content-super-light
-  border-radius: base.$roundness
-  overflow: hidden
+  display: inline-block
+  height: 100%
+  background: colours.$content-extra-light
   transition: all base.$contentTrans ease-in-out
-  display: inline
-  list-style-type: none
+  text-decoration: none
   &-hidden
     display: none
   &:hover,
   &:focus
     transform: scale(1.025)
-    background: colours.$content-light
+    background: colours.$content-medium
   &:active
-    background: colours.$site-nav-ind
+    background: colours.$site-btn-ind
+
+      // background: colours.$content-medium
+      // color: colours.$content-text-dark
+
   &:hover > *,
   &:focus > *,
   &:active > *
-    color: colours.$content-text-extra-dark
-  &:hover .card-img,
-  &:focus .card-img,
-  &:active .card-img
-    transform: scale(1.5)
-
-  & a,
-  & a:visited
-    text-decoration: none
+    color: colours.$content-text-dark
 
   &-img-container
     overflow: hidden
 
-  &-img
+  & img
     transition: transform base.$contentTrans ease-in-out
+
+  &:hover img,
+  &:focus img,
+  &:active img
+    transform: scale(1.4)
 
   &-title
     display: block
-    padding: base.raster(1)
+    padding: base.raster(2)
     @include base.font(800, normal, 0.7, body)
     color: colours.$content-running-text
 
   &-summary
     margin: unset
-    padding: 0 base.raster(1) base.raster(1) base.raster(1)
+    padding: 0 base.raster(2) base.raster(2) base.raster(2)
     @include base.font(400, normal, 0.6, body)
     color: colours.$content-running-text
